@@ -25,7 +25,7 @@ function Home() {
                   <span class="material-symbols-rounded">
                     <img src="/finanse2.svg" alt="финансы" />
                   </span>{" "}
-                  Финансы <em>12</em>
+                  Финансы
                 </a>
                 <a href="/nds/" class="sublnk">
                   Калькулятор НДС
