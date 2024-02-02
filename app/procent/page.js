@@ -2,9 +2,10 @@
 import "./procent.css";
 import { useState } from "react";
 import SimpleModal from "../components/SimpleModal/SimpleModal";
+import Footer from "../components/Footer";
 function Procent() {
-  const [number, setNumber] = useState("");
-  const [percent, setPercent] = useState("");
+  const [number, setNumber] = useState(0);
+  const [percent, setPercent] = useState(0);
   const [round, setRound] = useState(1);
   const [total, setTotal] = useState("");
   const [open, setOpen] = useState(false);
@@ -69,7 +70,7 @@ function Procent() {
                   Калькулятор НДФЛ
                 </a>
 
-                <a href="/summa" class="sublnk">
+                <a href="/summapro" class="sublnk">
                   Сумма прописью
                 </a>
               </div>
@@ -184,7 +185,7 @@ function Procent() {
             }`}
           >
             <span>Число 1</span>
-            <input type="number" class="input" id="twonum1" value={number} />
+            <input type="number" class="input" id="twonum1" />
             <div class="notation">&nbsp;</div>
           </label>
           <label
@@ -281,7 +282,15 @@ function Procent() {
 
           <div id="result">
             <p>
-              <span id="arearazmer">Процент от числа</span>:
+              <span id="arearazmer">{` ${percent ? percent : 0}% от числа ${
+                number ? number : 0
+              } равняется : `}</span>
+            </p>
+
+            <p>
+              <span id="arearazmer">
+                {`${number > 0 || percent > 0 ? "" : "Процент от числа"}`}
+              </span>
             </p>
             <p class="resultstring">
               <span id="resultarea">
@@ -295,6 +304,7 @@ function Procent() {
           </button>
         </form>
       </section>
+      <Footer />
     </>
   );
 }

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import SimpleModal from "../components/SimpleModal/SimpleModal";
-
+import Footer from "../components/Footer";
 function Nds() {
   const [rate, setRate] = useState("");
   const [mode, setMode] = useState("allocate");
@@ -58,8 +58,11 @@ function Nds() {
                   Калькулятор НДС
                 </a>
 
-                <a href="/numberminuspercent/" class="sublnk">
-                  Вычесть процент из числа
+                <a href="/ndfl" class="sublnk">
+                  Калькулятор НДФЛ
+                </a>
+                <a href="/summapro" class="sublnk">
+                  Сумма прописью
                 </a>
               </div>
               <div class="topmenulink">
@@ -242,6 +245,7 @@ function Nds() {
           </p>
         </article>
       </section>
+      <Footer />
     </>
   );
 }

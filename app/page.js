@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import SimpleModal from "./components/SimpleModal/SimpleModal";
-
+import Footer from "./components/Footer";
 function Home() {
   const [open, setOpen] = useState(false);
   return (
@@ -39,7 +39,7 @@ function Home() {
                   Калькулятор НДФЛ
                 </a>
 
-                <a href="/summa" class="sublnk">
+                <a href="/summapro" class="sublnk">
                   Сумма прописью
                 </a>
               </div>
@@ -105,7 +105,7 @@ function Home() {
               <div class="calcdesc">Вычислит сумму подоходного налога.</div>
             </div>
           </a>
-          <a href="/summa" class="calcitem finance it">
+          <a href="/summapro" class="calcitem finance it">
             <span class="material-symbols-rounded symbol-width">
               <img src="/summa.svg" alt="сумма" />
             </span>
@@ -1354,7 +1354,7 @@ function Home() {
         </div>
       </section>
 
-      <footer></footer>
+      <Footer />
     </body>
   );
 }
