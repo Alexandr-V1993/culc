@@ -8,13 +8,13 @@ function Footer() {
           <a class="fmenuitem" href="/doks">
             Политика конфиденциальности
           </a>
-          <a class="fmenuitem" href="/contact/">
+          <a class="fmenuitem" href="#">
             Контакты
           </a>
         </div>
         <div class="fmenu firstletterlogo">
           <a href="/">
-            <span>culc.ru</span>
+            <span>calcoffee.ru</span>
           </a>{" "}
           © 2024
         </div>

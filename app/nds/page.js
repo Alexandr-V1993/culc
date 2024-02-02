@@ -1,14 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import SimpleModal from "../components/SimpleModal/SimpleModal";
+import HeaderModal from "../components/HeaderModal";
 import Footer from "../components/Footer";
 function Nds() {
   const [rate, setRate] = useState("");
   const [mode, setMode] = useState("allocate");
   const [amount, setAmount] = useState("");
   const [total, setTotal] = useState("");
-  const [open, setOpen] = useState(false);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -33,60 +33,7 @@ function Nds() {
 
   return (
     <>
-      <header>
-        <a href="/">
-          <img src="/logo.svg" alt="логотип" />
-        </a>
-        <div class="topright">
-          <div class="toprightmenu" onClick={() => setOpen(true)}>
-            <img src="/menu.svg" alt="меню" />
-          </div>
-        </div>
-      </header>
-      <SimpleModal open={open} setOpen={setOpen}>
-        <div class="topright">
-          <div class="topmenu active">
-            <div class="topmenuwrap">
-              <div class="topmenulink">
-                <a class="linkheader linknotanchor" href="/?filter=finance#2">
-                  <span class="material-symbols-rounded">
-                    <img src="/finanse2.svg" alt="финансы" />
-                  </span>{" "}
-                  Финансы
-                </a>
-                <a href="/nds/" class="sublnk">
-                  Калькулятор НДС
-                </a>
-
-                <a href="/ndfl" class="sublnk">
-                  Калькулятор НДФЛ
-                </a>
-                <a href="/summapro" class="sublnk">
-                  Сумма прописью
-                </a>
-              </div>
-              <div class="topmenulink">
-                <a class="linkheader linknotanchor">
-                  <span class="material-symbols-rounded">
-                    <img
-                      className="img-width"
-                      src="/matt.svg"
-                      alt="бухгалтерия"
-                    />
-                  </span>{" "}
-                  Математика
-                </a>
-                <a href="/procent" class="sublnk">
-                  Калькулятор процентов
-                </a>
-              </div>
-              <span className="close" onClick={() => setOpen(false)}>
-                <img src="/close.svg" alt="закрыть" />
-              </span>
-            </div>
-          </div>
-        </div>
-      </SimpleModal>
+      <HeaderModal />
       <section class="topform " onSubmit={handleSubmit}>
         <div class="topformdesc">
           <h1>
@@ -120,7 +67,6 @@ function Nds() {
               className="input"
               id="ntax"
               min="0"
-              max="30"
               value={rate}
               onChange={(e) => setRate(e.target.value)}
             />
