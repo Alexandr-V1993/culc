@@ -21,9 +21,13 @@ function Home() {
           <div class="topmenu active">
             <div class="topmenuwrap">
               <div class="topmenulink">
-                <a class="linkheader linknotanchor" href="/?filter=finance#2">
+                <a class="linkheader linknotanchor">
                   <span class="material-symbols-rounded">
-                    <img src="/finanse2.svg" alt="финансы" />
+                    <img
+                      className="img-width"
+                      src="/finanse2.svg"
+                      alt="бухгалтерия"
+                    />
                   </span>{" "}
                   Финансы
                 </a>
@@ -31,10 +35,30 @@ function Home() {
                   Калькулятор НДС
                 </a>
 
-                <a href="/numberminuspercent/" class="sublnk">
-                  Вычесть процент из числа
+                <a href="/ndfl" class="sublnk">
+                  Калькулятор НДФЛ
+                </a>
+
+                <a href="/summa" class="sublnk">
+                  Сумма прописью
                 </a>
               </div>
+              <div class="topmenulink">
+                <a class="linkheader linknotanchor">
+                  <span class="material-symbols-rounded">
+                    <img
+                      className="img-width"
+                      src="/matt.svg"
+                      alt="бухгалтерия"
+                    />
+                  </span>{" "}
+                  Математика
+                </a>
+                <a href="/procent" class="sublnk">
+                  Калькулятор процентов
+                </a>
+              </div>
+
               <span className="close" onClick={() => setOpen(false)}>
                 <img src="/close.svg" alt="закрыть" />
               </span>
@@ -62,13 +86,33 @@ function Home() {
               </div>
             </a> */}
           <a href="/nds/" class="calcitem finance ">
-            <span class="material-symbols-rounded">
+            <span class="material-symbols-rounded symbol-width">
               <img src="/nds.svg" alt="ндс" />
             </span>
             <div class="calcalltext">
               <div class="calcname">Калькулятор НДС</div>
               <div class="calcdesc">
                 Выделит сумму налога из цены по любой ставке.
+              </div>
+            </div>
+          </a>
+          <a href="/ndfl/" class="calcitem finance ">
+            <span class="material-symbols-rounded symbol-width">
+              <img src="/ndfl2.svg" alt="ндфл" />
+            </span>
+            <div class="calcalltext">
+              <div class="calcname">Калькулятор НДФЛ</div>
+              <div class="calcdesc">Вычислит сумму подоходного налога.</div>
+            </div>
+          </a>
+          <a href="/summa" class="calcitem finance it">
+            <span class="material-symbols-rounded symbol-width">
+              <img src="/summa.svg" alt="сумма" />
+            </span>
+            <div class="calcalltext">
+              <div class="calcname">Сумма прописью</div>
+              <div class="calcdesc">
+                Правильно переведёт цифры и числа в слова.
               </div>
             </div>
           </a>
@@ -149,25 +193,7 @@ function Home() {
                 </div>
               </div>
             </a>
-            <a
-              href="/prop/"
-              class="calcitem finance it"
-              style="display: block;"
-            >
-              <span class="material-symbols-rounded">
-                <font style="vertical-align: inherit;">
-                  <font style="vertical-align: inherit;">
-                    text_rotation_none
-                  </font>
-                </font>
-              </span>
-              <div class="calcalltext">
-                <div class="calcname">Сумма прописью</div>
-                <div class="calcdesc">
-                  Правильно переведёт цифры и числа в слова.
-                </div>
-              </div>
-            </a>
+    
             <a href="/diam/" class="calcitem geom " style="display: block;">
               <span class="material-symbols-rounded">
                 <font style="vertical-align: inherit;">
@@ -238,17 +264,7 @@ function Home() {
                 </div>
               </div>
             </a>
-            <a href="/ndfl/" class="calcitem finance " style="display: block;">
-              <span class="material-symbols-rounded">
-                <font style="vertical-align: inherit;">
-                  <font style="vertical-align: inherit;">платежи</font>
-                </font>
-              </span>
-              <div class="calcalltext">
-                <div class="calcname">Калькулятор НДФЛ</div>
-                <div class="calcdesc">Вычислит сумму подоходного налога.</div>
-              </div>
-            </a>
+          
             <a
               href="/velo/"
               class="calcitem sport health"
@@ -1144,8 +1160,8 @@ function Home() {
                 </div>
               </div>
             </a> */}
-          <a href="/percent/" class="calcitem finance math">
-            <span class="material-symbols-rounded">
+          <a href="/procent/" class="calcitem finance math">
+            <span class="material-symbols-rounded symbol-width">
               <img src="/procent2.svg" alt="" />
             </span>
             <div class="calcalltext">

@@ -62,6 +62,21 @@ function Nds() {
                   Вычесть процент из числа
                 </a>
               </div>
+              <div class="topmenulink">
+                <a class="linkheader linknotanchor">
+                  <span class="material-symbols-rounded">
+                    <img
+                      className="img-width"
+                      src="/matt.svg"
+                      alt="бухгалтерия"
+                    />
+                  </span>{" "}
+                  Математика
+                </a>
+                <a href="/procent" class="sublnk">
+                  Калькулятор процентов
+                </a>
+              </div>
               <span className="close" onClick={() => setOpen(false)}>
                 <img src="/close.svg" alt="закрыть" />
               </span>
