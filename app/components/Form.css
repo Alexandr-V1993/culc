@@ -1,0 +1,33 @@
+.inlinecalculator {
+  max-height: 300px;
+}
+
+.inlinecalculator {
+  max-width: 980px;
+  box-sizing: border-box;
+  padding: 5px 380px 30px 30px;
+  margin: 10px auto;
+  position: relative;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  background: white;
+  border-radius: 20px;
+  background: #eff5f9;
+  background: #e1ecf3;
+  min-height: 250px;
+}
+
+.inlinecalculator > label {
+  padding: 5px;
+  box-sizing: border-box;
+}
+.bst {
+  margin-top: 10px;
+}
+.range input {
+  background-size: 72% 100%;
+}
+.blacks {
+  font-weight: 600;
+}

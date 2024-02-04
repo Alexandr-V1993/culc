@@ -314,12 +314,6 @@ section div.wrapper {
 section:not(.articlewrap) h2 {
   text-align: center;
 }
-section:not(.articlewrap) h2 + p {
-  margin: 20px auto;
-  max-width: 600px;
-  width: 96%;
-  text-align: center;
-}
 
 /*--- Топ лендинга ---*/
 section.top {
@@ -1159,7 +1153,7 @@ section.topform:before {
 section.articlewrap {
   padding: 10px 15px;
   max-width: 800px;
-  margin: 70px auto 100px;
+  margin: 20px auto 30px;
   background: transparent;
 }
 
@@ -1721,4 +1715,7 @@ footer .fmenu.firstletterlogo a span {
 }
 .resultstring {
   word-wrap: break-word;
+}
+.page-bolt {
+  font-weight: 600;
 }

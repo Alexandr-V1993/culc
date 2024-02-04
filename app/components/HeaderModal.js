@@ -21,7 +21,7 @@ function HeaderModal() {
           <div class="topmenu active">
             <div class="topmenuwrap">
               <div class="topmenulink">
-                <a class="linkheader linknotanchor" href="/?filter=finance#2">
+                <a class="linkheader linknotanchor">
                   <span class="material-symbols-rounded">
                     <img src="/finanse2.svg" alt="финансы" />
                   </span>{" "}
@@ -49,8 +49,23 @@ function HeaderModal() {
                   </span>{" "}
                   Математика
                 </a>
-                <a href="/procent" class="sublnk">
+                <a href="/percent" class="sublnk">
                   Калькулятор процентов
+                </a>
+              </div>
+              <div class="topmenulink">
+                <a class="linkheader linknotanchor">
+                  <span class="material-symbols-rounded">
+                    <img
+                      className="img-width"
+                      src="/heart.svg"
+                      alt="бухгалтерия"
+                    />
+                  </span>{" "}
+                  Здоровье
+                </a>
+                <a href="/imt" class="sublnk">
+                  Калькулятор ИМТ
                 </a>
               </div>
               <span className="close" onClick={() => setOpen(false)}>

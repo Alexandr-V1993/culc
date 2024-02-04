@@ -63,16 +63,18 @@ function Home() {
                 </div>
               </div>
             </a> */}
-          {/* <a href="/imt/" class="calcitem health sport">
-              <span class="material-symbols-rounded"></span>
-              <div class="calcalltext">
-                <div class="calcname">Калькулятор ИМТ</div>
-                <div class="calcdesc">
-                  Скажет, есть ли у вас проблемы с весом по индексу массы тела.
-                </div>
+          <a href="/imt" class="calcitem health sport">
+            <span class="material-symbols-rounded symbol-width">
+              <img src="/medic.svg" alt="здоровье" />
+            </span>
+            <div class="calcalltext">
+              <div class="calcname">Калькулятор ИМТ</div>
+              <div class="calcdesc">
+                Скажет, есть ли у вас проблемы с весом по индексу массы тела.
               </div>
-            </a>
-            <a href="/krug/" class="calcitem geom study">
+            </div>
+          </a>
+          {/* <a href="/krug/" class="calcitem geom study">
               <span class="material-symbols-rounded"></span>
               <div class="calcalltext">
                 <div class="calcname">Площадь круга</div>
@@ -81,7 +83,7 @@ function Home() {
                   окружности.
                 </div>
               </div>
-            </a> */}
+            </a>  */}
 
           {/* <a
               href="/alco/"
@@ -1098,9 +1100,9 @@ function Home() {
                 </div>
               </div>
             </a> */}
-          <a href="/procent/" class="calcitem finance math">
+          <a href="/percent/" class="calcitem finance math">
             <span class="material-symbols-rounded symbol-width">
-              <img src="/procent2.svg" alt="" />
+              <img src="/percent.svg" alt="процент" />
             </span>
             <div class="calcalltext">
               <div class="calcname">Калькулятор процентов</div>
