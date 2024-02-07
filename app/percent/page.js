@@ -12,6 +12,8 @@ import CalculateFour from "../calculaters/CalculateFour";
 import CalculateFive from "../calculaters/CalculateFive";
 import CalculateSix from "../calculaters/CalculateSix";
 import CalculateSeven from "../calculaters/CalculateSeven";
+import Head from "next/head";
+
 function Perccent() {
   const [number, setNumber] = useState("");
   const [numberTwo, setnumberTwo] = useState("");
@@ -68,7 +70,7 @@ function Perccent() {
         span={"процентов"}
       >
         <Form obj={obj} url={url} formTitle={"Результат :"}>
-          <label class="row-2" style={{ width: "75%" }}>
+          <label class="row-2 van">
             <span>Что вычислить</span>
             <div class="select">
               <select
@@ -81,7 +83,7 @@ function Perccent() {
                 </option>
                 <option value="increase">Прибавить процент к числу</option>
                 <option value="decrease">Вычесть процент из числа</option>
-                <option value="type4">Найти сто процентов</option>
+                <option value="type4">Найти 100 процентов</option>
                 <option value="type5">
                   На сколько % одно число больше другого
                 </option>
@@ -94,7 +96,7 @@ function Perccent() {
               </select>
             </div>
           </label>
-          <label class="row-2" style={{ width: "25%" }}>
+          <label class="row-2 two">
             <span>Окр. до</span>
             <div class="select">
               <select

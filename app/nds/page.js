@@ -67,6 +67,7 @@ function Nds() {
               className="input"
               id="ntax"
               min="0"
+              max="100"
               value={rate}
               onChange={(e) => setRate(e.target.value)}
             />

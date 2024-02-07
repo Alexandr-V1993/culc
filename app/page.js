@@ -1,5 +1,6 @@
 import HeaderModal from "./components/HeaderModal";
 import Footer from "./components/Footer";
+
 function Home() {
   return (
     <body>

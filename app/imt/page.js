@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import Form from "../components/Form";
 import { useState } from "react";
 import Contents from "../components/Contents";
+import "./imt.css";
 
 function Imt() {
   const [height, setHeight] = useState("");
@@ -30,7 +31,7 @@ function Imt() {
           formTitle={"Ваш ИМТ:"}
           all={`кг/м2`}
         >
-          <label class="numrange row-1">
+          <label class="numrange row-1 van">
             <span>Рост</span>
             <input
               type="number"
@@ -44,7 +45,7 @@ function Imt() {
             <div class="notation">см</div>
           </label>
 
-          <label class="numrange row-1">
+          <label class="numrange row-1 two">
             <span>Вес</span>
             <input
               type="number"

@@ -1094,13 +1094,10 @@ section.topform:before {
   font-size: 13px;
   color: black;
 }
-.copybutton:before {
-  color: gray;
+
+.copybutton {
+  color: grey;
   cursor: pointer;
-  content: "Скопировать";
-}
-.copybutton.copied:before {
-  color: rgba(70, 180, 130, 1);
   content: "Скопировано";
 }
 

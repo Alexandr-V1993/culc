@@ -3,9 +3,11 @@ import "./summ.css";
 import { useState } from "react";
 import HeaderModal from "../components/HeaderModal";
 import Footer from "../components/Footer";
+
 function Summ() {
   const [total, setTotal] = useState("");
   const [amount, setAmount] = useState("");
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -28,8 +30,9 @@ function Summ() {
 
     setTotal(responseData);
   };
+
   return (
-    <div>
+    <>
       <HeaderModal />
       <section className="topform">
         <div className="topformdesc">
@@ -57,9 +60,28 @@ function Summ() {
 
           <div id="result">
             <p className="sum">Сумма прописью:</p>
-            <div>{total?.data?.amount}</div>
-            <p className="resultdopinfo">
-              <span id="copypass" className="copybutton"></span>
+            <div>
+              {total?.data?.amount.charAt(0).toUpperCase() +
+                total?.data?.amount.slice(1)}
+            </div>
+            <p className="resultdopinfo ">
+              <span
+                id="copypass"
+                className="copybutton"
+                onClick={() => {
+                  const amount = parseFloat(total.data.amount);
+                  if (!isNaN(amount)) {
+                    navigator.clipboard.writeText(
+                      amount.charAt(0).toUpperCase() +
+                        total?.data?.amount.slice(1)
+                    );
+                  } else {
+                    console.error("Invalid amount:", total.data.amount);
+                  }
+                }}
+              >
+                {total?.data?.amount && "Скопировать"}
+              </span>
             </p>
           </div>
           <button className="btns" onSubmit={handleSubmit}>
@@ -123,7 +145,7 @@ function Summ() {
         </article>
       </section>
       <Footer />
-    </div>
+    </>
   );
 }
 

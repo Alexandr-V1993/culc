@@ -5,6 +5,8 @@ function Form({ children, obj, url, formTitle, all, summaOblog }) {
   const [total, setTotal] = useState("");
   let van;
   let two;
+  let three;
+  let four;
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -25,31 +27,39 @@ function Form({ children, obj, url, formTitle, all, summaOblog }) {
     two = total?.data?.bmiCategory;
   }
   if (total?.data?.amount) {
-    van = total?.data?.amount;
-    two = total?.data?.tax;
+    three = total?.data?.amount;
+    four = total?.data?.tax;
   }
   if (total?.data?.value) {
     van = total?.data?.value;
   }
   return (
     <form className="inlinecalculator " onSubmit={handleSubmit}>
-      {children}
+      <div className="centre-top">{children}</div>
       <div id="result">
         <p>{formTitle}</p>
         <p class="resultstring">
           <span id="resultimt">
-            {van || 0}
+            {van}
+            {four}
 
             {all}
           </span>
         </p>
         <p>
-          {summaOblog} <span className="blacks">{two}</span>
+          {summaOblog}{" "}
+          <span className="blacks">
+            {two}
+            {three}
+          </span>
         </p>
       </div>
-      <button className="btns bst" onSubmit={handleSubmit}>
-        Расчитать
-      </button>
+      <div className="btn-top">
+        {" "}
+        <button className="btns bst" onSubmit={handleSubmit}>
+          Расчитать
+        </button>
+      </div>
     </form>
   );
 }

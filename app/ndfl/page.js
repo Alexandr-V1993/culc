@@ -31,9 +31,9 @@ function Imt() {
           url={"https://calcline.ru/api/calculate/pit"}
           formTitle={"Расчет НДФЛ"}
           ndfl={"НДФЛ"}
-          summaOblog={"Сумма налогооблажения"}
+          summaOblog={"Сумма после налогооблажения"}
         >
-          <label class="row-2">
+          <label class="row-2 van">
             <span>Налогообложения</span>
             <div class="select">
               <select
@@ -48,7 +48,7 @@ function Imt() {
               </select>
             </div>
           </label>
-          <label class="row-2">
+          <label class="row-2 two">
             <span>Ставка налога</span>
             <div class="select">
               <select
