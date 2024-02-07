@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 function Summ() {
   const [total, setTotal] = useState("");
   const [amount, setAmount] = useState("");
-
+  const [clip, setClip] = useState("Скопировать");
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -45,7 +45,7 @@ function Summ() {
           </p>
         </div>
         <form className="inlinecalculator formsum" onSubmit={handleSubmit}>
-          <label className="numrange row-1">
+          <label className="numrange row-1 input-width">
             <span>Введите сумму числом</span>
             <input
               type="number"
@@ -68,25 +68,24 @@ function Summ() {
               <span
                 id="copypass"
                 className="copybutton"
-                onClick={() => {
-                  const amount = parseFloat(total.data.amount);
-                  if (!isNaN(amount)) {
-                    navigator.clipboard.writeText(
-                      amount.charAt(0).toUpperCase() +
-                        total?.data?.amount.slice(1)
-                    );
-                  } else {
-                    console.error("Invalid amount:", total.data.amount);
-                  }
-                }}
+                onClick={() =>
+                  navigator.clipboard.writeText(
+                    total.data.amount.charAt(0).toUpperCase() +
+                      total?.data?.amount.slice(1),
+                    setClip("Скопировано")
+                  )
+                }
+                style={{ color: clip === "Скопировано" ? "#27d827" : "grey" }}
               >
-                {total?.data?.amount && "Скопировать"}
+                {total?.data?.amount && clip}
               </span>
             </p>
           </div>
-          <button className="btns" onSubmit={handleSubmit}>
-            Расчитать
-          </button>
+          <div className="div-button">
+            <button className="btns" onSubmit={handleSubmit}>
+              Расчитать
+            </button>
+          </div>
         </form>
       </section>
       <section className="articlewrap">
