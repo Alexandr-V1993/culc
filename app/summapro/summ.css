@@ -94,10 +94,16 @@
   #result {
     position: absolute;
     border: 1px solid grey;
-    bottom: 0px;
+    bottom: 20px;
     display: flex;
 
     left: 0px;
+  }
+  h2 {
+    margin: 0;
+  }
+  .inlinecalculator {
+    margin-bottom: 0;
   }
   .numrange {
     width: 100%;

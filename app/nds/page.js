@@ -3,6 +3,7 @@
 import { useState } from "react";
 import HeaderModal from "../components/HeaderModal";
 import Footer from "../components/Footer";
+import "./nds.css";
 function Nds() {
   const [rate, setRate] = useState("");
   const [mode, setMode] = useState("allocate");
@@ -60,7 +61,7 @@ function Nds() {
               </select>
             </div>
           </label>
-          <label className="numrange plusvarrange row-2">
+          <label className="numrange plusvarrange row-2 stavka">
             <span>Ставка налога</span>
             <input
               type="number"
@@ -74,7 +75,7 @@ function Nds() {
             <div className="notation">%</div>
           </label>
 
-          <label className="numrange row-1">
+          <label className="numrange row-1 labels-width">
             <span>Цена</span>
             <input
               type="number"
@@ -86,11 +87,7 @@ function Nds() {
             />
             <div className="notation">р.</div>
           </label>
-          <label className="row-1">
-            <button className="btn" id="checkresult">
-              Рассчитать
-            </button>
-          </label>
+
           <div id="result">
             <p>Расчёт НДС: </p>
             <div className="resultmoreinfo">
@@ -117,9 +114,11 @@ function Nds() {
               {total?.data?.inWords}
             </p>
           </div>
-          <button className="btns" onSubmit={handleSubmit}>
-            Расчитать
-          </button>
+          <div className="div-button">
+            <button className="btns" onSubmit={handleSubmit}>
+              Расчитать
+            </button>
+          </div>
         </form>
       </section>
       <section class="articlewrap">
