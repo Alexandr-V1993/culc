@@ -10,7 +10,10 @@ function SimpleModal({ open, children, setOpen }) {
           <div className="modal-wrapper">
             <div className="modal-content">
               {children}
-              <span className="close" onClick={() => setOpen(false)}>
+              <span
+                className="close close-modal"
+                onClick={() => setOpen(false)}
+              >
                 <img src="/close.svg" alt="закрыть" />
               </span>
             </div>

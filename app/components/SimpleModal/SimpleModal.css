@@ -61,3 +61,29 @@
   right: 87px;
   cursor: pointer;
 }
+@media screen and (max-width: 540px) {
+  .close,
+  .close-modal {
+    position: absolute;
+    top: 210px;
+    right: 60px;
+    cursor: pointer;
+  }
+  .close > img {
+    height: 35px;
+    width: 35px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .close,
+  .close-modal {
+    position: absolute;
+    top: 120px;
+    right: 60px;
+    cursor: pointer;
+  }
+  .close > img {
+    height: 35px;
+    width: 35px;
+  }
+}

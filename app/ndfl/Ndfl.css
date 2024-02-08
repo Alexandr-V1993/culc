@@ -135,7 +135,7 @@ centre-top {
   #result {
     position: absolute;
     border: 1px solid grey;
-    bottom: -70px;
+    bottom: -80px;
     display: flex;
 
     left: 0px;
