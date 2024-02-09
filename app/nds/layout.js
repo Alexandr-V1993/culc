@@ -10,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <link rel="canonical" href={"http://localhost:3000/nds"} />
+      <link rel="canonical" href={"http://calcoffee.ru/nds"} />
 
       <body className={montserrat.className}>{children}</body>
     </html>

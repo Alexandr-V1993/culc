@@ -1,0 +1,137 @@
+.resultscentre-centre {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.resultscentre {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 150px;
+}
+.pd {
+  font-size: 15px;
+}
+.vsize {
+  margin: 0;
+  padding-top: 20px;
+  padding-right: 90px;
+}
+
+.inlinecalculator {
+  width: 100%;
+}
+
+.centre-top {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.van {
+  width: 49%;
+}
+.two {
+  width: 48%;
+}
+span.bg > strong {
+  background: linear-gradient(22.75deg, #f00 -42.47%, #4021ff 134.19%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+p.pd > strong {
+  background: linear-gradient(22.75deg, #f00 -42.47%, #4021ff 134.19%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.div-button {
+  margin-top: 10px;
+}
+.tops-content {
+  padding-top: 50px;
+}
+
+@media screen and (max-width: 940px) {
+  .van {
+    width: 49%;
+  }
+  .two {
+    width: 47%;
+  }
+}
+@media screen and (max-width: 800px) {
+  #result {
+    width: 300px;
+    height: 300px;
+    top: 15px;
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 823px) {
+  #result {
+    display: none;
+    position: relative;
+    margin: 5px;
+    padding: 5px;
+    width: 100%;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    max-height: 260px;
+    margin: 0px;
+  }
+  .tops-content {
+    padding-top: 200px;
+  }
+
+  .inlinecalculator {
+    margin: 10px -15px;
+    padding: 5px 15px 15px;
+    border-radius: 0;
+    box-shadow: none;
+
+    min-height: 210px;
+  }
+  #result {
+    position: absolute;
+    border: 1px solid grey;
+    bottom: -235px;
+    display: flex;
+    left: 0px;
+    margin: 0px;
+  }
+
+  .btn-top {
+    min-width: 100%;
+  }
+  .btns,
+  .bst {
+    min-width: 97%;
+  }
+  .van {
+    width: 47%;
+  }
+  .two {
+    width: 47%;
+  }
+}
+@media screen and (max-width: 385px) {
+  #result {
+    padding-top: 25px;
+    padding-bottom: 20px;
+    margin: 0px;
+  }
+  .resultmoreinfo {
+    margin: 0;
+  }
+}
+.div-button {
+  margin-top: 10px;
+}
+@media screen and (max-width: 345px) {
+  #result {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    margin: 0px;
+  }
+}

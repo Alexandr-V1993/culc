@@ -1648,19 +1648,19 @@ footer .fmenu.firstletterlogo a span {
 .inlinecalculator {
   min-height: 330px;
 }
-/* .resultmoreinfo {
+.resultmoreinfo {
   text-align: right;
   padding-top: 20px;
-} */
+}
 #result p {
   margin-bottom: 15 px;
   margin-top: 0;
 }
 
-/* .resultmoreinfo span {
+.resultmoreinfo span {
   margin-bottom: 10px;
   display: inline-block;
-} */
+}
 #resultgross {
   font-size: 25px;
 }

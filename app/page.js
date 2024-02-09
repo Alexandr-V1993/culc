@@ -1112,6 +1112,18 @@ function Home() {
               </div>
             </div>
           </a>
+          <a href="/age-calculator/" class="calcitem finance math">
+            <span class="material-symbols-rounded symbol-width">
+              <img src="/age-calc.svg" alt="возраст" />
+            </span>
+            <div class="calcalltext">
+              <div class="calcname">Калькулятор возраста</div>
+              <div class="calcdesc">
+                Вычисление возраста с точностью до минуты по дате вашего
+                рождения.
+              </div>
+            </div>
+          </a>
           {/* <a href="/pernumber/" class="calcitem finance math">
               <span class="material-symbols-rounded">humidity_percentage</span>
               <div class="calcalltext">

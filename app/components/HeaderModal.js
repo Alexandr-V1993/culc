@@ -68,6 +68,21 @@ function HeaderModal() {
                   Калькулятор ИМТ
                 </a>
               </div>
+              <div class="topmenulink">
+                <a class="linkheader linknotanchor">
+                  <span class="material-symbols-rounded">
+                    <img
+                      className="img-width"
+                      src="/age-calc.svg"
+                      alt="бухгалтерия"
+                    />
+                  </span>{" "}
+                  Возраст человека
+                </a>
+                <a href="/age-calculator" class="sublnk">
+                  Калькулятор возраста
+                </a>
+              </div>
               <span className="close" onClick={() => setOpen(false)}>
                 <img src="/close.svg" alt="закрыть" />
               </span>
