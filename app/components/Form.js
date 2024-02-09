@@ -79,28 +79,28 @@ function Form({
             <span className="bg">
               <strong>{y}</strong>
 
-              {total?.data?.y ? year : ""}
+              {total?.data?.y ? year : year}
             </span>
             <span className="bg">
               <strong> {m}</strong>
-              {total?.data?.m ? month : ""}
+              {total?.data?.m ? month : month}
             </span>
             <span className="bg">
               <strong> {d}</strong>
-              {total?.data?.d ? days : ""}
+              {total?.data?.d ? days : days}
             </span>
             <span className="bg">
               <strong> {h}</strong>
-              {total?.data?.h ? hour : ""}
+              {total?.data?.h ? hour : hour}
             </span>
             <span className="bg">
               <strong> {i}</strong>
-              {total?.data?.i ? minut : ""}
+              {total?.data?.i ? minut : minut}
             </span>
-            <span className="bg">
+            {/* <span className="bg">
               <strong>{s}</strong>
-              {total?.data?.s ? sec : ""}
-            </span>
+              {total?.data?.s ? sec : sec}
+            </span> */}
           </div>
           <p className="pd">
             {total?.data?.nextBirthday ? nextDay : ""}
