@@ -8,8 +8,8 @@ import Contents from "../components/Contents";
 import "./age.css";
 
 function Imt() {
-  const [date, setDate] = useState("02/02/2024");
-  const [vDate, setVdate] = useState("09/02/2024");
+  const [date, setDate] = useState("");
+  const [vDate, setVdate] = useState("");
   const obj = {
     startDate: date,
     endDate: vDate,
@@ -47,7 +47,7 @@ function Imt() {
               id="nheight"
               min="0"
               max="250"
-              value={date}
+              value={date.toString()}
               onChange={(e) => setDate(e.target.value)}
             />
           </label>

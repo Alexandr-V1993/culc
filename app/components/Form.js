@@ -68,6 +68,7 @@ function Form({
     untilNextBirthday = total?.data?.untilNextBirthday;
     y = total?.data?.y;
   }
+
   return (
     <form className="inlinecalculator " onSubmit={handleSubmit}>
       <div className="centre-top">{children}</div>
@@ -124,8 +125,36 @@ function Form({
         </p>
         <p>
           {summaOblog}{" "}
-          <span className="blacks">
-            {two}
+          <span
+            className="blacks "
+            style={{
+              color:
+                two === "MorbidObesity"
+                  ? "red"
+                  : "" || two === "Overweight"
+                  ? "orange"
+                  : "" || two === "ObeseClass1"
+                  ? "red"
+                  : "" || two === "ObeseClass2"
+                  ? "red"
+                  : "" || two === "SevereThinness"
+                  ? "red"
+                  : "" || two === "Underweight"
+                  ? "orange"
+                  : "" || two === "Normal"
+                  ? "green"
+                  : "",
+            }}
+          >
+            {two === "MorbidObesity"
+              ? "Ожирение третьей степени (морбидное)"
+              : ""}
+            {two === "ObeseClass1" ? "Ожирение первой степени" : ""}
+            {two === "ObeseClass2" ? "Ожирение второй степени" : ""}
+            {two === "Normal" ? "Нормальная масса тела" : ""}
+            {two === "SevereThinness" ? "Выраженный дефицит массы тела" : ""}
+            {two === "Overweight" ? "Избыточная масса тела (предожирение)" : ""}
+            {two === "Underweight" ? "Недостаточная (дефицит) масса тела" : ""}
             {three}
           </span>
         </p>

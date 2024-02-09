@@ -29,7 +29,7 @@ function Imt() {
           obj={obj}
           url={"https://calcline.ru/api/calculate/bmi"}
           formTitle={"Ваш ИМТ:"}
-          all={`кг/м2`}
+          all={" кг/м2"}
         >
           <label class="numrange row-1 van">
             <span>Рост</span>
