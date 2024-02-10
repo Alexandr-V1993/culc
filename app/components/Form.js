@@ -115,12 +115,12 @@ function Form({
             </strong>
           </p>
         </div>
+
         <p class="resultstring">
           <span id="resultimt">
             {van}
-            {four}
 
-            {all}
+            {four}
           </span>
         </p>
         <p>
