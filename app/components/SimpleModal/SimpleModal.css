@@ -61,12 +61,40 @@
   right: 87px;
   cursor: pointer;
 }
+
+@media screen and (min-width: 768px) {
+  .close,
+  .close-modal {
+    position: absolute;
+    top: 3px;
+    right: 13px;
+    cursor: pointer;
+  }
+  .close > img {
+    height: 35px;
+    width: 35px;
+  }
+}
+
 @media screen and (max-width: 540px) {
   .close,
   .close-modal {
     position: absolute;
-    top: 210px;
-    right: 60px;
+    top: 102px;
+    right: 52px;
+    cursor: pointer;
+  }
+  .close > img {
+    height: 35px;
+    width: 35px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .close,
+  .close-modal {
+    position: absolute;
+    top: 105px;
+    right: 52px;
     cursor: pointer;
   }
   .close > img {
@@ -78,12 +106,43 @@
   .close,
   .close-modal {
     position: absolute;
-    top: 120px;
-    right: 60px;
+    top: 62px;
+    right: 56px;
     cursor: pointer;
   }
   .close > img {
     height: 35px;
     width: 35px;
+  }
+}
+@media screen and (min-width: 820px) {
+  .close,
+  .close-modal {
+    position: absolute;
+    top: 15px;
+    right: 46px;
+    cursor: pointer;
+  }
+  .close > img {
+    height: 35px;
+    width: 35px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .close,
+  .close-modal {
+    position: absolute;
+    top: 17px;
+    right: 54px;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .close,
+  .close-modal {
+    position: absolute;
+    top: 17px;
+    right: 64px;
+    cursor: pointer;
   }
 }
