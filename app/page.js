@@ -1114,13 +1114,25 @@ function Home() {
           </a>
           <a href="/age-calculator/" class="calcitem finance math">
             <span class="material-symbols-rounded symbol-width">
-              <img src="/age-calc.svg" alt="возраст" />
+              <img src="/19.svg" alt="возраст" />
             </span>
             <div class="calcalltext">
               <div class="calcname">Калькулятор возраста</div>
               <div class="calcdesc">
                 Вычисление возраста с точностью до минуты по дате вашего
                 рождения.
+              </div>
+            </div>
+          </a>
+          <a href="/alcohol-calculator/" class="calcitem finance math">
+            <span class="material-symbols-rounded symbol-width">
+              <img src="/alcohol.svg" alt="алкоголь" />
+            </span>
+            <div class="calcalltext">
+              <div class="calcname">Калькулятор алкоголя</div>
+              <div class="calcdesc">
+                Калькулятор алкоголя поможет произвести расчеты важных
+                параметров.
               </div>
             </div>
           </a>

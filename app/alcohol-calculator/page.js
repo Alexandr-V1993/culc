@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import Form from "../components/Form";
 import { useState } from "react";
 import Contents from "../components/Contents";
+import Link from "next/link";
 
 function Perccent() {
   const [number, setNumber] = useState("");
@@ -70,6 +71,26 @@ function Perccent() {
             необходимые расчеты и исключить любые сомнения в их точности,
             воспользуйтесь калькулятором самогонщика.
           </p>
+          <ul className="alcohol-list">
+            <Link
+              href={"/alcohol-calculator/diluting-alcohol"}
+              className="underline"
+            >
+              <li className="alcohol-item">
+                <h5>Онлайн калькулятор разбавление самогона водой</h5>
+                <p>
+                  Вычислите сколько воды необходимо добавить для разбавления
+                  продукта,чтобы получить напиток желаемой крепости
+                </p>
+              </li>
+            </Link>
+            <li className="alcohol-item"></li>
+            <li className="alcohol-item"></li>
+            <li className="alcohol-item"></li>
+            <li className="alcohol-item"></li>
+            <li className="alcohol-item"></li>
+            <li className="alcohol-item"></li>
+          </ul>
           <p>
             Калькулятор удобен в использовании, работает в режиме онлайн и не
             требует установки на компьютер или любое другое устройство. Наши
