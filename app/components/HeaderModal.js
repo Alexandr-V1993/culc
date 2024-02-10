@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import SimpleModal from "./SimpleModal/SimpleModal";
+
 function HeaderModal() {
   const [open, setOpen] = useState(false);
   return (
@@ -73,11 +74,11 @@ function HeaderModal() {
                   <span class="material-symbols-rounded">
                     <img
                       className="img-width"
-                      src="/age-calc.svg"
+                      src="/dosug2.svg"
                       alt="бухгалтерия"
                     />
                   </span>{" "}
-                  Возраст человека
+                  Досуг
                 </a>
                 <a href="/age-calculator" class="sublnk">
                   Калькулятор возраста
