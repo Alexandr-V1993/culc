@@ -11,6 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ru">
+      <meta name="yandex-verification" content="39003c7ac70e9975" />
       <body className={montserrat.className}>{children}</body>
     </html>
   );
