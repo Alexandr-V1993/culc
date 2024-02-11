@@ -7,7 +7,7 @@ import { useState } from "react";
 import Contents from "../components/Contents";
 import "./age.css";
 
-function Imt() {
+function Agecalc() {
   const [date, setDate] = useState("");
   const [vDate, setVdate] = useState("");
   const obj = {
@@ -101,4 +101,4 @@ function Imt() {
   );
 }
 
-export default Imt;
+export default Agecalc;
