@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="ru">
       <link
         rel="canonical"
         href={"http://calcoffee.ru/alcohol-calculator/head-selection"}
