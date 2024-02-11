@@ -7,7 +7,7 @@ import { useState } from "react";
 import Contents from "@/app/components/Contents";
 import "./diluting.css";
 
-function Imt() {
+function Dilating() {
   const [volume, setVolume] = useState("");
   const [strengthAfter, setStrengthAfter] = useState("");
   const [strengthBefore, setStrengthBefore] = useState("");
@@ -150,4 +150,4 @@ function Imt() {
   );
 }
 
-export default Imt;
+export default Dilating;

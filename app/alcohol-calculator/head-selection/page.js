@@ -7,7 +7,7 @@ import { useState } from "react";
 import Contents from "@/app/components/Contents";
 import "./selection.css";
 
-function Imt() {
+function Heads() {
   const [heads, setHeads] = useState("");
   const [strength, setStrength] = useState("");
   const [volume, setVolume] = useState("");
@@ -177,4 +177,4 @@ function Imt() {
   );
 }
 
-export default Imt;
+export default Heads;

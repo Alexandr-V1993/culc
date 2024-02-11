@@ -7,7 +7,7 @@ import { useState } from "react";
 import Contents from "@/app/components/Contents";
 import "./replacement.css";
 
-function Imt() {
+function Replacement() {
   const [weight, setWeight] = useState("");
 
   const obj = {
@@ -106,4 +106,4 @@ function Imt() {
   );
 }
 
-export default Imt;
+export default Replacement;

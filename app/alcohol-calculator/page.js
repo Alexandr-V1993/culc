@@ -8,7 +8,7 @@ import { useState } from "react";
 import Contents from "../components/Contents";
 import Link from "next/link";
 
-function Perccent() {
+function AgeCalc() {
   const [number, setNumber] = useState("");
   const [numberTwo, setnumberTwo] = useState("");
   const [percent, setPercent] = useState("");
@@ -132,8 +132,19 @@ function Perccent() {
                 </p>
               </li>
             </Link>
+            <Link
+              href={"/alcohol-calculator/moonshiner-calculator"}
+              className="underline"
+            >
+              <li className="alcohol-item">
+                <h5>Калькулятор смешивания спиртов</h5>
+                <p>
+                  Поможет определить крепость алкогольных напитков при
+                  смешивании жидкостей разной крепости и обьема.
+                </p>
+              </li>
+            </Link>
 
-            <li className="alcohol-item"></li>
             <li className="alcohol-item"></li>
             <li className="alcohol-item"></li>
           </ul>
@@ -154,4 +165,4 @@ function Perccent() {
   );
 }
 
-export default Perccent;
+export default AgeCalc;

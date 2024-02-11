@@ -7,7 +7,7 @@ import { useState } from "react";
 import Contents from "@/app/components/Contents";
 import "./areometer.css";
 
-function Imt() {
+function Areometr() {
   const [temperature, setTemperature] = useState("");
   const [strength, setStrength] = useState("");
 
@@ -157,4 +157,4 @@ function Imt() {
   );
 }
 
-export default Imt;
+export default Areometr;
