@@ -109,10 +109,7 @@ function Nds() {
                 </b>
               </div>
             </div>
-            <p className="resultdopinfo">
-              <span>Сумма прописью : </span>
-              {total?.data?.inWords}
-            </p>
+            <p className="resultdopinfo"></p>
           </div>
           <div className="div-button">
             <button className="btns" onSubmit={handleSubmit}>

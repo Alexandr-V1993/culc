@@ -9,8 +9,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <link rel="canonical" href={"http://localhost:3000/percent"} />
+    <html lang="ru">
+      <link rel="canonical" href={"http://calcoffee.ru/percent"} />
 
       <body className={montserrat.className}>{children}</body>
     </html>

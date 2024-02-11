@@ -1,13 +1,41 @@
 import React, { useState } from "react";
 
 import "./Form.css";
-function Form({ children, obj, url, formTitle, all, summaOblog }) {
+function Form({
+  children,
+  obj,
+  url,
+  formTitle,
+  all,
+  summaOblog,
+  nextDay,
+  ostatokDay,
+  year,
+  month,
+  days,
+  hour,
+  minut,
+  sec,
+  dn,
+  alcoTitle,
+  crepost,
+}) {
   const [total, setTotal] = useState("");
   let van;
   let two;
   let three;
   let four;
-
+  let m;
+  let y;
+  let d;
+  let h;
+  let i;
+  let nextBirthday;
+  let q;
+  let s;
+  let untilNextBirthday;
+  let strength;
+  let weights;
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -32,24 +60,116 @@ function Form({ children, obj, url, formTitle, all, summaOblog }) {
   }
   if (total?.data?.value) {
     van = total?.data?.value;
+    strength = total?.data?.strength;
   }
+  if (total?.data?.volumeHeads && total?.data?.volumePureAlcohol) {
+    van = total?.data?.volumePureAlcohol;
+    strength = total?.data?.volumeHeads;
+  }
+  if (total?.data?.weight) {
+    weights = total?.data?.weight;
+  }
+  if (total?.data?.d) {
+    d = total?.data?.d;
+    h = total?.data?.h;
+    i = total?.data?.i;
+    m = total?.data?.m;
+    nextBirthday = total?.data?.nextBirthday;
+    q = total?.data?.q;
+    s = total?.data?.s;
+    untilNextBirthday = total?.data?.untilNextBirthday;
+    y = total?.data?.y;
+  }
+  console.log(van);
   return (
     <form className="inlinecalculator " onSubmit={handleSubmit}>
       <div className="centre-top">{children}</div>
       <div id="result">
-        <p>{formTitle}</p>
+        <p className="vsize">{formTitle}</p>
+
+        <div className="resultscentre-centre">
+          <div className="resultscentre">
+            <span className="bg">
+              <strong>{y}</strong>
+
+              {total?.data?.y ? year : year}
+            </span>
+            <span className="bg">
+              <strong> {m}</strong>
+              {total?.data?.m ? month : month}
+            </span>
+            <span className="bg">
+              <strong> {d}</strong>
+              {total?.data?.d ? days : days}
+            </span>
+            <span className="bg">
+              <strong> {h}</strong>
+              {total?.data?.h ? hour : hour}
+            </span>
+            <span className="bg">
+              <strong> {i}</strong>
+              {total?.data?.i ? minut : minut}
+            </span>
+            {/* <span className="bg">
+              <strong>{s}</strong>
+              {total?.data?.s ? sec : sec}
+            </span> */}
+          </div>
+          <p className="pd">
+            {total?.data?.nextBirthday ? nextDay : ""}
+            <strong> {nextBirthday}</strong>
+          </p>
+          <p className="pd">
+            {total?.data?.untilNextBirthday ? ostatokDay : ""}
+            <strong>
+              {untilNextBirthday}
+              {total?.data?.untilNextBirthday ? dn : ""}
+            </strong>
+          </p>
+        </div>
+        {weights}
         <p class="resultstring">
           <span id="resultimt">
-            {van}
+            {alcoTitle} {van}
+            {all === "литров" ? "" : all}
             {four}
-
-            {all}
+          </span>
+          <span id="resultimt">
+            {crepost} {weights} {strength}
           </span>
         </p>
         <p>
           {summaOblog}{" "}
-          <span className="blacks">
-            {two}
+          <span
+            className="blacks "
+            style={{
+              color:
+                two === "MorbidObesity"
+                  ? "red"
+                  : "" || two === "Overweight"
+                  ? "orange"
+                  : "" || two === "ObeseClass1"
+                  ? "red"
+                  : "" || two === "ObeseClass2"
+                  ? "red"
+                  : "" || two === "SevereThinness"
+                  ? "red"
+                  : "" || two === "Underweight"
+                  ? "orange"
+                  : "" || two === "Normal"
+                  ? "green"
+                  : "",
+            }}
+          >
+            {two === "MorbidObesity"
+              ? "Ожирение третьей степени (морбидное)"
+              : ""}
+            {two === "ObeseClass1" ? "Ожирение первой степени" : ""}
+            {two === "ObeseClass2" ? "Ожирение второй степени" : ""}
+            {two === "Normal" ? "Нормальная масса тела" : ""}
+            {two === "SevereThinness" ? "Выраженный дефицит массы тела" : ""}
+            {two === "Overweight" ? "Избыточная масса тела (предожирение)" : ""}
+            {two === "Underweight" ? "Недостаточная (дефицит) масса тела" : ""}
             {three}
           </span>
         </p>

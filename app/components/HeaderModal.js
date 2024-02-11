@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import SimpleModal from "./SimpleModal/SimpleModal";
+
 function HeaderModal() {
   const [open, setOpen] = useState(false);
   return (
@@ -66,6 +67,21 @@ function HeaderModal() {
                 </a>
                 <a href="/imt" class="sublnk">
                   Калькулятор ИМТ
+                </a>
+              </div>
+              <div class="topmenulink">
+                <a class="linkheader linknotanchor">
+                  <span class="material-symbols-rounded">
+                    <img
+                      className="img-width"
+                      src="/dosug2.svg"
+                      alt="бухгалтерия"
+                    />
+                  </span>{" "}
+                  Досуг
+                </a>
+                <a href="/age-calculator" class="sublnk">
+                  Калькулятор возраста
                 </a>
               </div>
               <span className="close" onClick={() => setOpen(false)}>

@@ -1648,19 +1648,19 @@ footer .fmenu.firstletterlogo a span {
 .inlinecalculator {
   min-height: 330px;
 }
-/* .resultmoreinfo {
+.resultmoreinfo {
   text-align: right;
   padding-top: 20px;
-} */
+}
 #result p {
   margin-bottom: 15 px;
   margin-top: 0;
 }
 
-/* .resultmoreinfo span {
+.resultmoreinfo span {
   margin-bottom: 10px;
   display: inline-block;
-} */
+}
 #resultgross {
   font-size: 25px;
 }
@@ -1725,13 +1725,19 @@ footer .fmenu.firstletterlogo a span {
   }
   .topmenu.active {
     position: absolute;
+    width: 100%;
   }
   .topmenuwrap {
     position: absolute;
-    top: -200px;
+    top: -100px;
     left: 10px;
   }
+  .close > img {
+    top: -200px;
+    display: block;
+  }
 }
+
 @media screen and (max-width: 375px) {
   .topmenuwrap {
     display: flex;
@@ -1741,10 +1747,11 @@ footer .fmenu.firstletterlogo a span {
   }
   .topmenu.active {
     position: absolute;
+    width: 100%;
   }
   .topmenuwrap {
     position: absolute;
-    top: -110px;
+    top: -60px;
     left: 10px;
   }
 }
