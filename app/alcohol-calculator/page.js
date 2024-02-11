@@ -84,8 +84,31 @@ function Perccent() {
                 </p>
               </li>
             </Link>
-            <li className="alcohol-item"></li>
-            <li className="alcohol-item"></li>
+            <Link
+              href={"/alcohol-calculator/sugar-braga"}
+              className="underline"
+            >
+              <li className="alcohol-item">
+                <h5>Калькулятор расчет сахарной браги</h5>
+                <p>
+                  Чтобы получить нужный обьем раствора и нужную крепость,найдите
+                  идеальное соотношение между сахаром и водой.
+                </p>
+              </li>
+            </Link>
+            <Link
+              href={"/alcohol-calculator/areometer-correction"}
+              className="underline"
+            >
+              <li className="alcohol-item">
+                <h5>Калькулятор коррекции показаний ареометра</h5>
+                <p>
+                  Расчитайте реальную крепость самогона при температуре больше
+                  или меньше 20°С.
+                </p>
+              </li>
+            </Link>
+
             <li className="alcohol-item"></li>
             <li className="alcohol-item"></li>
             <li className="alcohol-item"></li>

@@ -8,8 +8,9 @@
   flex-wrap: wrap;
   width: 100%;
 }
-#result {
-  /* max-width: 50%; */
+p.resultstring {
+  font-size: 17px;
+  line-height: 20px;
 }
 .notation {
   color: grey;

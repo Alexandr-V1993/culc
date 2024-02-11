@@ -123,6 +123,7 @@ function Form({
         <p class="resultstring">
           <span id="resultimt">
             {alcoTitle} {van}
+            {all === "литров" ? "" : all}
             {four}
           </span>
           <span id="resultimt">

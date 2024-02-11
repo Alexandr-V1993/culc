@@ -26,6 +26,7 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   transition: all 0.4s;
   cursor: pointer;
+  height: 80%;
 }
 .alcohol-item:hover {
   background-color: rgb(210, 222, 224);
@@ -34,6 +35,7 @@
 .alcohol-item > p {
   font-size: 14px;
   color: rgb(56, 54, 54);
+  text-align: center;
 }
 h5 {
   padding: 0;
