@@ -61,6 +61,10 @@ function Form({
     van = total?.data?.value;
     strength = total?.data?.strength;
   }
+  if (total?.data?.volumeHeads && total?.data?.volumePureAlcohol) {
+    van = total?.data?.volumePureAlcohol;
+    strength = total?.data?.volumeHeads;
+  }
   if (total?.data?.d) {
     d = total?.data?.d;
     h = total?.data?.h;
@@ -72,7 +76,7 @@ function Form({
     untilNextBirthday = total?.data?.untilNextBirthday;
     y = total?.data?.y;
   }
-
+  console.log(van);
   return (
     <form className="inlinecalculator " onSubmit={handleSubmit}>
       <div className="centre-top">{children}</div>
