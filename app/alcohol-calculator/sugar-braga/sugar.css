@@ -1,6 +1,6 @@
 .inlinecalculator {
   max-width: 750px;
-  min-height: 350px;
+  min-height: 280px;
   padding-bottom: 0;
 }
 .centre-top {
@@ -8,9 +8,19 @@
   flex-wrap: wrap;
   width: 100%;
 }
-#result {
-  /* max-width: 50%; */
+
+.b-centre {
+  width: 200px;
 }
+.resultstring {
+  text-align-last: left;
+  background-color: none;
+}
+#resultimt {
+  font-size: 20px;
+  display: block;
+}
+
 .notation {
   color: grey;
 }
@@ -45,11 +55,8 @@
   .inlinecalculator {
     padding-top: 20px;
   }
-  .top-alco {
-    padding-top: 140px;
-  }
   #result {
-    top: 343px;
+    top: 273px;
     left: -5px;
   }
   .top-deluting {
@@ -59,7 +66,7 @@
 
 @media screen and (max-width: 375px) {
   #result {
-    top: 343px;
+    top: 273px;
     left: -5px;
   }
 }

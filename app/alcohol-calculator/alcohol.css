@@ -24,11 +24,12 @@
   background-color: rgb(233, 236, 241);
   padding: 15px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  transition: all 0.5s;
+  transition: all 0.4s;
   cursor: pointer;
 }
 .alcohol-item:hover {
   background-color: rgb(210, 222, 224);
+  transform: scale(1.1);
 }
 .alcohol-item > p {
   font-size: 14px;

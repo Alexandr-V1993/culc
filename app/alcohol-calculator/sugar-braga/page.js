@@ -5,15 +5,15 @@ import Footer from "@/app/components/Footer";
 import Form from "@/app/components/Form";
 import { useState } from "react";
 import Contents from "@/app/components/Contents";
-import "./diluting.css";
+import "./sugar.css";
 
-function Imt() {
+function Sugar() {
+  const [weight, setWeight] = useState("");
   const [volume, setVolume] = useState("");
-  const [strengthAfter, setStrengthAfter] = useState("");
-  const [strengthBefore, setStrengthBefore] = useState("");
+
   const obj = {
-    strengthAfter: Number(strengthAfter),
-    strengthBefore: Number(strengthBefore),
+    weight: Number(weight),
+
     volume: Number(volume),
   };
 
@@ -21,61 +21,46 @@ function Imt() {
     <>
       <HeaderModal />
       <TopForm
-        title={"Калькулятор разбавления спирта "}
+        title={"Калькулятор расчета "}
         description={
-          "Калькулятор разбавления спирта помогает избавиться от рутины с расчетам и исклюбчает ошибки в пропорциях воды и спирта, вводя в форму простые исходные данные."
+          "Определите оптимальное содержание алкоголя в браге, учитывая объем воды и вес сахара."
         }
-        span={"водой"}
+        span={"сахарной браги"}
       >
         <Form
           obj={obj}
-          url={"https://calcline.ru/api/calculate/alcohol-water-dilution"}
-          formTitle={"Необходимо долить литров воды:"}
-          all={"литров"}
+          url={"https://calcline.ru/api/calculate/alcohol-sugar-braga"}
+          alcoTitle={"Долить литров воды:"}
+          crepost={"Крепость браги: "}
         >
           <label class="numrange row-1 van">
-            <span>Начальный объем спирта</span>
+            <span>Вес сахара</span>
             <input
               type="number"
               class="input"
               id="nheight"
               min="0"
-              max="250"
+              value={weight}
+              onChange={(e) => setWeight(e.target.value)}
+            />
+            <div class="notation">кг.</div>
+          </label>
+
+          <label class="numrange row-1 two">
+            <span>Раствор, вода + сахар (Гидромодуль)</span>
+            <input
+              type="number"
+              class="input"
+              id="nweight"
+              min="0"
               value={volume}
               onChange={(e) => setVolume(e.target.value)}
             />
             <div class="notation">л.</div>
           </label>
-
-          <label class="numrange row-1 two">
-            <span>Крепость начального объема</span>
-            <input
-              type="number"
-              class="input"
-              id="nweight"
-              min="0"
-              max="100"
-              value={strengthBefore}
-              onChange={(e) => setStrengthBefore(e.target.value)}
-            />
-            <div class="notation">%</div>
-          </label>
-          <label class="numrange row-1 two">
-            <span>Требуемая крепость</span>
-            <input
-              type="number"
-              class="input"
-              id="nweight"
-              min="0"
-              max="100"
-              value={strengthAfter}
-              onChange={(e) => setStrengthAfter(e.target.value)}
-            />
-            <div class="notation">%</div>
-          </label>
         </Form>
         <Contents>
-          <h2 className="top-alco">Зачем разбавлять самогон?</h2>
+          <h2 className="top-deluting">Зачем разбавлять самогон?</h2>
           <p>
             Разбавление самогона важно для безопасности употребления и
             законности производства. Снижение уровня алкоголя предотвращает риск
@@ -150,4 +135,4 @@ function Imt() {
   );
 }
 
-export default Imt;
+export default Sugar;

@@ -17,6 +17,8 @@ function Form({
   minut,
   sec,
   dn,
+  alcoTitle,
+  crepost,
 }) {
   const [total, setTotal] = useState("");
   let van;
@@ -32,6 +34,7 @@ function Form({
   let q;
   let s;
   let untilNextBirthday;
+  let strength;
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -56,6 +59,7 @@ function Form({
   }
   if (total?.data?.value) {
     van = total?.data?.value;
+    strength = total?.data?.strength;
   }
   if (total?.data?.d) {
     d = total?.data?.d;
@@ -118,9 +122,11 @@ function Form({
 
         <p class="resultstring">
           <span id="resultimt">
-            {van}
-
+            {alcoTitle} {van}
             {four}
+          </span>
+          <span id="resultimt">
+            {crepost} {strength}
           </span>
         </p>
         <p>
