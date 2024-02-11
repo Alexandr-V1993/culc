@@ -34,7 +34,6 @@ function Areometr() {
           obj={obj}
           url={"https://calcline.ru/api/calculate/alcohol-mixing"}
           alcoTitle={"Крепость жидкости:"}
-          crepost={"Объем смешанных жидкостей:"}
         >
           <label class="numrange row-1 van">
             <span>Объем первой жидкости</span>
@@ -43,11 +42,10 @@ function Areometr() {
               class="input"
               id="nheight"
               min="0"
-              max="100"
               value={volume1}
               onChange={(e) => setvolume1(e.target.value)}
             />
-            <div class="notation">литров</div>
+            <div class="notation">л-в.</div>
           </label>
           <label class="numrange row-1 van">
             <span>Крепость первой жидкости</span>
@@ -69,11 +67,10 @@ function Areometr() {
               class="input"
               id="nheight"
               min="0"
-              max="100"
               value={volume2}
               onChange={(e) => setVolume2(e.target.value)}
             />
-            <div class="notation">литров</div>
+            <div class="notation">л-в</div>
           </label>
           <label class="numrange row-1 van">
             <span>Крепость второй жидкости</span>
