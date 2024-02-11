@@ -6,7 +6,7 @@ import Form from "../components/Form";
 import { useState } from "react";
 import Contents from "../components/Contents";
 import "./Ndfl.css";
-function Imt() {
+function Ndfl() {
   const [selectSumm, setSelectSumm] = useState("before");
   const [selectSummProcent, setSelectSummProcent] = useState(13);
   const [number, setNumber] = useState("");
@@ -225,4 +225,4 @@ function Imt() {
   );
 }
 
-export default Imt;
+export default Ndfl;

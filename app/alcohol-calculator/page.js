@@ -8,7 +8,7 @@ import { useState } from "react";
 import Contents from "../components/Contents";
 import Link from "next/link";
 
-function AgeCalc() {
+function AlcoCalc() {
   const [number, setNumber] = useState("");
   const [numberTwo, setnumberTwo] = useState("");
   const [percent, setPercent] = useState("");
@@ -165,4 +165,4 @@ function AgeCalc() {
   );
 }
 
-export default AgeCalc;
+export default AlcoCalc;
