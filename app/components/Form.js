@@ -35,6 +35,7 @@ function Form({
   let s;
   let untilNextBirthday;
   let strength;
+  let weights;
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -64,6 +65,9 @@ function Form({
   if (total?.data?.volumeHeads && total?.data?.volumePureAlcohol) {
     van = total?.data?.volumePureAlcohol;
     strength = total?.data?.volumeHeads;
+  }
+  if (total?.data?.weight) {
+    weights = total?.data?.weight;
   }
   if (total?.data?.d) {
     d = total?.data?.d;
@@ -123,7 +127,7 @@ function Form({
             </strong>
           </p>
         </div>
-
+        {weights}
         <p class="resultstring">
           <span id="resultimt">
             {alcoTitle} {van}
@@ -131,7 +135,7 @@ function Form({
             {four}
           </span>
           <span id="resultimt">
-            {crepost} {strength}
+            {crepost} {weights} {strength}
           </span>
         </p>
         <p>

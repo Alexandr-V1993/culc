@@ -80,7 +80,7 @@ function Perccent() {
                 <h5>Онлайн калькулятор разбавление самогона водой</h5>
                 <p>
                   Вычислите сколько воды необходимо добавить для разбавления
-                  продукта,чтобы получить напиток желаемой крепости
+                  продукта,чтобы получить напиток желаемой крепости.
                 </p>
               </li>
             </Link>
@@ -108,8 +108,31 @@ function Perccent() {
                 </p>
               </li>
             </Link>
+            <Link
+              href={"/alcohol-calculator/head-selection"}
+              className="underline"
+            >
+              <li className="alcohol-item">
+                <h5>Калькулятор абсолютного спирта и отбора голов</h5>
+                <p>
+                  Расчитайте,сколько абсолютного спирта содержится в полученном
+                  спирте-сырце и обьем голов,которые необходимо отобрать.
+                </p>
+              </li>
+            </Link>
+            <Link
+              href={"/alcohol-calculator/replacement-sugar"}
+              className="underline"
+            >
+              <li className="alcohol-item">
+                <h5>Калькулятор замены сахара глюкозой</h5>
+                <p>
+                  Расчитайте,сколько вам потребуется глюкозы для замены
+                  сахара,чтобы приготовить продукт без потери крепости
+                </p>
+              </li>
+            </Link>
 
-            <li className="alcohol-item"></li>
             <li className="alcohol-item"></li>
             <li className="alcohol-item"></li>
             <li className="alcohol-item"></li>
