@@ -10,10 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ru">
-      <link
-        rel="canonical"
-        href={"http://calcoffee.ru/alcohol-calculator/sugar-braga"}
-      />
+      <link rel="canonical" href={"http://calcoffee.ru/sugar-braga"} />
 
       <body className={montserrat.className}>{children}</body>
     </html>

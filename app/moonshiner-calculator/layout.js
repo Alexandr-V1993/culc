@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="ru">
       <link
         rel="canonical"
-        href={"http://calcoffee.ru/alcohol-calculator/moonshiner-calculator"}
+        href={"http://calcoffee.ru/moonshiner-calculator"}
       />
 
       <body className={montserrat.className}>{children}</body>

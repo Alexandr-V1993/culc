@@ -4,3 +4,19 @@
   text-align: center;
   position: relative;
 }
+@media screen and (max-width: 800px) {
+  .inlinecalculator {
+    min-height: 100px;
+    display: flex;
+    align-items: flex-start;
+  }
+  #result {
+    display: flex;
+  }
+}
+@media screen and (max-width: 600px) {
+  #result {
+    display: flex;
+    left: -5px;
+  }
+}

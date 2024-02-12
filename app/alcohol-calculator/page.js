@@ -72,10 +72,7 @@ function AlcoCalc() {
             воспользуйтесь калькулятором самогонщика.
           </p>
           <ul className="alcohol-list">
-            <Link
-              href={"/alcohol-calculator/diluting-alcohol"}
-              className="underline"
-            >
+            <Link href={"/diluting-alcohol"} className="underline">
               <li className="alcohol-item">
                 <h5>Онлайн калькулятор разбавление самогона водой</h5>
                 <p>
@@ -84,10 +81,7 @@ function AlcoCalc() {
                 </p>
               </li>
             </Link>
-            <Link
-              href={"/alcohol-calculator/sugar-braga"}
-              className="underline"
-            >
+            <Link href={"/sugar-braga"} className="underline">
               <li className="alcohol-item">
                 <h5>Калькулятор расчет сахарной браги</h5>
                 <p>
@@ -96,10 +90,7 @@ function AlcoCalc() {
                 </p>
               </li>
             </Link>
-            <Link
-              href={"/alcohol-calculator/areometer-correction"}
-              className="underline"
-            >
+            <Link href={"/areometer-correction"} className="underline">
               <li className="alcohol-item">
                 <h5>Калькулятор коррекции показаний ареометра</h5>
                 <p>
@@ -108,10 +99,7 @@ function AlcoCalc() {
                 </p>
               </li>
             </Link>
-            <Link
-              href={"/alcohol-calculator/head-selection"}
-              className="underline"
-            >
+            <Link href={"/head-selection"} className="underline">
               <li className="alcohol-item">
                 <h5>Калькулятор абсолютного спирта и отбора голов</h5>
                 <p>
@@ -120,10 +108,7 @@ function AlcoCalc() {
                 </p>
               </li>
             </Link>
-            <Link
-              href={"/alcohol-calculator/replacement-sugar"}
-              className="underline"
-            >
+            <Link href={"/replacement-sugar"} className="underline">
               <li className="alcohol-item">
                 <h5>Калькулятор замены сахара глюкозой</h5>
                 <p>
@@ -132,10 +117,7 @@ function AlcoCalc() {
                 </p>
               </li>
             </Link>
-            <Link
-              href={"/alcohol-calculator/moonshiner-calculator"}
-              className="underline"
-            >
+            <Link href={"/moonshiner-calculator"} className="underline">
               <li className="alcohol-item">
                 <h5>Калькулятор смешивания спиртов</h5>
                 <p>
@@ -145,7 +127,6 @@ function AlcoCalc() {
               </li>
             </Link>
 
-            <li className="alcohol-item"></li>
             <li className="alcohol-item"></li>
           </ul>
           <p>

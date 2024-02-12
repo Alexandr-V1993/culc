@@ -12,6 +12,7 @@ import CalculateFour from "../calculaters/CalculateFour";
 import CalculateFive from "../calculaters/CalculateFive";
 import CalculateSix from "../calculaters/CalculateSix";
 import CalculateSeven from "../calculaters/CalculateSeven";
+import "./procent.css";
 
 function Perccent() {
   const [number, setNumber] = useState("");

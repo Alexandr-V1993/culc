@@ -78,3 +78,14 @@
 .div-button {
   margin-top: 10px;
 }
+@media screen and (max-width: 768px) {
+  #result {
+    height: 220px;
+  }
+  .resultmoreinfo {
+    margin: 0;
+  }
+}
+.div-button {
+  margin-top: 10px;
+}
