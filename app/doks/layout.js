@@ -4,7 +4,7 @@ const montserrat = Montserrat({ weight: ["400", "700"], subsets: ["latin"] });
 export const metadata = {
   title: " Документы",
   description:
-    "Определите, соответствует ли ваш вес норме, недостаточен ли он или, возможно, есть признаки ожирения. Адаптировано для всех возрастов и полов: мужчин, женщин, подростков и детей. Узнайте, как поддерживать здоровый вес!",
+    "Документы, calcoffee,calcoffee ru,  онлайн-калькуляторы,александр владимирович ,",
 };
 
 export default function RootLayout({ children }) {
