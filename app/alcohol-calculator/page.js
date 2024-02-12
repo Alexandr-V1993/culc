@@ -7,50 +7,23 @@ import Form from "../components/Form";
 import { useState } from "react";
 import Contents from "../components/Contents";
 import Link from "next/link";
+import "./alcohol.css";
+import RazbavlenieSpirta from "../alcoholCalc/RazbavlenieSpirta";
 
 function AlcoCalc() {
-  const [number, setNumber] = useState("");
-  const [numberTwo, setnumberTwo] = useState("");
-  const [percent, setPercent] = useState("");
-  const [round, setRound] = useState(1);
-  const [condition, setCondition] = useState("type1");
-
+  const [volume, setVolume] = useState("");
+  const [strengthAfter, setStrengthAfter] = useState("");
+  const [strengthBefore, setStrengthBefore] = useState("");
+  const [select, setSelect] = useState("type1");
   const obj = {
-    number: Number(number),
-    number2: Number(numberTwo),
-    percent: Number(percent),
-    round: Number(round),
-    condition: condition,
+    strengthAfter: Number(strengthAfter),
+    strengthBefore: Number(strengthBefore),
+    volume: Number(volume),
   };
 
   let url;
-  if (obj.condition === "type1") {
-    url = "https://calcline.ru/api/calculate/percent-of-number";
-  }
-
-  if (obj.condition === "increase") {
-    url = "https://calcline.ru/api/calculate/percent-change";
-  }
-  if (obj.condition === "decrease") {
-    url = "https://calcline.ru/api/calculate/percent-change";
-  }
-  if (obj.condition === "type4") {
-    url = "https://calcline.ru/api/calculate/percent-100";
-  }
-  if (obj.condition === "type5") {
-    url = "https://calcline.ru/api/calculate/percent-difference";
-    delete obj.percent;
-    obj.condition = "increase";
-  }
-  if (obj.condition === "type6") {
-    url = "https://calcline.ru/api/calculate/percent-difference";
-    delete obj.percent;
-    obj.condition = "decrease";
-  }
-  if (obj.condition === "type7") {
-    url = "https://calcline.ru/api/calculate/percent-of";
-    delete obj.percent;
-    delete obj.condition;
+  if (select === "type1") {
+    url = "https://calcline.ru/api/calculate/alcohol-water-dilution";
   }
 
   return (
@@ -63,6 +36,40 @@ function AlcoCalc() {
         }
         span={"самогонщика"}
       >
+        <Form
+          obj={obj}
+          url={url}
+          formTitle={select === "type1" ? "Необходимо долить воды:" : ""}
+        >
+          <label class="row-2 four">
+            <span>Что вычислить</span>
+            <div class="select">
+              <select
+                id="what"
+                class="input"
+                value={select}
+                onChange={(e) => setSelect(e.target.value)}
+              >
+                <option value="type1">Разбавления спирта водой</option>
+                <option value="decrease">Расчет сахарной браги</option>
+                <option value="type4">Смешивание самогона</option>
+                <option value="type5">Коррекция показаний ареометра</option>
+                <option value="type6">Абсолютный спирт и отбор голов</option>
+                <option value="type7">Замена сахара глюкозой</option>
+              </select>
+            </div>
+          </label>
+
+          {select === "type1" ? (
+            <RazbavlenieSpirta
+              setVolume={setVolume}
+              setStrengthAfter={setStrengthAfter}
+              setStrengthBefore={setStrengthBefore}
+            />
+          ) : (
+            ""
+          )}
+        </Form>
         <Contents>
           <p>
             Создание качественных домашних алкогольных напитков сопряжено с
