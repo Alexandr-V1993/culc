@@ -7,11 +7,12 @@
 }
 .inlinecalculator {
   min-width: 800px;
-  min-height: 370px;
+  max-height: 370px;
 }
 .centre-top {
   display: flex;
   width: 100%;
+  height: 100%;
 }
 .fives {
   min-width: 100%;

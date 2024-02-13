@@ -9,21 +9,125 @@ import Contents from "../components/Contents";
 import Link from "next/link";
 import "./alcohol.css";
 import RazbavlenieSpirta from "../alcoholCalc/RazbavlenieSpirta";
-
+import RaschetSaharBraga from "../alcoholCalc/RaschetSaharBraga";
+import SmehivanieSpitrov from "../alcoholCalc/SmehivanieSpitrov";
+import CorrekciaAreometr from "../alcoholCalc/CorrekciaAreometr";
+import OtborGolov from "../alcoholCalc/OtborGolov";
+import Glucoza from "../alcoholCalc/Glucoza";
 function AlcoCalc() {
   const [volume, setVolume] = useState("");
   const [strengthAfter, setStrengthAfter] = useState("");
   const [strengthBefore, setStrengthBefore] = useState("");
   const [select, setSelect] = useState("type1");
+  const [weight, setWeight] = useState("");
+  const [volume1, setvolume1] = useState("");
+  const [volume2, setVolume2] = useState("");
+  const [strength1, setStrength1] = useState("");
+  const [strength2, settrength2] = useState("");
+  const [temperature, setTemperature] = useState("");
+  const [strength, setStrength] = useState("");
+  const [heads, setHeads] = useState("");
   const obj = {
     strengthAfter: Number(strengthAfter),
     strengthBefore: Number(strengthBefore),
     volume: Number(volume),
+    weight: Number(weight),
+    volume1: Number(volume1),
+    volume2: Number(volume2),
+    strength1: Number(strength1),
+    strength2: Number(strength2),
+    temperature: Number(temperature),
+    strength: Number(strength),
+    heads: Number(heads),
   };
 
   let url;
   if (select === "type1") {
     url = "https://calcline.ru/api/calculate/alcohol-water-dilution";
+  }
+  if (select === "type2") {
+    url = "https://calcline.ru/api/calculate/alcohol-sugar-braga";
+    delete obj.strengthAfter;
+    delete obj.strengthBefore;
+  }
+  if (select === "type3") {
+    url = "https://calcline.ru/api/calculate/alcohol-mixing";
+    delete obj.strengthAfter;
+    delete obj.strengthBefore;
+    delete obj.volume;
+    delete obj.weight;
+  }
+  if (select === "type4") {
+    url = "https://calcline.ru/api/calculate/areometer-correction";
+    delete obj.strengthAfter;
+    delete obj.strengthBefore;
+    delete obj.volume;
+    delete obj.weight;
+    delete obj.volume1;
+    delete obj.volume2;
+    delete obj.strength1;
+    delete obj.strength2;
+  }
+  if (select === "type5") {
+    url = "https://calcline.ru/api/calculate/absolute-alcohol-head-selection";
+    (obj.volume = Number(volume) * 1000), delete obj.strengthAfter;
+    delete obj.strengthBefore;
+    delete obj.weight;
+    delete obj.volume1;
+    delete obj.volume2;
+    delete obj.strength1;
+    delete obj.strength2;
+    delete obj.temperature;
+  }
+  if (select === "type6") {
+    url = "https://calcline.ru/api/calculate/glucose-sugar-replacement";
+    obj.weight = weight;
+    delete (obj.volume = Number(volume) * 1000), delete obj.strengthAfter;
+    delete obj.strengthBefore;
+    delete obj.volume1;
+    delete obj.volume2;
+    delete obj.strength1;
+    delete obj.strength2;
+    delete obj.temperature;
+    delete obj.value;
+    delete obj.strength;
+    delete obj.heads;
+    delete obj.volume;
+  }
+  let formTitle;
+  let alcoTitle;
+  let crepost;
+  switch (select) {
+    case "type1":
+      formTitle = "Необходимо долить литров воды:";
+      break;
+    case "type2":
+      alcoTitle = "Долить литров воды:";
+      crepost = "Крепость браги: ";
+      break;
+    case "type3":
+      alcoTitle = "Крепость жидкости:";
+      crepost = "";
+      formTitle = "";
+      break;
+    case "type4":
+      alcoTitle = "Реальная крепость";
+      crepost = "";
+      formTitle = "";
+      break;
+    case "type5":
+      alcoTitle = "Объем чистого спирта:";
+      crepost = "Объем «голов»:";
+      formTitle = "";
+      break;
+    case "type6":
+      alcoTitle = "Потребуется глюкозы (фруктозы)кг. :";
+      crepost = "";
+      formTitle = "";
+      break;
+
+    default:
+      break;
   }
 
   return (
@@ -39,7 +143,9 @@ function AlcoCalc() {
         <Form
           obj={obj}
           url={url}
-          formTitle={select === "type1" ? "Необходимо долить воды:" : ""}
+          formTitle={formTitle}
+          alcoTitle={alcoTitle}
+          crepost={crepost}
         >
           <label class="row-2 four">
             <span>Что вычислить</span>
@@ -51,11 +157,11 @@ function AlcoCalc() {
                 onChange={(e) => setSelect(e.target.value)}
               >
                 <option value="type1">Разбавления спирта водой</option>
-                <option value="decrease">Расчет сахарной браги</option>
-                <option value="type4">Смешивание самогона</option>
-                <option value="type5">Коррекция показаний ареометра</option>
-                <option value="type6">Абсолютный спирт и отбор голов</option>
-                <option value="type7">Замена сахара глюкозой</option>
+                <option value="type2">Расчет сахарной браги</option>
+                <option value="type3">Смешивание самогона</option>
+                <option value="type4">Коррекция показаний ареометра</option>
+                <option value="type5">Абсолютный спирт и отбор голов</option>
+                <option value="type6">Замена сахара глюкозой</option>
               </select>
             </div>
           </label>
@@ -69,6 +175,41 @@ function AlcoCalc() {
           ) : (
             ""
           )}
+          {select === "type2" ? (
+            <RaschetSaharBraga setVolume={setVolume} setWeight={setWeight} />
+          ) : (
+            ""
+          )}
+          {select === "type3" ? (
+            <SmehivanieSpitrov
+              setvolume1={setvolume1}
+              setVolume2={setVolume2}
+              setStrength1={setStrength1}
+              settrength2={settrength2}
+            />
+          ) : (
+            ""
+          )}
+          {select === "type4" ? (
+            <CorrekciaAreometr
+              setTemperature={setTemperature}
+              setStrength={setStrength}
+              temperature={temperature}
+              strength={strength}
+            />
+          ) : (
+            ""
+          )}
+          {select === "type5" ? (
+            <OtborGolov
+              setVolume={setVolume}
+              setStrength={setStrength}
+              setHeads={setHeads}
+            />
+          ) : (
+            ""
+          )}
+          {select === "type6" ? <Glucoza setWeight={setWeight} /> : ""}
         </Form>
         <Contents>
           <p>

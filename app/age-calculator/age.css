@@ -155,3 +155,12 @@ p.pd > strong {
     margin: 0px;
   }
 }
+@media screen and (max-width: 600px) {
+  #result {
+    display: flex;
+  }
+  .inlinecalculator {
+    margin-left: 1px;
+    min-width: 100%;
+  }
+}
