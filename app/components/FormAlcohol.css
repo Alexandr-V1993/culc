@@ -1,0 +1,42 @@
+.select {
+  max-width: 100%;
+}
+.five {
+  max-width: 48%;
+  max-height: 75px;
+}
+.inlinecalculator {
+  max-height: 35%;
+}
+.btn-top {
+  padding-top: 20px;
+}
+.notation {
+  position: absolute;
+  top: 40px;
+}
+.five-left {
+  margin-left: 17px;
+}
+#resultimt {
+  font-size: 20px;
+}
+.vsize {
+  background: linear-gradient(22.75deg, #f00 -42.47%, #4021ff 134.19%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  font-size: 18px;
+}
+.resultstring {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.smesh {
+  max-width: 60%;
+}
+.smesh-left {
+  margin-left: 27px;
+  max-width: 100%;
+}

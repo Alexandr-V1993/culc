@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import "./Form.css";
 function Form({
@@ -19,8 +19,10 @@ function Form({
   dn,
   alcoTitle,
   crepost,
+  condition,
 }) {
   const [total, setTotal] = useState("");
+  const [vans, setVans] = useState("");
   let van;
   let two;
   let three;
@@ -50,37 +52,43 @@ function Form({
     const responseData = await response.json();
     setTotal(responseData);
   };
-  if (total?.data?.bmi) {
-    van = total?.data?.bmi;
-    two = total?.data?.bmiCategory;
-  }
-  if (total?.data?.amount) {
-    three = total?.data?.amount;
-    four = total?.data?.tax;
-  }
-  if (total?.data?.value) {
-    van = total?.data?.value;
-    strength = total?.data?.strength;
-  }
-  if (total?.data?.volumeHeads && total?.data?.volumePureAlcohol) {
-    van = total?.data?.volumePureAlcohol;
-    strength = total?.data?.volumeHeads;
-  }
-  if (total?.data?.weight) {
-    weights = total?.data?.weight;
-  }
-  if (total?.data?.d) {
-    d = total?.data?.d;
-    h = total?.data?.h;
-    i = total?.data?.i;
-    m = total?.data?.m;
-    nextBirthday = total?.data?.nextBirthday;
-    q = total?.data?.q;
-    s = total?.data?.s;
-    untilNextBirthday = total?.data?.untilNextBirthday;
-    y = total?.data?.y;
-  }
-  console.log(van);
+  useEffect(() => {
+    if (total?.data?.bmi) {
+      setVans(total?.data?.bmi);
+      two = total?.data?.bmiCategory;
+    }
+    if (total?.data?.amount) {
+      three = total?.data?.amount;
+      four = total?.data?.tax;
+    }
+    if (total?.data?.value) {
+      setVans(total?.data?.value);
+      strength = total?.data?.strength;
+    }
+    if (total?.data?.volumeHeads && total?.data?.volumePureAlcohol) {
+      setVans(total?.data?.volumePureAlcohol);
+      strength = total?.data?.volumeHeads;
+    }
+    if (total?.data?.weight) {
+      weights = total?.data?.weight;
+    }
+    if (total?.data?.d) {
+      d = total?.data?.d;
+      h = total?.data?.h;
+      i = total?.data?.i;
+      m = total?.data?.m;
+      nextBirthday = total?.data?.nextBirthday;
+      q = total?.data?.q;
+      s = total?.data?.s;
+      untilNextBirthday = total?.data?.untilNextBirthday;
+      y = total?.data?.y;
+    }
+  }, [total]);
+
+  useEffect(() => {
+    setVans("");
+  }, [condition]);
+
   return (
     <form className="inlinecalculator " onSubmit={handleSubmit}>
       <div className="centre-top">{children}</div>
@@ -130,7 +138,7 @@ function Form({
         {weights}
         <p class="resultstring">
           <span id="resultimt">
-            {alcoTitle} {van}
+            {alcoTitle} {vans}
             {all === "литров" ? "" : all}
             {four}
           </span>

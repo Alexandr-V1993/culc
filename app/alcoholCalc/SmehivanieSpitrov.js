@@ -8,7 +8,7 @@ function SmehivanieSpitrov({
   return (
     <>
       {" "}
-      <label class="numrange row-1 van">
+      <label class="numrange smesh">
         <span>Объем первой жидкости</span>
         <input
           type="number"
@@ -19,7 +19,7 @@ function SmehivanieSpitrov({
         />
         <div class="notation">л-в.</div>
       </label>
-      <label class="numrange row-1 van">
+      <label class="numrange smesh-left">
         <span>Крепость первой жидкости</span>
         <input
           type="number"
@@ -31,7 +31,7 @@ function SmehivanieSpitrov({
         />
         <div class="notation">°C</div>
       </label>
-      <label class="numrange row-1 van">
+      <label class="numrange smesh">
         <span>Объем второй жидкости</span>
         <input
           type="number"
@@ -42,7 +42,7 @@ function SmehivanieSpitrov({
         />
         <div class="notation">л-в</div>
       </label>
-      <label class="numrange row-1 van">
+      <label class="numrange smesh-left">
         <span>Крепость второй жидкости</span>
         <input
           type="number"

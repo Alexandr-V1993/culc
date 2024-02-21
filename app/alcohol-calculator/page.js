@@ -3,7 +3,6 @@ import "./alcohol.css";
 import TopForm from "../components/TopForm";
 import HeaderModal from "../components/HeaderModal";
 import Footer from "../components/Footer";
-import Form from "../components/Form";
 import { useState } from "react";
 import Contents from "../components/Contents";
 import Link from "next/link";
@@ -14,6 +13,8 @@ import SmehivanieSpitrov from "../alcoholCalc/SmehivanieSpitrov";
 import CorrekciaAreometr from "../alcoholCalc/CorrekciaAreometr";
 import OtborGolov from "../alcoholCalc/OtborGolov";
 import Glucoza from "../alcoholCalc/Glucoza";
+
+import FormAlcohol from "../components/FormAlcohol";
 function AlcoCalc() {
   const [volume, setVolume] = useState("");
   const [strengthAfter, setStrengthAfter] = useState("");
@@ -136,16 +137,17 @@ function AlcoCalc() {
       <TopForm
         title={"Калькулятор"}
         description={
-          "Перед онлайн калькулятор самогонщика, рассчитайте важные для самогоноварения параметры. Этот сервис будет полезен как опытным, так начинающим винокурам. Он экономит время, избавляя от необходимости делать вычисления вручную."
+          "Рассчитайте важные для самогоноварения параметры. Этот сервис будет полезен как опытным, так начинающим винокурам. Он экономит время, избавляя от необходимости делать вычисления вручную."
         }
         span={"самогонщика"}
       >
-        <Form
+        <FormAlcohol
           obj={obj}
           url={url}
           formTitle={formTitle}
           alcoTitle={alcoTitle}
           crepost={crepost}
+          select={select}
         >
           <label class="row-2 four">
             <span>Что вычислить</span>
@@ -210,7 +212,7 @@ function AlcoCalc() {
             ""
           )}
           {select === "type6" ? <Glucoza setWeight={setWeight} /> : ""}
-        </Form>
+        </FormAlcohol>
         <Contents>
           <p>
             Создание качественных домашних алкогольных напитков сопряжено с
@@ -274,8 +276,6 @@ function AlcoCalc() {
                 </p>
               </li>
             </Link>
-
-            <li className="alcohol-item"></li>
           </ul>
           <p>
             Калькулятор удобен в использовании, работает в режиме онлайн и не

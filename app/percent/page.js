@@ -69,7 +69,12 @@ function Perccent() {
         }
         span={"процентов"}
       >
-        <Form obj={obj} url={url} formTitle={"Результат :"}>
+        <Form
+          obj={obj}
+          url={url}
+          formTitle={"Результат :"}
+          condition={condition}
+        >
           <label class="row-2 van">
             <span>Что вычислить</span>
             <div class="select">

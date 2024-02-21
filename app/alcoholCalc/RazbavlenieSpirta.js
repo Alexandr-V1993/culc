@@ -16,7 +16,7 @@ function RazbavlenieSpirta({ setVolume, setStrengthAfter, setStrengthBefore }) {
         <div class="notation">л.</div>
       </label>
 
-      <label class="numrange row-1 five">
+      <label class="numrange row-1 five five-left">
         <span>Крепость начального объема</span>
         <input
           type="number"
