@@ -81,6 +81,7 @@
 @media screen and (max-width: 768px) {
   #result {
     height: 220px;
+    left: -5px;
   }
   .resultmoreinfo {
     margin: 0;

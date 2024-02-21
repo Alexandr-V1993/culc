@@ -1,10 +1,5 @@
 import "./Correkcia.css";
-function CorrekciaAreometr({
-  setTemperature,
-  setStrength,
-  temperature,
-  strength,
-}) {
+function CorrekciaAreometr({ setTemperature, setStrength }) {
   return (
     <>
       {" "}
@@ -16,7 +11,6 @@ function CorrekciaAreometr({
           id="nheight"
           min="0"
           max="100"
-          value={temperature}
           onChange={(e) => setTemperature(e.target.value)}
         />
         <div class="notation">°C</div>
@@ -29,7 +23,6 @@ function CorrekciaAreometr({
           id="nweight"
           min="0"
           max="100"
-          value={strength}
           onChange={(e) => setStrength(e.target.value)}
         />
         <div class="notation">°</div>

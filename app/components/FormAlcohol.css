@@ -21,12 +21,14 @@
 #resultimt {
   font-size: 20px;
 }
+
 .vsize {
   background: linear-gradient(22.75deg, #f00 -42.47%, #4021ff 134.19%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 600;
   font-size: 18px;
+  padding-top: 50px;
 }
 .resultstring {
   display: flex;
@@ -39,4 +41,37 @@
 .smesh-left {
   margin-left: 27px;
   max-width: 100%;
+}
+.resulthour {
+  background: linear-gradient(22.75deg, #f00 -42.47%, #4021ff 134.19%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.active-resulthour {
+  background: linear-gradient(
+    22.75deg,
+    rgb(24, 173, 24) -42.47%,
+    #27d827 134.19%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  font-size: 18px;
+}
+.greys {
+  font-size: 15px;
+  color: grey;
+  cursor: pointer;
+}
+.active-greys {
+  color: #27d827;
+}
+.color-celcii {
+  color: #758a9a;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 400;
 }

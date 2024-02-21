@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import HeaderModal from "../components/HeaderModal";
 import Footer from "../components/Footer";
 import "./nds.css";
@@ -9,6 +9,17 @@ function Nds() {
   const [mode, setMode] = useState("allocate");
   const [amount, setAmount] = useState("");
   const [total, setTotal] = useState("");
+  const [beforeAmount, setBeforeAmount] = useState("");
+  const [afterAmount, setAfterAmount] = useState("");
+  const [vat, setVat] = useState("");
+
+  useEffect(() => {
+    setAmount("");
+    setRate("");
+    setBeforeAmount("");
+    setAfterAmount("");
+    setVat("");
+  }, [mode]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -31,6 +42,18 @@ function Nds() {
     setTotal(responseData);
     console.log(responseData);
   };
+
+  useEffect(() => {
+    if (total.data?.beforeAmount) {
+      setBeforeAmount(total.data?.beforeAmount);
+    }
+    if (total.data?.vat) {
+      setVat(total.data?.vat);
+    }
+    if (total.data?.afterAmount) {
+      setAfterAmount(total.data?.afterAmount);
+    }
+  }, [total]);
 
   return (
     <>
@@ -94,17 +117,17 @@ function Nds() {
               <div className="centre">
                 <span className="resspans items1">Без налога:</span>{" "}
                 <strong id="resultnet">
-                  {total ? total.data?.beforeAmount : 0}
+                  {beforeAmount ? total.data?.beforeAmount : 0}
                 </strong>{" "}
                 <br />
                 <span className="topstest items1">Налог:</span>{" "}
-                <strong id="resulttax">{total ? total.data?.vat : 0}</strong>{" "}
+                <strong id="resulttax">{vat ? total.data?.vat : 0}</strong>{" "}
                 <br />
                 <b className="itogotax">
                   <span className="bolted">Итого:</span>{" "}
                   <strong id="resultgross">
                     {" "}
-                    {total ? total.data?.afterAmount : 0}
+                    {afterAmount ? total.data?.afterAmount : 0}
                   </strong>
                 </b>
               </div>

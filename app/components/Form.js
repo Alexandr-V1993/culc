@@ -23,10 +23,12 @@ function Form({
 }) {
   const [total, setTotal] = useState("");
   const [vans, setVans] = useState("");
-  let van;
-  let two;
-  let three;
-  let four;
+  const [strength, setStrength] = useState("");
+  const [amount, setAmount] = useState("");
+  const [tax, setTax] = useState("");
+  const [bmt, setBmt] = useState("");
+  const [weights, setwWights] = useState("");
+
   let m;
   let y;
   let d;
@@ -36,8 +38,7 @@ function Form({
   let q;
   let s;
   let untilNextBirthday;
-  let strength;
-  let weights;
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -55,36 +56,36 @@ function Form({
   useEffect(() => {
     if (total?.data?.bmi) {
       setVans(total?.data?.bmi);
-      two = total?.data?.bmiCategory;
+      setBmt(total?.data?.bmiCategory);
     }
     if (total?.data?.amount) {
-      three = total?.data?.amount;
-      four = total?.data?.tax;
+      setAmount(total?.data?.amount);
+      setTax(total?.data?.tax);
     }
     if (total?.data?.value) {
       setVans(total?.data?.value);
-      strength = total?.data?.strength;
+      setStrength(total?.data?.strength);
     }
     if (total?.data?.volumeHeads && total?.data?.volumePureAlcohol) {
       setVans(total?.data?.volumePureAlcohol);
-      strength = total?.data?.volumeHeads;
+      setStrength(total?.data?.volumeHeads);
     }
     if (total?.data?.weight) {
-      weights = total?.data?.weight;
-    }
-    if (total?.data?.d) {
-      d = total?.data?.d;
-      h = total?.data?.h;
-      i = total?.data?.i;
-      m = total?.data?.m;
-      nextBirthday = total?.data?.nextBirthday;
-      q = total?.data?.q;
-      s = total?.data?.s;
-      untilNextBirthday = total?.data?.untilNextBirthday;
-      y = total?.data?.y;
+      setwWights(total?.data?.weight);
     }
   }, [total]);
 
+  if (total?.data?.d) {
+    d = total?.data?.d;
+    h = total?.data?.h;
+    i = total?.data?.i;
+    m = total?.data?.m;
+    nextBirthday = total?.data?.nextBirthday;
+    q = total?.data?.q;
+    s = total?.data?.s;
+    untilNextBirthday = total?.data?.untilNextBirthday;
+    y = total?.data?.y;
+  }
   useEffect(() => {
     setVans("");
   }, [condition]);
@@ -140,7 +141,7 @@ function Form({
           <span id="resultimt">
             {alcoTitle} {vans}
             {all === "литров" ? "" : all}
-            {four}
+            {tax}
           </span>
           <span id="resultimt">
             {crepost} {weights} {strength}
@@ -152,33 +153,33 @@ function Form({
             className="blacks "
             style={{
               color:
-                two === "MorbidObesity"
+                bmt === "MorbidObesity"
                   ? "red"
-                  : "" || two === "Overweight"
+                  : "" || bmt === "Overweight"
                   ? "orange"
-                  : "" || two === "ObeseClass1"
+                  : "" || bmt === "ObeseClass1"
                   ? "red"
-                  : "" || two === "ObeseClass2"
+                  : "" || bmt === "ObeseClass2"
                   ? "red"
-                  : "" || two === "SevereThinness"
+                  : "" || bmt === "SevereThinness"
                   ? "red"
-                  : "" || two === "Underweight"
+                  : "" || bmt === "Underweight"
                   ? "orange"
-                  : "" || two === "Normal"
+                  : "" || bmt === "Normal"
                   ? "green"
                   : "",
             }}
           >
-            {two === "MorbidObesity"
+            {bmt === "MorbidObesity"
               ? "Ожирение третьей степени (морбидное)"
               : ""}
-            {two === "ObeseClass1" ? "Ожирение первой степени" : ""}
-            {two === "ObeseClass2" ? "Ожирение второй степени" : ""}
-            {two === "Normal" ? "Нормальная масса тела" : ""}
-            {two === "SevereThinness" ? "Выраженный дефицит массы тела" : ""}
-            {two === "Overweight" ? "Избыточная масса тела (предожирение)" : ""}
-            {two === "Underweight" ? "Недостаточная (дефицит) масса тела" : ""}
-            {three}
+            {bmt === "ObeseClass1" ? "Ожирение первой степени" : ""}
+            {bmt === "ObeseClass2" ? "Ожирение второй степени" : ""}
+            {bmt === "Normal" ? "Нормальная масса тела" : ""}
+            {bmt === "SevereThinness" ? "Выраженный дефицит массы тела" : ""}
+            {bmt === "Overweight" ? "Избыточная масса тела (предожирение)" : ""}
+            {bmt === "Underweight" ? "Недостаточная (дефицит) масса тела" : ""}
+            {amount}
           </span>
         </p>
       </div>

@@ -148,6 +148,8 @@ function AlcoCalc() {
           alcoTitle={alcoTitle}
           crepost={crepost}
           select={select}
+          strengthAfter={strengthAfter}
+          setStrengthAfter={setStrengthAfter}
         >
           <label class="row-2 four">
             <span>Что вычислить</span>
@@ -171,6 +173,7 @@ function AlcoCalc() {
           {select === "type1" ? (
             <RazbavlenieSpirta
               setVolume={setVolume}
+              volume={volume}
               setStrengthAfter={setStrengthAfter}
               setStrengthBefore={setStrengthBefore}
             />

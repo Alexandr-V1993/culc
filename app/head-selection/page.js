@@ -73,7 +73,7 @@ function Heads() {
               value={heads}
               onChange={(e) => setHeads(e.target.value)}
             />
-            <div class="notation">% от общего обьема</div>
+            <div class="notation">% от общего объема</div>
           </label>
         </Form>
         <Contents>

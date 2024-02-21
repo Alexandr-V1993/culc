@@ -37,7 +37,7 @@ function OtborGolov({ setVolume, setStrength, setHeads }) {
           max="100"
           onChange={(e) => setHeads(e.target.value)}
         />
-        <div class="notation">% от общего обьема</div>
+        <div class="notation">% от общего объема</div>
       </label>
     </>
   );
