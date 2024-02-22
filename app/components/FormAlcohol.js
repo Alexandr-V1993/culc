@@ -69,7 +69,6 @@ function FormAlcohol({
     setStrength("");
     setWeight("");
     setVans("");
-    setStrengthAfter("");
   }, [select]);
   useEffect(() => {
     setTimeout(() => {

@@ -58,7 +58,6 @@ function Ndfl() {
                 name="age"
                 id="actionnds"
                 class="input"
-                value={selectSummProcent}
                 onChange={(e) => setSelectSummProcent(e.target.value)}
               >
                 <option value="13">Подоходный налог(13% - 15%)</option>
