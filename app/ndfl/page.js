@@ -32,6 +32,9 @@ function Ndfl() {
           formTitle={"Расчет НДФЛ"}
           ndfl={"НДФЛ"}
           summaOblog={"Сумма после налогооблажения"}
+          setNumber={setNumber}
+          selectSumm={selectSumm}
+          selectSummProcent={selectSummProcent}
         >
           <label class="row-2 van">
             <span>Налогообложения</span>
@@ -55,6 +58,7 @@ function Ndfl() {
                 name="age"
                 id="actionnds"
                 class="input"
+                value={selectSummProcent}
                 onChange={(e) => setSelectSummProcent(e.target.value)}
               >
                 <option value="13">Подоходный налог(13% - 15%)</option>
@@ -75,6 +79,7 @@ function Ndfl() {
               id="nprice"
               min="0"
               max="100000"
+              value={number}
               onChange={(e) => setNumber(e.target.value)}
             />
             <div class="notation">р.</div>

@@ -75,3 +75,206 @@
   font-size: 16px;
   font-weight: 400;
 }
+@media screen and (max-width: 1025px) {
+  .select {
+    max-width: 75%;
+  }
+  .testcentre {
+    display: flex;
+    flex-direction: column;
+  }
+  .five {
+    max-width: 75%;
+  }
+  .five-left {
+    padding: 0;
+    margin: 0;
+  }
+  .fives {
+    min-width: 75%;
+  }
+  .btn-top {
+    max-width: 75%;
+  }
+  .inlinecalculator {
+    padding: 5px 230px 15px 15px;
+  }
+}
+@media screen and (max-width: 911px) {
+  .inlinecalculator {
+    padding: 5px 250px 15px 15px;
+    max-width: 650px;
+  }
+}
+@media screen and (max-width: 880px) {
+  .inlinecalculator {
+    padding: 5px 300px 15px 15px;
+    max-width: 650px;
+  }
+  #result {
+    right: 70px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .inlinecalculator {
+    padding: 5px 270px 15px 15px;
+    max-width: 650px;
+  }
+  #result {
+    right: 55px;
+  }
+  .topmenuwrap {
+    display: flex;
+    flex-direction: column;
+  }
+  .close {
+    position: absolute;
+    right: 108px;
+    top: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .inlinecalculator {
+    min-height: 330px;
+  }
+
+  .inlinecalculator {
+    margin: 10px -15px;
+    padding: 5px 15px 15px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .topmenuwrap {
+    top: -130px;
+  }
+  .close {
+    position: absolute;
+    right: 200px;
+    top: 300px;
+  }
+
+  #result {
+    top: 400px;
+    left: 0px;
+    max-width: 64%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .five {
+    max-width: 62%;
+  }
+  .five-left {
+    padding: 0;
+    margin: 0;
+  }
+  .fives {
+    min-width: 62%;
+  }
+  .btn-top {
+    max-width: 62%;
+  }
+  .select {
+    max-width: 62%;
+  }
+  .articleBody {
+    padding-top: 200px;
+    text-align: center;
+  }
+  .articleBody > p {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 540px) {
+  .topmenuwrap {
+    top: -230px;
+  }
+  .close {
+    position: absolute;
+    right: 363px;
+    top: 238px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .inlinecalculator {
+    padding: 20px;
+  }
+  .five {
+    width: 46%;
+  }
+  .select {
+    width: 46%;
+  }
+  .fives {
+    width: 10%;
+    margin-left: 0;
+  }
+  .numrange {
+    width: 46%;
+  }
+  .btn-top {
+    max-width: 46%;
+  }
+  .smesh {
+    margin-left: 0;
+  }
+  .fives {
+    width: 20px;
+  }
+  .topmenuwrap {
+    top: -590px;
+  }
+  .close {
+    position: absolute;
+    right: 500px;
+    top: 600px;
+  }
+  #result {
+    top: 400px;
+    left: 0px;
+    max-width: 49%;
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid grey;
+  }
+}
+@media screen and (max-width: 375px) {
+  .topmenuwrap {
+    top: -490px;
+  }
+  .close {
+    position: absolute;
+    right: 525px;
+    top: 493px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .five {
+    width: 48%;
+    margin-left: 0;
+  }
+  .select {
+    width: 48%;
+  }
+  .fives {
+    width: 10%;
+  }
+  .btn-top {
+    max-width: 48%;
+  }
+  #result {
+    top: 420px;
+    left: 0px;
+    max-width: 49%;
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid grey;
+  }
+}
+/* .close {
+  position: absolute;
+  right: 100px;
+  top: 200px;
+} */

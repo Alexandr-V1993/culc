@@ -20,6 +20,9 @@ function Form({
   alcoTitle,
   crepost,
   condition,
+  setNumber,
+  selectSumm,
+  selectSummProcent,
 }) {
   const [total, setTotal] = useState("");
   const [vans, setVans] = useState("");
@@ -86,9 +89,22 @@ function Form({
     untilNextBirthday = total?.data?.untilNextBirthday;
     y = total?.data?.y;
   }
+
   useEffect(() => {
     setVans("");
   }, [condition]);
+
+  useEffect(() => {
+    setTax("");
+    setAmount("");
+    setNumber("");
+  }, [selectSumm]);
+
+  useEffect(() => {
+    setTax("");
+    setAmount("");
+    setNumber("");
+  }, [selectSummProcent]);
 
   return (
     <form className="inlinecalculator " onSubmit={handleSubmit}>

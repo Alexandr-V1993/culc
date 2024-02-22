@@ -28,7 +28,7 @@ function RazbavlenieSpirta({ setVolume, setStrengthAfter, setStrengthBefore }) {
         />
         <div class="notation">%</div>
       </label>
-      <label class="numrange row-1 five fives">
+      <label class="numrange row-1 five">
         <span>Требуемая крепость</span>
         <input
           type="number"
