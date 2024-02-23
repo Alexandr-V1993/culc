@@ -14,12 +14,6 @@ function DiscountForm({
   setPric,
   priceBezScidki,
 }) {
-  useEffect(() => {
-    setDiscounts("");
-    setDiscountPercentage("");
-    setPrice("");
-  }, [modeSelect]);
-
   const [total, setTotal] = useState("");
   const [discount, setDiscounts] = useState("");
   const [prices, setPrice] = useState("");
@@ -54,6 +48,12 @@ function DiscountForm({
     }
   }, [total]);
 
+  useEffect(() => {
+    setDiscounts("");
+    setPrice("");
+    setDiscountedPrice("");
+  }, [modeSelect]);
+
   useEffect(() => {}, []);
   return (
     <form className="inlinecalculator" onSubmit={handleSubmit}>
@@ -63,19 +63,24 @@ function DiscountForm({
         <p className="vsize">{}</p>
 
         <p className="resultstring">
-          <span id="resultimt">
-            {disconts}
-            {discount}
-          </span>
-          <span id="resultimt">
-            {priceDiscount}
-            {prices}
-          </span>
-
-          <span id="resultimt">
-            {priceBezScidki}
-            {discountedPrice}
-          </span>
+          {modeSelect !== "startingPrice" && (
+            <span id="resultimt">
+              {disconts}
+              {discount} {modeSelect === "discountPercentage" ? "%" : "₽"}
+            </span>
+          )}
+          {modeSelect === "discountedPrice" && (
+            <span id="resultimt">
+              {priceDiscount}
+              {prices} ₽
+            </span>
+          )}
+          {modeSelect === "startingPrice" && (
+            <span id="resultimt">
+              {priceBezScidki}
+              {discountedPrice} ₽
+            </span>
+          )}
         </p>
       </div>
 

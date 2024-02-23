@@ -1136,6 +1136,18 @@ function Home() {
               </div>
             </div>
           </a>
+          <a href="/discount-calculator/" class="calcitem finance math">
+            <span class="material-symbols-rounded symbol-width">
+              <img src="/scidki.svg" alt="алкоголь" />
+            </span>
+            <div class="calcalltext">
+              <div class="calcname">Калькулятор скидок</div>
+              <div class="calcdesc">
+                Позволяет узнать сумму скидки и окончательную цену товара или
+                услуги после применения скидки.
+              </div>
+            </div>
+          </a>
           {/* <a href="/pernumber/" class="calcitem finance math">
               <span class="material-symbols-rounded">humidity_percentage</span>
               <div class="calcalltext">

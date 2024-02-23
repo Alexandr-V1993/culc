@@ -6,12 +6,12 @@ import HeaderModal from "../components/HeaderModal";
 import TopForm from "../components/TopForm";
 import Contents from "../components/Contents";
 import Footer from "../components/Footer";
+import "./discount.css";
 function Discount() {
   const [mode, setMode] = useState("discountedPrice");
-  const [discount, setDiscount] = useState(10);
-  const [discountPercentage, setDiscountPercentage] = useState(12);
-  const [price, setPrice] = useState(1000);
-  const [prices, setPrices] = useState("");
+  const [discount, setDiscount] = useState();
+  const [discountPercentage, setDiscountPercentage] = useState();
+  const [price, setPrice] = useState();
 
   const obj = {
     discount: discount,
@@ -27,7 +27,7 @@ function Discount() {
   if (mode === "startingPrice") {
     obj.mode = "startingPrice";
 
-    obj.price = prices;
+    obj.price = price;
   }
 
   return (
@@ -71,8 +71,8 @@ function Discount() {
                 type="number"
                 class="input"
                 id="nprice"
-                value={prices}
-                onChange={(e) => setPrices(e.target.value)}
+                value={price}
+                onChange={(e) => setPrice(e.target.value)}
               />
               <div class="notation">₽</div>
             </label>
@@ -84,6 +84,7 @@ function Discount() {
                 type="number"
                 class="input"
                 id="nprice"
+                value={price}
                 onChange={(e) => setPrice(e.target.value)}
               />
               <div class="notation">₽</div>
@@ -117,7 +118,37 @@ function Discount() {
             </label>
           )}
         </DiscountForm>
-        <Contents></Contents>
+        <Contents>
+          <h2 className="tops-content">Рассчет процента скидки от суммы</h2>
+          <p>
+            Калькулятор скидок – онлайн инструмент для быстрого расчета суммы
+            скидки и ее процентного значения от исходной цены. Позволяет узнать
+            сумму скидки и окончательную цену товара или услуги после применения
+            скидки.
+          </p>
+          <p>
+            Просто введите начальную сумму и процент скидки, чтобы получить
+            результат. Удобен для расчета как фиксированных, так и процентных
+            скидок.
+          </p>
+          <h3>
+            Калькулятор скидок предоставляет решение для множества вопросов:
+          </h3>
+          <ul>
+            <li>
+              С его помощью можно быстро узнать окончательную стоимость товара
+              после применения скидки.
+            </li>
+            <li>
+              Выяснить, какая скидка действует на товар, если известна его
+              конечная цена.
+            </li>
+            <li>
+              Определить начальную цену товара, если известна его цена со
+              скидкой и размер скидки.
+            </li>
+          </ul>
+        </Contents>
       </TopForm>
       <Footer />
     </>

@@ -20,7 +20,7 @@ function Form({
   alcoTitle,
   crepost,
   condition,
-  setNumber,
+
   selectSumm,
   selectSummProcent,
 }) {
@@ -97,13 +97,11 @@ function Form({
   useEffect(() => {
     setTax("");
     setAmount("");
-    setNumber("");
   }, [selectSumm]);
 
   useEffect(() => {
     setTax("");
     setAmount("");
-    setNumber("");
   }, [selectSummProcent]);
 
   return (

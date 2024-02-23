@@ -72,16 +72,44 @@ function HeaderModal() {
               <div class="topmenulink">
                 <a class="linkheader linknotanchor">
                   <span class="material-symbols-rounded">
-                    <img
-                      className="img-width"
-                      src="/dosug2.svg"
-                      alt="бухгалтерия"
-                    />
+                    <img className="img-width" src="/dosug2.svg" alt="досуг" />
                   </span>{" "}
                   Досуг
                 </a>
                 <a href="/age-calculator" class="sublnk">
                   Калькулятор возраста
+                </a>
+                <a href="/discount-calculator" class="sublnk">
+                  Калькулятор скидок
+                </a>
+              </div>
+              <div class="topmenulink">
+                <a class="linkheader linknotanchor">
+                  <span class="material-symbols-rounded">
+                    <img className="img-width" src="/alco.svg" alt="досуг" />
+                  </span>{" "}
+                  Алкоголь
+                </a>
+                <a href="/alcohol-calculator" class="sublnk">
+                  Калькулятор алкоголя
+                </a>
+                <a href="/diluting-alcohol" class="sublnk">
+                  Калькулятор разбавления спирта водой
+                </a>
+                <a href="/sugar-braga" class="sublnk">
+                  Калькулятор расчета браги
+                </a>
+                <a href="/areometer-correction" class="sublnk">
+                  Калькулятор коррекции ареометра
+                </a>
+                <a href="/head-selection" class="sublnk">
+                  Калькулятор отбора голов
+                </a>
+                <a href="/replacement-sugar" class="sublnk">
+                  Калькулятор расчета глюкозы
+                </a>
+                <a href="/moonshiner-calculator" class="sublnk">
+                  Калькулятор смешивания спиртов
                 </a>
               </div>
               <span className="close" onClick={() => setOpen(false)}>
