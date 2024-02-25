@@ -112,6 +112,21 @@ function HeaderModal() {
                   Калькулятор смешивания спиртов
                 </a>
               </div>
+              <div class="topmenulink">
+                <a class="linkheader linknotanchor">
+                  <span class="material-symbols-rounded">
+                    <img
+                      className="img-width"
+                      src="/car2.svg"
+                      alt="автомобиль"
+                    />
+                  </span>{" "}
+                  Автомобильные калькуляторы
+                </a>
+                <a href="/fuel-cost-calculator" class="sublnk">
+                  Калькулятор расхода топлива
+                </a>
+              </div>
               <span className="close" onClick={() => setOpen(false)}>
                 <img src="/close.svg" alt="закрыть" />
               </span>

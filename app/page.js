@@ -1148,6 +1148,17 @@ function Home() {
               </div>
             </div>
           </a>
+          <a href="/fuel-cost-calculator/" class="calcitem finance math">
+            <span class="material-symbols-rounded symbol-width">
+              <img src="/oil.svg" alt="алкоголь" />
+            </span>
+            <div class="calcalltext">
+              <div class="calcname">Калькулятор расхода топлива</div>
+              <div class="calcdesc">
+                Калькулятор расхода топлива помогает оценить стоимость поездки.
+              </div>
+            </div>
+          </a>
           {/* <a href="/pernumber/" class="calcitem finance math">
               <span class="material-symbols-rounded">humidity_percentage</span>
               <div class="calcalltext">
