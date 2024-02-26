@@ -1716,7 +1716,7 @@ footer .fmenu.firstletterlogo a span {
 .page-bolt {
   font-weight: 600;
 }
-@media screen and (max-width: 540px) {
+/* @media screen and (max-width: 540px) {
   .topmenuwrap {
     display: flex;
     flex-direction: column;
@@ -1770,4 +1770,4 @@ footer .fmenu.firstletterlogo a span {
     display: flex;
     left: -5px;
   }
-}
+} */

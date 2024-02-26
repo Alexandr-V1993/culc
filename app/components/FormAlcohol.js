@@ -79,69 +79,71 @@ function FormAlcohol({
   }, [clip]);
   return (
     <form className="inlinecalculator" onSubmit={handleSubmit}>
-      <div className="centre-top testcentre">{children}</div>
-
-      <div id="result">
-        <p className="vsize">{formTitle}</p>
-        {weights}
-        <p className="resultstring">
-          <span id="resultimt">
-            {alcoTitle} {vans}
-            {select === "type3" || select === "type4" ? "°" : ""}
-            {all === "литров" ? "" : all}
-          </span>
-          <span id="resultimt">
-            {crepost} {weight}
-            {strength} {select === "type2" ? "°" : ""}
-          </span>
-        </p>
-        <p>{summaOblog}</p>
-        {select === "type3" ||
-          (select === "type5" && <p className="color-celcii">{dannie}</p>)}
-        {select === "type4" && <p className="color-celcii">{areometr}</p>}
-        {select === "type6" && <p className="color-celcii">{glucoza}</p>}
-        {select === "type1" && (
-          <div>
-            <p
-              className={`greys ${
-                clip === "Скопировано" ? "active-greys" : ""
-              }`}
-            >
-              Для получения{" "}
-              <span
-                className={`resulthour ${
-                  clip === "Скопировано" ? "active-resulthour" : "resulthour"
+      <div className="row-res">
+        {" "}
+        <div className="centre-top testcentre">{children}</div>
+        <div className="res">
+          <p className="vsizes">{formTitle}</p>
+          {weights}
+          <p className="resultstring">
+            <span id="resultimt">
+              {alcoTitle} {vans}
+              {select === "type3" || select === "type4" ? "°" : ""}
+              {all === "литров" ? "" : all}
+            </span>
+            <span id="resultimt">
+              {crepost} {weight}
+              {strength} {select === "type2" ? "°" : ""}
+            </span>
+          </p>
+          <p>{summaOblog}</p>
+          {select === "type3" ||
+            (select === "type5" && <p className="color-celcii">{dannie}</p>)}
+          {select === "type4" && <p className="color-celcii">{areometr}</p>}
+          {select === "type6" && <p className="color-celcii">{glucoza}</p>}
+          {select === "type1" && (
+            <div>
+              <p
+                className={`greys ${
+                  clip === "Скопировано" ? "active-greys" : ""
                 }`}
               >
-                {strengthAfter}%
-              </span>{" "}
-              после разбавления, нужно добавить{" "}
-              <span
-                className={`resulthour ${
-                  clip === "Скопировано" ? "active-resulthour" : "resulthour"
-                }`}
+                Для получения{" "}
+                <span
+                  className={`resulthour ${
+                    clip === "Скопировано" ? "active-resulthour" : "resulthour"
+                  }`}
+                >
+                  {strengthAfter}%
+                </span>{" "}
+                после разбавления, нужно добавить{" "}
+                <span
+                  className={`resulthour ${
+                    clip === "Скопировано" ? "active-resulthour" : "resulthour"
+                  }`}
+                >
+                  {vans}
+                </span>{" "}
+                литров воды
+              </p>
+              <p
+                className="greys"
+                onClick={() =>
+                  navigator.clipboard.writeText(
+                    `Для получения ${strengthAfter}% после разбавления, нужно добавить ${vans} литров воды`,
+                    setClip("Скопировано")
+                  )
+                }
+                style={{
+                  color: clip === "Скопировано" ? "#27d827" : "grey",
+                }}
               >
-                {vans}
-              </span>{" "}
-              литров воды
-            </p>
-            <p
-              className="greys"
-              onClick={() =>
-                navigator.clipboard.writeText(
-                  `Для получения ${strengthAfter}% после разбавления, нужно добавить ${vans} литров воды`,
-                  setClip("Скопировано")
-                )
-              }
-              style={{
-                color: clip === "Скопировано" ? "#27d827" : "grey",
-              }}
-            >
-              {clip}
-              {}
-            </p>
-          </div>
-        )}
+                {clip}
+                {}
+              </p>
+            </div>
+          )}
+        </div>
       </div>
 
       <div className="btn-top">

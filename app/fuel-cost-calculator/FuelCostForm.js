@@ -35,24 +35,26 @@ function FuelCostForm({ children, obj, url, rashod, CenaTopliva }) {
 
   return (
     <form className="inlinecalculator" onSubmit={handleSubmit}>
-      <div className="centre-top testcentre">{children}</div>
+      <div className="row-res">
+        {" "}
+        <div className="centre-top testcentre">{children}</div>
+        <div id="res">
+          <p className="vsize">{}</p>
 
-      <div id="result">
-        <p className="vsize">{}</p>
+          <p className="resultstring">
+            <span id="resultimt">
+              {rashod}
+              {`${consumption}`}
+            </span>
 
-        <p className="resultstring">
-          <span id="resultimt">
-            {rashod}
-            {`${consumption}`}
-          </span>
+            <span id="resultimt">
+              {CenaTopliva}
+              {`${cost}`}
+            </span>
 
-          <span id="resultimt">
-            {CenaTopliva}
-            {`${cost}`}
-          </span>
-
-          <span></span>
-        </p>
+            <span></span>
+          </p>
+        </div>
       </div>
 
       <div className="btn-top">

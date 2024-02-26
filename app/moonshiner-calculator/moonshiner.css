@@ -194,3 +194,10 @@ ol > li {
     width: 100%;
   }
 }
+@media screen and (max-width: 580px) {
+  .topmenu,
+  .active {
+    width: 100%;
+    padding-left: 200px;
+  }
+}

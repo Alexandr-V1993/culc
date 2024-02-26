@@ -3,7 +3,7 @@ import "./razbav.css";
 function RazbavlenieSpirta({ setVolume, setStrengthAfter, setStrengthBefore }) {
   return (
     <>
-      <label class="numrange row-1 five">
+      <label class="numrange five">
         <span>Начальный объем спирта</span>
         <input
           type="number"
@@ -16,7 +16,7 @@ function RazbavlenieSpirta({ setVolume, setStrengthAfter, setStrengthBefore }) {
         <div class="notation">л.</div>
       </label>
 
-      <label class="numrange row-1 five five-left">
+      <label class="numrange five">
         <span>Крепость начального объема</span>
         <input
           type="number"
@@ -28,7 +28,7 @@ function RazbavlenieSpirta({ setVolume, setStrengthAfter, setStrengthBefore }) {
         />
         <div class="notation">%</div>
       </label>
-      <label class="numrange row-1 five">
+      <label class="numrange five">
         <span>Требуемая крепость</span>
         <input
           type="number"

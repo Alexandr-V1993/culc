@@ -121,7 +121,7 @@ function HeaderModal() {
                       alt="автомобиль"
                     />
                   </span>{" "}
-                  Автомобильные калькуляторы
+                  Автомобильные
                 </a>
                 <a href="/fuel-cost-calculator" class="sublnk">
                   Калькулятор расхода топлива

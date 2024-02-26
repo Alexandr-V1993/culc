@@ -8,7 +8,7 @@ function SmehivanieSpitrov({
   return (
     <>
       {" "}
-      <label class="numrange smesh">
+      <label class="numrange smesh-left">
         <span>Объем первой жидкости</span>
         <input
           type="number"
@@ -31,7 +31,7 @@ function SmehivanieSpitrov({
         />
         <div class="notation">°C</div>
       </label>
-      <label class="numrange smesh">
+      <label class="numrange smesh-left">
         <span>Объем второй жидкости</span>
         <input
           type="number"

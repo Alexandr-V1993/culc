@@ -7,9 +7,12 @@ import { useState } from "react";
 import Contents from "../components/Contents";
 import "./age.css";
 
+let currentDate = new Date();
+let formattedDate = currentDate.toISOString().split("T")[0];
+
 function Agecalc() {
-  const [date, setDate] = useState("");
-  const [vDate, setVdate] = useState("");
+  const [date, setDate] = useState("2024-02-18");
+  const [vDate, setVdate] = useState(formattedDate);
   const obj = {
     startDate: date,
     endDate: vDate,
@@ -47,7 +50,7 @@ function Agecalc() {
               id="nheight"
               min="0"
               max="250"
-              value={date.toString()}
+              value={date}
               onChange={(e) => setDate(e.target.value)}
             />
           </label>
