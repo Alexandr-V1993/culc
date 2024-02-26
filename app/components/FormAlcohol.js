@@ -69,6 +69,7 @@ function FormAlcohol({
     setStrength("");
     setWeight("");
     setVans("");
+    setStrengthAfter("");
   }, [select]);
   useEffect(() => {
     setTimeout(() => {
@@ -78,7 +79,7 @@ function FormAlcohol({
     }, 1500);
   }, [clip]);
   return (
-    <form className="inlinecalculator" onSubmit={handleSubmit}>
+    <form className="inlinecalculators" onSubmit={handleSubmit}>
       <div className="row-res">
         {" "}
         <div className="centre-top testcentre">{children}</div>

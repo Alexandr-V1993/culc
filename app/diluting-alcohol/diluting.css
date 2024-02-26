@@ -12,6 +12,12 @@ p.resultstring {
   font-size: 17px;
   line-height: 20px;
 }
+.vsize {
+  background: linear-gradient(22.75deg, #f00 -42.47%, #4021ff 134.19%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
 .notation {
   color: grey;
 }

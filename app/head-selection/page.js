@@ -42,7 +42,6 @@ function Heads() {
               class="input"
               id="nheight"
               min="0"
-              max="250"
               value={volume}
               onChange={(e) => setVolume(e.target.value)}
             />
