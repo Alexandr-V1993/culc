@@ -81,17 +81,28 @@ function FormAlcohol({
   return (
     <form className="inlinecalculators" onSubmit={handleSubmit}>
       <div className="row-res">
-        {" "}
         <div className="centre-top testcentre">{children}</div>
+        <div className="btn-top">
+          <button className="btns bst" onClick={handleSubmit}>
+            Расчитать
+          </button>
+        </div>
         <div className="res">
           <p className="vsizes">{formTitle}</p>
           {weights}
           <p className="resultstring">
             <span id="resultimt">
-              {alcoTitle} {vans}
+              {alcoTitle}
               {select === "type3" || select === "type4" ? "°" : ""}
               {all === "литров" ? "" : all}
             </span>
+            <span id="resultimt">
+              {vans}
+              {select === "type3" || select === "type4" ? "°" : ""}
+              {all === "литров" ? "" : all}
+            </span>
+          </p>
+          <p className="resultstring">
             <span id="resultimt">
               {crepost} {weight}
               {strength} {select === "type2" ? "°" : ""}
@@ -145,12 +156,6 @@ function FormAlcohol({
             </div>
           )}
         </div>
-      </div>
-
-      <div className="btn-top">
-        <button className="btns bst" onClick={handleSubmit}>
-          Расчитать
-        </button>
       </div>
     </form>
   );

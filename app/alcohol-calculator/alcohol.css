@@ -67,12 +67,18 @@ a {
 }
 .res {
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 5px;
   text-align: center;
   padding-top: 20px;
   background-color: #fff;
   max-width: 100%;
   margin-bottom: 20px;
+}
+#resultimt {
+  line-height: 70%;
+}
+.resultstring {
+  line-height: 10%;
 }
 .five {
   width: 100%;
@@ -81,7 +87,8 @@ a {
   width: 100%;
 }
 .btn-top {
-  max-width: 95%;
+  max-width: 100%;
+  padding-top: 20px;
 }
 .vsizes {
   background: linear-gradient(22.75deg, #f00 -42.47%, #4021ff 134.19%);
@@ -105,4 +112,19 @@ p.resultstring {
   .vsizes {
     font-size: 15px;
   }
+}
+@media screen and (min-width: 1000px) {
+  .alcohol-list {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 769px) {
+  .alcohol-list {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+article.articleBody p {
+  text-align: center;
 }

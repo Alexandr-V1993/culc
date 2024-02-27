@@ -27,10 +27,12 @@
 }
 
 #resultimt {
-  font-size: 15px;
+  font-size: 17px;
   line-height: 10px;
 }
-
+#resultimt {
+  line-height: 101%;
+}
 .notation {
   color: grey;
 }
