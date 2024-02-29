@@ -115,9 +115,10 @@ function FaelCost() {
                 type="number"
                 className="input"
                 onChange={handleConsumptionChange}
+                required
               />
               <div className="notation">
-                {state.units === "english" ? "галлонов" : "литров"}
+                {state.units === "english" ? "г-в" : "л-в"}
               </div>
             </label>
             {state.mode === "consumptionCost" && (
@@ -148,6 +149,7 @@ function FaelCost() {
               type="number"
               className="input"
               onChange={handleDistanceChange}
+              required
             />
             <div className="notation">
               {state.units === "english" ? "миль" : "км"}
@@ -161,6 +163,7 @@ function FaelCost() {
               type="number"
               className="input"
               onChange={handleCostChange}
+              required
             />
             <div className="notation">₽</div>
           </label>

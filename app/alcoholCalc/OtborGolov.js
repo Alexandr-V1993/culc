@@ -11,6 +11,7 @@ function OtborGolov({ setVolume, setStrength, setHeads }) {
           min="0"
           max="250"
           onChange={(e) => setVolume(e.target.value)}
+          required
         />
         <div class="notation">л.</div>
       </label>
@@ -24,6 +25,7 @@ function OtborGolov({ setVolume, setStrength, setHeads }) {
           min="0"
           max="100"
           onChange={(e) => setStrength(e.target.value)}
+          required
         />
         <div class="notation"> °</div>
       </label>
@@ -36,6 +38,7 @@ function OtborGolov({ setVolume, setStrength, setHeads }) {
           min="0"
           max="100"
           onChange={(e) => setHeads(e.target.value)}
+          required
         />
         <div class="notation">% от общего объема</div>
       </label>

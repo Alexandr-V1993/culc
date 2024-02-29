@@ -1,113 +1,87 @@
-.left-select {
-  width: 45%;
+.inlinecalculator {
+  padding-right: 25px;
+  max-width: 600px;
+  padding-bottom: 20px;
 }
-.right-select {
-  width: 55%;
+.row-res {
+  padding-top: 17px;
 }
 .row-select {
-  display: flex;
-  gap: 20px;
-}
-
-.inlinecalculator {
-  padding-bottom: 10px;
-  padding-top: 10px;
-}
-.resultstring {
-  font-size: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 20px;
-}
-.notation {
-  top: 40px;
-}
-.tops-content {
-  font-size: 30px;
-}
-@media screen and (max-width: 540px) {
-  .inlinecalculator {
-    padding: 10px;
-  }
-}
-.inlinecalculator {
-  padding-right: 0;
-}
-.row-select {
-  display: flex;
-  align-items: flex-end;
-}
-.align-end {
-  width: 50%;
+  display: grid;
+  grid-template-columns: 45% 51.5%;
+  column-gap: 20px;
 }
 .label-row {
   display: flex;
   align-items: flex-end;
-  column-gap: 20px;
-}
-.row-select span {
-  display: block;
-  font-size: 13px;
-  color: rgba(0, 0, 0, 0.6);
-  font-weight: 500;
-  white-space: nowrap;
-}
-.row-res {
-  display: grid;
-  grid-template-columns: 58% 40%;
-  gap: 10px;
-  align-items: end;
-}
-#res {
-  display: flex;
-  height: 93%;
-
-  border-radius: 10px;
-  align-items: center;
-  background-color: #fff;
+  gap: 20px;
 }
 .btn-top {
-  padding-top: 20px;
   width: 100%;
+  padding-top: 20px;
 }
 .bst {
-  width: 58%;
+  width: 100%;
 }
-@media screen and (max-width: 768px) {
-  .row-res {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    align-items: end;
-    width: 100%;
-    padding-right: 15px;
-  }
+#res {
+  background-color: #fff;
+  border-radius: 10px;
+}
+p.resultstring {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
 
-  .bst {
-    width: 98%;
+  row-gap: 20px;
+  justify-content: center;
+}
+#resultimt {
+  font-size: 20px;
+  line-height: 120%;
+}
+.notation {
+  bottom: 0px;
+  position: absolute;
+}
+@media screen and (max-width: 540px) {
+  .row-res {
+    padding-top: 0;
   }
-  .resultstring {
-    padding-top: 20px;
+}
+@media screen and (max-width: 540px) {
+  .row-res {
+    padding-top: 0;
   }
   .row-select {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
+    grid-template-columns: 45% 51%;
   }
-  .left-select {
-    width: 100%;
+  .inlinecalculator {
+    padding-right: 15px;
   }
-  .right-select {
-    width: 100%;
+}
+@media screen and (max-width: 450px) {
+  .row-res {
+    padding-top: 0;
   }
-  .align-end {
-    width: 70%;
+  .row-select {
+    grid-template-columns: 1fr;
   }
-  #res {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .inlinecalculator {
+    padding-right: 15px;
   }
+}
+.notation {
+  top: 35px;
+}
+.row-select span {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 15px;
+}
+label > span {
+  display: block;
+  font-size: 15px;
+}
+.align-end {
+  padding-left: 5px;
+  min-height: 50.5px;
 }

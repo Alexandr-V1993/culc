@@ -11,6 +11,7 @@ import RazbavlenieSpirta from "../alcoholCalc/RazbavlenieSpirta";
 import RaschetSaharBraga from "../alcoholCalc/RaschetSaharBraga";
 import SmehivanieSpitrov from "../alcoholCalc/SmehivanieSpitrov";
 import CorrekciaAreometr from "../alcoholCalc/CorrekciaAreometr";
+import FtoraiaPeregonka from "../alcoholCalc/FtoraiaPeregonka";
 import OtborGolov from "../alcoholCalc/OtborGolov";
 import Glucoza from "../alcoholCalc/Glucoza";
 
@@ -28,6 +29,12 @@ function AlcoCalc() {
   const [temperature, setTemperature] = useState("");
   const [strength, setStrength] = useState("");
   const [heads, setHeads] = useState("");
+
+  const [strenghtStart, setStrenghtStart] = useState();
+  const [strenghtEnd, setStrenghtEnd] = useState();
+
+  const [tails, setTails] = useState();
+
   const obj = {
     strengthAfter: Number(strengthAfter),
     strengthBefore: Number(strengthBefore),
@@ -40,6 +47,11 @@ function AlcoCalc() {
     temperature: Number(temperature),
     strength: Number(strength),
     heads: Number(heads),
+    volume: Number(volume),
+    strengthStart: Number(strenghtStart),
+    strengthEnd: Number(strenghtEnd),
+    heads: Number(heads),
+    tails: Number(tails),
   };
 
   let url;
@@ -82,7 +94,7 @@ function AlcoCalc() {
   }
   if (select === "type6") {
     url = "https://calcline.ru/api/calculate/glucose-sugar-replacement";
-    obj.weight = weight;
+
     delete (obj.volume = Number(volume) * 1000), delete obj.strengthAfter;
     delete obj.strengthBefore;
     delete obj.volume1;
@@ -95,9 +107,26 @@ function AlcoCalc() {
     delete obj.heads;
     delete obj.volume;
   }
+  if (select === "type7") {
+    url = "https://calcline.ru/api/calculate/second-fractional-distillation";
+    delete obj.weight;
+    delete obj.strengthAfter;
+    delete obj.strengthBefore;
+    delete obj.volume1;
+    delete obj.volume2;
+    delete obj.strength1;
+    delete obj.strength2;
+    delete obj.temperature;
+    delete obj.value;
+    delete obj.strength;
+  }
   let formTitle;
   let alcoTitle;
   let crepost;
+  let spirt;
+  let golovi;
+  let hvosti;
+  let vihod;
   switch (select) {
     case "type1":
       formTitle = "Необходимо долить литров воды:";
@@ -126,6 +155,15 @@ function AlcoCalc() {
       crepost = "";
       formTitle = "";
       break;
+    case "type7":
+      alcoTitle = " ";
+      crepost = "";
+      formTitle = "";
+      spirt = "Абсолютного спирта: ";
+      golovi = "Головы: ";
+      hvosti = "Хвосты: ";
+      vihod = "Выход продукта крепостью 40°: ";
+      break;
 
     default:
       break;
@@ -142,6 +180,10 @@ function AlcoCalc() {
         span={"самогонщика"}
       >
         <FormAlcohol
+          spirt={spirt}
+          golovi={golovi}
+          hvosti={hvosti}
+          vihod={vihod}
           obj={obj}
           url={url}
           formTitle={formTitle}
@@ -166,6 +208,7 @@ function AlcoCalc() {
                 <option value="type4">Коррекция показаний ареометра</option>
                 <option value="type5">Абсолютный спирт и отбор голов</option>
                 <option value="type6">Замена сахара глюкозой</option>
+                <option value="type7">Дробная перегонка спирта сырца</option>
               </select>
             </div>
           </label>
@@ -215,6 +258,17 @@ function AlcoCalc() {
             ""
           )}
           {select === "type6" ? <Glucoza setWeight={setWeight} /> : ""}
+          {select === "type7" ? (
+            <FtoraiaPeregonka
+              setVolume={setVolume}
+              setStrenghtStart={setStrenghtStart}
+              setStrenghtEnd={setStrenghtEnd}
+              setHeads={setHeads}
+              setTails={setTails}
+            />
+          ) : (
+            ""
+          )}
         </FormAlcohol>
         <Contents>
           <p>

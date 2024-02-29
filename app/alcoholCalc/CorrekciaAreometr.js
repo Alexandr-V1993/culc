@@ -12,6 +12,7 @@ function CorrekciaAreometr({ setTemperature, setStrength }) {
           min="0"
           max="100"
           onChange={(e) => setTemperature(e.target.value)}
+          required
         />
         <div class="notation">°C</div>
       </label>
@@ -24,6 +25,7 @@ function CorrekciaAreometr({ setTemperature, setStrength }) {
           min="0"
           max="100"
           onChange={(e) => setStrength(e.target.value)}
+          required
         />
         <div class="notation">°</div>
       </label>

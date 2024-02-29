@@ -99,4 +99,10 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+    <url>
+        <loc>https://calcoffee.ru/second-fractional-distillation</loc>
+        <lastmod>2024-02-27T12:25:03+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 </urlset>

@@ -11,6 +11,7 @@ function Glucoza({ setWeight }) {
           id="nheight"
           min="0"
           onChange={(e) => setWeight(e.target.value)}
+          required
         />
         <div class="notation">кг.</div>
       </label>

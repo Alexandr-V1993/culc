@@ -10,6 +10,7 @@ function RaschetSaharBraga({ setVolume, setWeight }) {
           id="nheight"
           min="0"
           onChange={(e) => setWeight(e.target.value)}
+          required
         />
         <div class="notation">кг.</div>
       </label>
@@ -22,6 +23,7 @@ function RaschetSaharBraga({ setVolume, setWeight }) {
           id="nweight"
           min="0"
           onChange={(e) => setVolume(e.target.value)}
+          required
         />
         <div class="notation">л.</div>
       </label>

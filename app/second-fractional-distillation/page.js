@@ -64,6 +64,7 @@ function SecondFrac() {
                 onChange={(e) =>
                   dispatch({ type: "volume", payload: Number(e.target.value) })
                 }
+                required
               />
               <div class="notation">л.</div>
             </label>
@@ -81,6 +82,7 @@ function SecondFrac() {
                     payload: Number(e.target.value),
                   })
                 }
+                required
               />
               <div class="notation">°</div>
             </label>
@@ -98,6 +100,7 @@ function SecondFrac() {
                     payload: Number(e.target.value),
                   })
                 }
+                required
               />
               <div class="notation">°</div>
             </label>
@@ -112,6 +115,7 @@ function SecondFrac() {
                 onChange={(e) =>
                   dispatch({ type: "heads", payload: Number(e.target.value) })
                 }
+                required
               />
               <div class="notation">%</div>
             </label>
@@ -126,6 +130,7 @@ function SecondFrac() {
                 onChange={(e) =>
                   dispatch({ type: "tails", payload: Number(e.target.value) })
                 }
+                required
               />
               <div class="notation">%</div>
             </label>

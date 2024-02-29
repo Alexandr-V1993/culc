@@ -65,6 +65,18 @@ a {
   background: #e1ecf3;
   min-height: 280px;
 }
+label.five {
+  max-width: 100%;
+}
+div.testcentre {
+  max-width: 100%;
+}
+.label-row {
+  width: 100%;
+}
+.input {
+  max-width: 100%;
+}
 .res {
   border-radius: 10px;
   margin-top: 5px;

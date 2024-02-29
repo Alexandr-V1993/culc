@@ -16,6 +16,7 @@ function SmehivanieSpitrov({
           id="nheight"
           min="0"
           onChange={(e) => setvolume1(e.target.value)}
+          required
         />
         <div class="notation">л-в.</div>
       </label>
@@ -28,6 +29,7 @@ function SmehivanieSpitrov({
           min="0"
           max="100"
           onChange={(e) => setStrength1(e.target.value)}
+          required
         />
         <div class="notation">°C</div>
       </label>
@@ -39,6 +41,7 @@ function SmehivanieSpitrov({
           id="nheight"
           min="0"
           onChange={(e) => setVolume2(e.target.value)}
+          required
         />
         <div class="notation">л-в</div>
       </label>
@@ -51,6 +54,7 @@ function SmehivanieSpitrov({
           min="0"
           max="100"
           onChange={(e) => settrength2(e.target.value)}
+          required
         />
         <div class="notation">°С</div>
       </label>

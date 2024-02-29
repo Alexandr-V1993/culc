@@ -73,6 +73,7 @@ function Discount() {
                 id="nprice"
                 value={price}
                 onChange={(e) => setPrice(e.target.value)}
+                required
               />
               <div class="notation">₽</div>
             </label>
@@ -86,6 +87,7 @@ function Discount() {
                 id="nprice"
                 value={price}
                 onChange={(e) => setPrice(e.target.value)}
+                required
               />
               <div class="notation">₽</div>
             </label>
@@ -99,6 +101,7 @@ function Discount() {
                 id="nprice"
                 value={discount}
                 onChange={(e) => setDiscount(e.target.value)}
+                required
               />
               <div class="notation">%</div>
             </label>
@@ -113,6 +116,7 @@ function Discount() {
                 id="nprice"
                 value={discountPercentage}
                 onChange={(e) => setDiscountPercentage(e.target.value)}
+                required
               />
               <div class="notation">₽</div>
             </label>

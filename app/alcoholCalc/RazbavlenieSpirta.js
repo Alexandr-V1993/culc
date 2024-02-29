@@ -12,6 +12,7 @@ function RazbavlenieSpirta({ setVolume, setStrengthAfter, setStrengthBefore }) {
           min="0"
           max="250"
           onChange={(e) => setVolume(e.target.value)}
+          required
         />
         <div class="notation">л.</div>
       </label>
@@ -25,6 +26,7 @@ function RazbavlenieSpirta({ setVolume, setStrengthAfter, setStrengthBefore }) {
           min="0"
           max="100"
           onChange={(e) => setStrengthBefore(e.target.value)}
+          required
         />
         <div class="notation">%</div>
       </label>
@@ -37,6 +39,7 @@ function RazbavlenieSpirta({ setVolume, setStrengthAfter, setStrengthBefore }) {
           min="0"
           max="100"
           onChange={(e) => setStrengthAfter(e.target.value)}
+          required
         />
         <div class="notation">%</div>
       </label>

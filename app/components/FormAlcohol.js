@@ -13,10 +13,15 @@ function FormAlcohol({
   select,
   strengthAfter,
   setStrengthAfter,
+  spirt,
+  golovi,
+  hvosti,
+  vihod,
 }) {
+  console.log(spirt);
   const [total, setTotal] = useState("");
   const [vans, setVans] = useState("");
-
+  const [click, setClick] = useState(false);
   const [weight, setWeight] = useState("");
   const [strength, setStrength] = useState("");
   const [clip, setClip] = useState("Скопировать");
@@ -29,6 +34,10 @@ function FormAlcohol({
   const [dannie, setDannie] = useState(
     "Данные результаты актуальны и верны при температуре компонентов равной 20°C"
   );
+  const [alcohol, setaAcohol] = useState();
+  const [heads, setHeads] = useState();
+  const [tails, setTails] = useState();
+  const [value, setValue] = useState();
 
   let weights;
 
@@ -55,15 +64,23 @@ function FormAlcohol({
   useEffect(() => {
     if (total?.data?.value) {
       setVans(total.data.value);
+      setaAcohol(total?.data?.alcohol);
+      setHeads(total?.data?.heads);
+      setTails(total?.data?.tails);
       setStrength(total.data.strength);
     } else if (total?.data?.volumeHeads && total?.data?.volumePureAlcohol) {
       setVans(total.data.volumePureAlcohol);
-      setStrength(total.data.volumeHeads);
-    } else if (total?.data?.weight) {
-      setWeight(total.data.weight);
+      setStrength(total?.data?.volumeHeads);
+    } else if (total?.data?.tails) {
+      setaAcohol(total?.data?.alcohol);
+      setHeads(total?.data?.heads);
+      setTails(total?.data?.tails);
     }
   }, [total]);
 
+  useEffect(() => {
+    setClick(false);
+  }, [select]);
   // Обнуляем переменные при изменении значения селекта
   useEffect(() => {
     setStrength("");
@@ -83,79 +100,102 @@ function FormAlcohol({
       <div className="row-res">
         <div className="centre-top testcentre">{children}</div>
         <div className="btn-top">
-          <button className="btns bst" onClick={handleSubmit}>
+          <button className="btns bst" onClick={() => setClick(true)}>
             Расчитать
           </button>
         </div>
-        <div className="res">
-          <p className="vsizes">{formTitle}</p>
-          {weights}
-          <p className="resultstring">
-            <span id="resultimt">
-              {alcoTitle}
-              {select === "type3" || select === "type4" ? "°" : ""}
-              {all === "литров" ? "" : all}
-            </span>
-            <span id="resultimt">
-              {vans}
-              {select === "type3" || select === "type4" ? "°" : ""}
-              {all === "литров" ? "" : all}
-            </span>
-          </p>
-          <p className="resultstring">
-            <span id="resultimt">
-              {crepost} {weight}
-              {strength} {select === "type2" ? "°" : ""}
-            </span>
-          </p>
-          <p>{summaOblog}</p>
-          {select === "type3" ||
-            (select === "type5" && <p className="color-celcii">{dannie}</p>)}
-          {select === "type4" && <p className="color-celcii">{areometr}</p>}
-          {select === "type6" && <p className="color-celcii">{glucoza}</p>}
-          {select === "type1" && (
-            <div>
-              <p
-                className={`greys ${
-                  clip === "Скопировано" ? "active-greys" : ""
-                }`}
-              >
-                Для получения{" "}
-                <span
-                  className={`resulthour ${
-                    clip === "Скопировано" ? "active-resulthour" : "resulthour"
+        {click && (
+          <div className="res">
+            <p className="vsizes">{formTitle}</p>
+            {weights}
+            {select === "type7" && (
+              <p className="resultstring">
+                <span id="resultimt">
+                  {spirt}
+                  {alcohol}
+                </span>
+                <span id="resultimt">
+                  {golovi}
+                  {heads}
+                </span>
+                <span id="resultimt">
+                  {hvosti}
+                  {tails}
+                </span>
+                <span id="resultimt">{value}</span>
+              </p>
+            )}
+            <p className="resultstring">
+              <span id="resultimt">
+                {alcoTitle}
+                {select === "type3" || select === "type4" ? "°" : ""}
+                {all === "литров" ? "" : all}
+              </span>
+              <span id="resultimt">
+                {vihod} {vans}
+                {select === "type3" || select === "type4" ? "°" : ""}
+                {all === "литров" ? "" : all}
+              </span>
+            </p>
+            <p className="resultstring">
+              <span id="resultimt">
+                {crepost} {weight}
+                {strength} {select === "type2" ? "°" : ""}
+              </span>
+            </p>
+            <p>{summaOblog}</p>
+            {select === "type3" ||
+              (select === "type5" && <p className="color-celcii">{dannie}</p>)}
+            {select === "type4" && <p className="color-celcii">{areometr}</p>}
+            {select === "type6" && <p className="color-celcii">{glucoza}</p>}
+            {select === "type1" && (
+              <div>
+                <p
+                  className={`greys ${
+                    clip === "Скопировано" ? "active-greys" : ""
                   }`}
                 >
-                  {strengthAfter}%
-                </span>{" "}
-                после разбавления, нужно добавить{" "}
-                <span
-                  className={`resulthour ${
-                    clip === "Скопировано" ? "active-resulthour" : "resulthour"
-                  }`}
+                  Для получения{" "}
+                  <span
+                    className={`resulthour ${
+                      clip === "Скопировано"
+                        ? "active-resulthour"
+                        : "resulthour"
+                    }`}
+                  >
+                    {strengthAfter}%
+                  </span>{" "}
+                  после разбавления, нужно добавить{" "}
+                  <span
+                    className={`resulthour ${
+                      clip === "Скопировано"
+                        ? "active-resulthour"
+                        : "resulthour"
+                    }`}
+                  >
+                    {vans}
+                  </span>{" "}
+                  литров воды
+                </p>
+                <p
+                  className="greys"
+                  onClick={() =>
+                    navigator.clipboard.writeText(
+                      `Для получения ${strengthAfter}% после разбавления, нужно добавить ${vans} литров воды`,
+                      setClip("Скопировано")
+                    )
+                  }
+                  style={{
+                    color: clip === "Скопировано" ? "#27d827" : "grey",
+                  }}
                 >
-                  {vans}
-                </span>{" "}
-                литров воды
-              </p>
-              <p
-                className="greys"
-                onClick={() =>
-                  navigator.clipboard.writeText(
-                    `Для получения ${strengthAfter}% после разбавления, нужно добавить ${vans} литров воды`,
-                    setClip("Скопировано")
-                  )
-                }
-                style={{
-                  color: clip === "Скопировано" ? "#27d827" : "grey",
-                }}
-              >
-                {clip}
-                {}
-              </p>
-            </div>
-          )}
-        </div>
+                  {clip}
+                  {}
+                </p>
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </form>
   );

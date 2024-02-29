@@ -6,6 +6,7 @@ function FuelCostForm({ children, obj, url, rashod, CenaTopliva }) {
   const [total, setTotal] = useState("");
   const [cost, setCost] = useState("");
   const [consumption, setConsumption] = useState("");
+  const [click, setClick] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -36,31 +37,31 @@ function FuelCostForm({ children, obj, url, rashod, CenaTopliva }) {
   return (
     <form className="inlinecalculator" onSubmit={handleSubmit}>
       <div className="row-res">
-        {" "}
         <div className="centre-top testcentre">{children}</div>
-        <div id="res">
-          <p className="vsize">{}</p>
-
-          <p className="resultstring">
-            <span id="resultimt">
-              {rashod}
-              {`${consumption}`}
-            </span>
-
-            <span id="resultimt">
-              {CenaTopliva}
-              {`${cost}`}
-            </span>
-
-            <span></span>
-          </p>
+        <div className="btn-top">
+          <button className="btns bst" onClick={() => setClick(true)}>
+            Расчитать
+          </button>
         </div>
-      </div>
+        {click && cost && consumption && (
+          <div id="res">
+            <p className="vsize">{}</p>
 
-      <div className="btn-top">
-        <button className="btns bst" onClick={handleSubmit}>
-          Расчитать
-        </button>
+            <p className="resultstring">
+              <span id="resultimt">
+                {rashod}
+                {`${consumption}`}
+              </span>
+
+              <span id="resultimt">
+                {CenaTopliva}
+                {`${cost}`}
+              </span>
+
+              <span></span>
+            </p>
+          </div>
+        )}
       </div>
     </form>
   );
