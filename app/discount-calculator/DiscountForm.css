@@ -1,6 +1,7 @@
 #resultimt {
   font-size: 20px;
   display: block;
+  line-height: 30px;
 }
 .inlinecalculator {
   display: flex;

@@ -1138,7 +1138,7 @@ function Home() {
           </a>
           <a href="/discount-calculator/" class="calcitem finance math">
             <span class="material-symbols-rounded symbol-width">
-              <img src="/scidki.svg" alt="алкоголь" />
+              <img src="/scidki.svg" alt="скидки" />
             </span>
             <div class="calcalltext">
               <div class="calcname">Калькулятор скидок</div>
@@ -1150,12 +1150,23 @@ function Home() {
           </a>
           <a href="/fuel-cost-calculator/" class="calcitem finance math">
             <span class="material-symbols-rounded symbol-width">
-              <img src="/oil.svg" alt="алкоголь" />
+              <img src="/oil.svg" alt="топливо" />
             </span>
             <div class="calcalltext">
               <div class="calcname">Калькулятор расхода топлива</div>
               <div class="calcdesc">
                 Калькулятор расхода топлива помогает оценить стоимость поездки.
+              </div>
+            </div>
+          </a>
+          <a href="/date-calculator" class="calcitem finance math">
+            <span class="material-symbols-rounded symbol-width">
+              <img src="/time-date.svg" alt="дата" />
+            </span>
+            <div class="calcalltext">
+              <div class="calcname">Калькулятор дней</div>
+              <div class="calcdesc">
+                Калькулятор дней поможет вычислению промежутка между датами.
               </div>
             </div>
           </a>

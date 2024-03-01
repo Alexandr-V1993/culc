@@ -99,6 +99,8 @@ function Discount() {
                 type="number"
                 class="input"
                 id="nprice"
+                min={0}
+                max={100}
                 value={discount}
                 onChange={(e) => setDiscount(e.target.value)}
                 required

@@ -82,6 +82,9 @@ function HeaderModal() {
                 <a href="/discount-calculator" class="sublnk">
                   Калькулятор скидок
                 </a>
+                <a href="/date-calculator" class="sublnk">
+                  Калькулятор дней
+                </a>
               </div>
               <div class="topmenulink">
                 <a class="linkheader linknotanchor">
@@ -110,6 +113,9 @@ function HeaderModal() {
                 </a>
                 <a href="/moonshiner-calculator" class="sublnk">
                   Калькулятор смешивания спиртов
+                </a>
+                <a href="/second-fractional-distillation" class="sublnk">
+                  Калькулятор дробной перегонки спирта сырца
                 </a>
               </div>
               <div class="topmenulink">

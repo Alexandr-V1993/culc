@@ -41,6 +41,7 @@ function Areometr() {
               max="100"
               value={temperature}
               onChange={(e) => setTemperature(e.target.value)}
+              required
             />
             <div class="notation">°C</div>
           </label>
@@ -55,6 +56,7 @@ function Areometr() {
               max="100"
               value={strength}
               onChange={(e) => setStrength(e.target.value)}
+              required
             />
             <div class="notation">°</div>
           </label>
