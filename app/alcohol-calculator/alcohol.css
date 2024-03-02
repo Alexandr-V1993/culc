@@ -140,3 +140,14 @@ p.resultstring {
 article.articleBody p {
   text-align: center;
 }
+@media screen and (max-width: 768px) {
+  .inlinecalculators {
+    padding-right: 10px;
+    justify-content: center;
+    padding-left: 30px;
+  }
+  span#resultimt {
+    line-height: 70%;
+    word-wrap: normal;
+  }
+}

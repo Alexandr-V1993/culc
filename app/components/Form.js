@@ -152,13 +152,15 @@ function Form({
         </div>
         {weights}
         <p class="resultstring">
+          <span id="resultimt"> {alcoTitle}</span>
           <span id="resultimt">
-            {alcoTitle} {vans}
+            {vans}
             {all === "литров" ? "" : all}
             {tax}
           </span>
+          <span id="resultimt">{crepost}</span>
           <span id="resultimt">
-            {crepost} {weights} {strength}
+            {weights} {strength}
           </span>
         </p>
         <p>

@@ -108,9 +108,29 @@ function DateCalc() {
                   }
                 />
               </label>
+              {state.mode === "difference" && (
+                <label class="numrange row-1 date">
+                  <span>Конечная дата</span>
+                  <input
+                    type="date"
+                    class="input"
+                    min="0"
+                    max="250"
+                    value={state.endDate}
+                    onChange={(e) => {
+                      state.mode === "difference"
+                        ? dispatch({
+                            type: "endDate",
+                            payload: String(e.target.value),
+                          })
+                        : null;
+                    }}
+                  />
+                </label>
+              )}
 
               <label class="row-chekc">
-                <span>Учитывать н-ю дату</span>
+                <span>Учитывать нач-ю. дату</span>
                 <input
                   type="checkbox"
                   class="chekc"
@@ -144,26 +164,6 @@ function DateCalc() {
                   </div>
                 </label>
               )}
-              {state.mode === "difference" && (
-                <label class="numrange row-1 date">
-                  <span>Конечная дата</span>
-                  <input
-                    type="date"
-                    class="input"
-                    min="0"
-                    max="250"
-                    value={state.endDate}
-                    onChange={(e) => {
-                      state.mode === "difference"
-                        ? dispatch({
-                            type: "endDate",
-                            payload: String(e.target.value),
-                          })
-                        : null;
-                    }}
-                  />
-                </label>
-              )}
 
               {state.mode !== "difference" && (
                 <label class="numrange row-1 van">
@@ -178,6 +178,7 @@ function DateCalc() {
                         payload: Number(e.target.value),
                       })
                     }
+                    required
                   />
                   <div class="notation">дней</div>
                 </label>
@@ -196,6 +197,7 @@ function DateCalc() {
                           payload: Number(e.target.value),
                         })
                       }
+                      required
                     />
                     <div class="notation">недель</div>
                   </label>
@@ -211,6 +213,7 @@ function DateCalc() {
                           payload: Number(e.target.value),
                         })
                       }
+                      required
                     />
                     <div class="notation">месяцев</div>
                   </label>
@@ -226,6 +229,7 @@ function DateCalc() {
                           payload: Number(e.target.value),
                         })
                       }
+                      required
                     />
                     <div class="notation">лет</div>
                   </label>

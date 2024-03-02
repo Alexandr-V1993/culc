@@ -200,4 +200,10 @@ ol > li {
     width: 100%;
     padding-left: 200px;
   }
+  p.resultstring {
+    width: 250px;
+    text-align: left;
+    display: flex;
+    gap: 10px;
+  }
 }

@@ -1,18 +1,56 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 
 function Footer() {
+  useEffect(() => {
+    // Проверяем, что код выполняется только в продакшн
+    if (process.env.NODE_ENV === "production") {
+      // Yandex.Metrika counter
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
+        }
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      );
+
+      ym(96633373, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+      });
+    }
+  }, []);
+
   return (
     <footer>
-      <div class="wrapper">
-        <div class="fmenu">
-          <a class="fmenuitem" href="/doks">
+      <div className="wrapper">
+        <div className="fmenu">
+          <a className="fmenuitem" href="/doks">
             Политика конфиденциальности
           </a>
-          <a class="fmenuitem" href="#">
+          <a className="fmenuitem" href="#">
             Контакты
           </a>
         </div>
-        <div class="fmenu firstletterlogo">
+        <div className="fmenu firstletterlogo">
           <a href="/">
             <span>calcoffee.ru</span>
           </a>{" "}

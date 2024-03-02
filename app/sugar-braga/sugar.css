@@ -84,6 +84,20 @@ p.resultstring {
   .top-deluting {
     padding-top: 140px;
   }
+  p.resultstring > span {
+    font-size: 20px;
+    line-height: 40px;
+    display: block;
+    text-align: center;
+  }
+  p.resultstring {
+    width: 250px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
 }
 
 @media screen and (max-width: 375px) {

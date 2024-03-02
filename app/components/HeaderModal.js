@@ -38,6 +38,9 @@ function HeaderModal() {
                 <a href="/summapro" class="sublnk">
                   Сумма прописью
                 </a>
+                <a href="/microloan-calculator" class="sublnk">
+                  Сумма прописью
+                </a>
               </div>
               <div class="topmenulink">
                 <a class="linkheader linknotanchor">

@@ -1170,6 +1170,18 @@ function Home() {
               </div>
             </div>
           </a>
+          <a href="/microloan-calculator" class="calcitem finance math">
+            <span class="material-symbols-rounded symbol-width">
+              <img src="/micro2.svg" alt="микрозаймы" />
+            </span>
+            <div class="calcalltext">
+              <div class="calcname">Калькулятор микрозаймов</div>
+              <div class="calcdesc">
+                Микрозайм - это небольшие кредиты, предназначенные для
+                предоставления.
+              </div>
+            </div>
+          </a>
           {/* <a href="/pernumber/" class="calcitem finance math">
               <span class="material-symbols-rounded">humidity_percentage</span>
               <div class="calcalltext">

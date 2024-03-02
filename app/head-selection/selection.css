@@ -75,7 +75,13 @@ p.resultstring > span {
     font-size: 20px;
     line-height: 40px;
     display: block;
+    text-align: center;
+  }
+  p.resultstring {
+    width: 250px;
     text-align: left;
+    display: flex;
+    gap: 10px;
   }
 }
 

@@ -17,7 +17,7 @@
 .resultstring {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 
 @media screen and (max-width: 802px) {
@@ -42,5 +42,10 @@
   .btns,
   .bst {
     width: 100%;
+  }
+}
+@media screen and (max-width: 540px) {
+  span#resultimt {
+    font-size: 17px;
   }
 }
