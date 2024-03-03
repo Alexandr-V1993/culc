@@ -1,5 +1,5 @@
 import "./input.css";
-function Input({ labelTitle, max, type, typeDispatch, payloadType, notation }) {
+function Input({ labelTitle, max, type, notation, typeDispatch, hadleInput }) {
   return (
     <>
       <label class="numrange row-1 van">
@@ -9,12 +9,7 @@ function Input({ labelTitle, max, type, typeDispatch, payloadType, notation }) {
           class="input"
           min="0"
           max={max}
-          onChange={(e) =>
-            dispatch({
-              type: { typeDispatch },
-              payload: { payloadType }(e.target.value),
-            })
-          }
+          onChange={(e) => hadleInput(e, typeDispatch)}
           required
         />
         <div class="notation">{notation}</div>
@@ -24,3 +19,7 @@ function Input({ labelTitle, max, type, typeDispatch, payloadType, notation }) {
 }
 
 export default Input;
+
+// function hadleInput(e, typeDispatch) {
+//     dispatch({ type: typeDispatch, payload: e.target.value });
+//   }

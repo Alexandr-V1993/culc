@@ -2,39 +2,36 @@
 import React, { useEffect, useReducer, useState } from "react";
 
 const initial = {
-  dateText: null,
-  total: null,
-  date: null,
   click: false,
-  days: null,
-  weekDays: null,
+  amount: null,
 };
 
 function reducer(state, action) {
-  console.log(state.days);
+  console.log(state);
   switch (action.type) {
     case "total":
       return { ...state, total: action.payload };
-    case "date":
-      return { ...state, date: action.payload };
-    case "dateText":
-      return { ...state, dateText: action.payload };
+
     case "click":
       return { ...state, click: action.payload };
 
-    case "days":
-      return { ...state, days: action.payload };
-    case "weekDays":
-      return { ...state, weekDays: action.payload };
+    case "amount":
+      return { ...state, amount: +action.payload.toFixed(2) };
+    case "overpayment":
+      return { ...state, overpayment: Number(action.payload.toFixed(2)) };
+    case "overdueOverpayment":
+      return {
+        ...state,
+        overdueOverpayment: +action.payload.toFixed(2),
+      };
 
     default:
       break;
   }
 }
 
-function MicroForm({ children, obj, url, mode }) {
+function MicroForm({ children, obj, url }) {
   const [state, dispatch] = useReducer(reducer, initial);
-  const [tests, settests] = useState();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -56,23 +53,26 @@ function MicroForm({ children, obj, url, mode }) {
     }
   };
 
-  //   useEffect(() => {
-  //     if (state?.total?.data?.date) {
-  //       dispatch({ type: "date", payload: state?.total?.data?.date });
-  //     }
-  //     if (state?.total?.data?.dateText) {
-  //       dispatch({ type: "dateText", payload: state?.total?.data?.dateText });
-  //     }
-  //     if (state?.total?.data?.days) {
-  //       dispatch({ type: "days", payload: state?.total?.data?.days });
-  //     }
-  //     if (state?.total?.data?.weekDays) {
-  //       dispatch({ type: "weekDays", payload: state?.total?.data?.weekDays });
-  //     }
-  //   }, [state.total]);
-  //   useEffect(() => {
-  //     dispatch({ type: "setClick", payload: false });
-  //   }, [mode]);
+  useEffect(() => {
+    if (state?.total?.data?.amount) {
+      dispatch({ type: "amount", payload: state?.total?.data?.amount });
+    }
+    if (state?.total?.data?.overpayment) {
+      dispatch({
+        type: "overpayment",
+        payload: Number(state?.total?.data?.overpayment),
+      });
+    }
+    if (state?.total?.data?.overdueOverpayment) {
+      dispatch({
+        type: "overdueOverpayment",
+        payload: Number(state?.total?.data?.overdueOverpayment),
+      });
+    }
+  }, [state?.total]);
+  useEffect(() => {
+    dispatch({ type: "setClick", payload: false });
+  }, []);
 
   return (
     <form className="inlinecalculators" onSubmit={handleSubmit}>
@@ -87,32 +87,40 @@ function MicroForm({ children, obj, url, mode }) {
             Расчитать
           </button>
         </div>
-        {state.click && (
+        {state?.click && (
           <div id="res">
             <p className="resultstring">
-              <span id="rw">Начислено процентов </span>
+              <span id="rw">Начислено % </span>
               <span id="resultimt">
-                {state.alcohol} <span className="colored">руб.</span>
+                {state.overpayment} <span className="colored">руб.</span>
               </span>
             </p>
             <p className="resultstring">
               <span id="rw">Сумма к возврату </span>
               <span id="resultimt">
-                {state.heads} <span className="colored">руб.</span>{" "}
+                {state.amount} <span className="colored">руб.</span>{" "}
               </span>
             </p>
-            <p className="resultstring">
-              <span id="rw">Просрочка </span>
-              <span id="resultimt">
-                {state.tails} <span className="colored">руб.</span>
-              </span>
-            </p>
-            <p className="resultstring">
-              <span id="rw">Всего </span>
-              <span id="resultimt">
-                {state.value} <span className="colored">руб.</span>
-              </span>
-            </p>
+            {state.overdueOverpayment && (
+              <>
+                <p className="resultstring">
+                  <span id="rw">Просрочка </span>
+                  <span id="resultimt">
+                    {state.overdueOverpayment}{" "}
+                    <span className="colored">руб.</span>
+                  </span>
+                </p>
+                <p className="resultstring">
+                  <span id="rw">Всего </span>
+                  <span id="resultimt">
+                    {state && (
+                      <span>{state.amount + state.overdueOverpayment} </span>
+                    )}
+                    <span className="colored">руб.</span>
+                  </span>
+                </p>
+              </>
+            )}
           </div>
         )}
       </div>
