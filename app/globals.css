@@ -1716,58 +1716,32 @@ footer .fmenu.firstletterlogo a span {
 .page-bolt {
   font-weight: 600;
 }
-/* @media screen and (max-width: 540px) {
-  .topmenuwrap {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    align-items: flex-start;
-  }
-  .topmenu.active {
-    position: absolute;
-    width: 100%;
-  }
-  .topmenuwrap {
-    position: absolute;
-    top: -100px;
-    left: 10px;
-  }
-  .close > img {
-    top: -200px;
-    display: block;
-  }
+.top {
+  display: flex;
+}
+.search-section-top > input {
+  padding: 15px;
+  margin: 0;
+  min-height: 60px;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (max-width: 375px) {
-  .topmenuwrap {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    align-items: flex-start;
-  }
-  .topmenu.active {
-    position: absolute;
-    width: 100%;
-  }
-  .topmenuwrap {
-    position: absolute;
-    top: -60px;
-    left: 10px;
-  }
+.search-section-top {
+  /* background: white; */
+  padding: 4px 4px;
+  width: 100%;
+  border-radius: 15px;
+  margin: 2px 0;
+  font-size: 16px;
+  font-weight: 400;
+  box-sizing: border-box;
+  outline: none;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+  font-family: "Open Sans", sans-serif;
+  min-height: 54px;
+  border: none;
 }
-@media screen and (max-width: 800px) {
-  .inlinecalculator {
-    min-height: 100px;
-    display: flex;
-    align-items: flex-start;
-  }
-  #result {
-    display: flex;
-  }
-}
-@media screen and (max-width: 600px) {
-  #result {
-    display: flex;
-    left: -5px;
-  }
-} */

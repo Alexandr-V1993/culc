@@ -155,6 +155,42 @@ span.colorite {
   font-weight: 600;
 }
 
+@media screen and (max-width: 768px) {
+  .inlinecalculators {
+    padding-right: 10px;
+    justify-content: center;
+    padding-left: 30px;
+    max-width: 500px;
+  }
+  .row-vans-bottom {
+    flex-direction: column;
+  }
+  p.resultstring {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .inlinecalculators {
+    padding-right: 10px;
+    justify-content: center;
+    padding-left: 40px;
+    max-width: 500px;
+  }
+  .row-vans-bottom {
+    flex-direction: column;
+  }
+  p.resultstring {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
 @media screen and (max-width: 540px) {
   .topInput {
     flex-direction: column;
@@ -185,36 +221,6 @@ span.colorite {
   p.resultstring {
     width: 100%;
     display: flex;
-    justify-content: space-between;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .inlinecalculators {
-    padding-right: 10px;
-    justify-content: center;
-    padding-left: 30px;
-    max-width: 500px;
-  }
-  .row-vans-bottom {
     flex-direction: column;
-  }
-}
-@media screen and (min-width: 800px) {
-  .inlinecalculators {
-    padding-right: 10px;
-    justify-content: center;
-    padding-left: 40px;
-    max-width: 500px;
-  }
-  .row-vans-bottom {
-    flex-direction: column;
-  }
-  p.resultstring {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 10px;
   }
 }

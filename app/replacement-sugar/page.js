@@ -27,7 +27,7 @@ function Replacement() {
         <Form
           obj={obj}
           url={"https://calcline.ru/api/calculate/glucose-sugar-replacement"}
-          alcoTitle={"Потребуется глюкозы (фруктозы)кг. :"}
+          alcoTitle={"Потребуется глюкозы кг. : "}
         >
           <label class="numrange row-1 van">
             <span>Количество сахара</span>

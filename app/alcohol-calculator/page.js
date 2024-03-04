@@ -151,7 +151,7 @@ function AlcoCalc() {
       formTitle = "";
       break;
     case "type6":
-      alcoTitle = "Потребуется глюкозы (фруктозы)кг. :";
+      alcoTitle = "Потребуется глюкозы кг. : ";
       crepost = "";
       formTitle = "";
       break;
