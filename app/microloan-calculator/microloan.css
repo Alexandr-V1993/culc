@@ -152,6 +152,7 @@ span.colorite {
   background: linear-gradient(22.75deg, #f00 -42.47%, #4021ff 134.19%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
   font-weight: 600;
 }
 
@@ -221,6 +222,50 @@ span.colorite {
   p.resultstring {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
+}
+
+.test2 {
+  text-align: center;
+  padding-top: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+  margin: 0 auto;
+  table-layout: fixed;
+}
+
+th,
+td {
+  border: 1px solid gray;
+  padding: 3px; /* Уменьшение размера внутренних отступов */
+  width: calc(100% / 3);
+  text-align: center;
+  background-color: #fbfcfc;
+  border: 1px solid #ecf0f1;
+  padding: 7px;
+}
+
+th:first-child,
+td:first-child {
+  width: 20%;
+  background-color: #fbfcfc;
+  border: 1px solid #ecf0f1;
+  padding: 7px;
+}
+
+thead {
+  background-color: #f2f2f2;
+}
+
+tbody {
+  vertical-align: top;
+}
+
+#res {
+  width: 96%;
 }

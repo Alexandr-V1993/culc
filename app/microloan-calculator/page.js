@@ -21,8 +21,6 @@ const initial = {
 };
 
 function reducer(state, action) {
-  console.log(state.click);
-
   switch (action.type) {
     case "amount":
       return { ...state, amount: +action.payload };
@@ -49,7 +47,13 @@ function reducer(state, action) {
 function Microloun() {
   const [state, dispatch] = useReducer(reducer, initial);
   const obj = { ...state };
-
+  const period = state.period;
+  const amount = state.amount;
+  const overdueDays = state.overdueDays;
+  const overduePerDay = state.overduePerDay;
+  const overdueFee = state.overdueFee;
+  const click = state.click;
+  const overdueOverpayment = state.overdueOverpayment;
   function hadleInput(e, typeDispatch) {
     dispatch({ type: typeDispatch, payload: e.target.value });
   }
@@ -58,6 +62,25 @@ function Microloun() {
   }
   function handleCheck(typeDispatch) {
     dispatch({ type: typeDispatch });
+  }
+
+  let stavca;
+  switch (state.rateUnit) {
+    case "day":
+      stavca = "Ставка в день";
+      break;
+    case "week":
+      stavca = "Ставка в неделю";
+      break;
+    case "month":
+      stavca = "Ставка в месяц";
+      break;
+    case "year":
+      stavca = "Ставка в год";
+      break;
+
+    default:
+      break;
   }
 
   return (
@@ -71,6 +94,13 @@ function Microloun() {
         span={"Микрозаймов"}
       >
         <MicroForm
+          overdueDays={overdueDays}
+          overPerDay={overduePerDay}
+          overdueOverpayment={overdueOverpayment}
+          overdueFee={overdueFee}
+          amount={amount}
+          period={period}
+          click={click}
           obj={obj}
           url={"https://calcline.ru/api/calculate/microloan"}
         >
@@ -129,7 +159,7 @@ function Microloun() {
                     hadleInput={hadleInput}
                   />
                   <Input
-                    labelTitle={"Ставка в год"}
+                    labelTitle={stavca}
                     notation={"%"}
                     typeDispatch={"overdueRate"}
                     hadleInput={hadleInput}
