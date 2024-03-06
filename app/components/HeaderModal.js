@@ -136,6 +136,21 @@ function HeaderModal() {
                   Калькулятор расхода топлива
                 </a>
               </div>
+              <div class="topmenulink">
+                <a class="linkheader linknotanchor">
+                  <span class="material-symbols-rounded">
+                    <img
+                      className="img-width"
+                      src="/cub2.svg"
+                      alt="автомобиль"
+                    />
+                  </span>{" "}
+                  Рандомайзеры
+                </a>
+                <a href="/password-generator" class="sublnk">
+                  Генератор паролей
+                </a>
+              </div>
               <span className="close" onClick={() => setOpen(false)}>
                 <img src="/close.svg" alt="закрыть" />
               </span>
