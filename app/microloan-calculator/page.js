@@ -127,6 +127,7 @@ function Microloun() {
               </div>
               <div className="row-select">
                 <Input
+                  type={"number"}
                   labelTitle={"Ставка"}
                   notation={"%"}
                   typeDispatch={"rate"}
@@ -153,18 +154,21 @@ function Microloun() {
               {state.click && (
                 <div>
                   <Input
+                    type={"number"}
                     labelTitle={"Просрочка"}
                     notation={"дней"}
                     typeDispatch={"overdueDays"}
                     hadleInput={hadleInput}
                   />
                   <Input
+                    type={"number"}
                     labelTitle={stavca}
                     notation={"%"}
                     typeDispatch={"overdueRate"}
                     hadleInput={hadleInput}
                   />
                   <Input
+                    type={"number"}
                     labelTitle={"Сумма штрафа"}
                     notation={"руб."}
                     typeDispatch={"overdueFee"}

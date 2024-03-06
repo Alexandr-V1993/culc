@@ -51,7 +51,9 @@ a {
   width: 100%;
   padding-right: 24px;
 }
-
+span.r-d {
+  margin: -15px;
+}
 .inlinecalculators {
   max-width: 480px;
   box-sizing: border-box;
@@ -149,5 +151,6 @@ article.articleBody p {
   span#resultimt {
     line-height: 70%;
     word-wrap: normal;
+    text-align: center;
   }
 }

@@ -110,10 +110,8 @@ function FormAlcohol({
             {weights}
             {select === "type7" && (
               <p className="resultstring">
-                <span id="resultimt">
-                  {spirt}
-                  {alcohol}
-                </span>
+                <span id="resultimt">{spirt}</span>
+                <span id="resultimt">{alcohol}</span>
                 <span id="resultimt">
                   {golovi}
                   {heads}
@@ -131,16 +129,20 @@ function FormAlcohol({
                 {select === "type3" || select === "type4" ? "°" : ""}
                 {all === "литров" ? "" : all}
               </span>
+              <span style={{ fontSize: "15px" }} className="r-d">
+                {vihod}
+              </span>
               <span id="resultimt">
-                {vihod}{" "}
                 {vans ? new Intl.NumberFormat("ru-RU").format(vans) : ""}
                 {select === "type3" || select === "type4" ? "°" : ""}
                 {all === "литров" ? "" : all}
               </span>
             </p>
             <p className="resultstring">
+              <span id="resultimt">{crepost}</span>
+
               <span id="resultimt">
-                {crepost} {weight}
+                {weight}
                 {strength
                   ? new Intl.NumberFormat("ru-RU").format(strength)
                   : ""}{" "}
