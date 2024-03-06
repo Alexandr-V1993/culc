@@ -50,12 +50,17 @@ function FuelCostForm({ children, obj, url, rashod, CenaTopliva }) {
             <p className="resultstring">
               <span id="resultimt">
                 {rashod}
-                {`${consumption}`}
+                {new Intl.NumberFormat("ru-RU").format(consumption)}
               </span>
 
               <span id="resultimt">
                 {CenaTopliva}
-                {`${cost}`}
+                {new Intl.NumberFormat("ru-RU", {
+                  style: "currency",
+                  currency: "RUB",
+                  minimumFractionDigits: 3,
+                  maximumFractionDigits: 3,
+                }).format(cost)}
               </span>
 
               <span></span>

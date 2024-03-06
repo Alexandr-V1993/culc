@@ -121,13 +121,21 @@ function MicroForm({
             <p className="resultstring">
               <span id="rw">Начислено % </span>
               <span id="resultimt">
-                {state.overpayment} <span className="colored">руб.</span>
+                {state?.overpayment?.toLocaleString("ru-RU", {
+                  style: "currency",
+                  currency: "RUB",
+                })}{" "}
+                <span className="colored"></span>
               </span>
             </p>
             <p className="resultstring">
               <span id="rw">Сумма к возврату </span>
               <span id="resultimt">
-                {state.amount} <span className="colored">руб.</span>{" "}
+                {state?.amount?.toLocaleString("ru-RU", {
+                  style: "currency",
+                  currency: "RUB",
+                })}{" "}
+                <span className="colored"></span>{" "}
               </span>
             </p>
             {!click && (
@@ -142,8 +150,8 @@ function MicroForm({
                         <thead>
                           <tr>
                             <td>День</td>
-                            <td>Проценты, руб.</td>
-                            <td>Долг, руб.</td>
+                            <td>Проценты, ₽</td>
+                            <td>Долг, ₽</td>
                           </tr>
                         </thead>
                       ) : null}
@@ -162,7 +170,7 @@ function MicroForm({
                               : ""}
                           </td>
 
-                          <td>{currentAmount.toFixed(2)}</td>
+                          <td>{currentAmount.toFixed(2)} ₽</td>
                         </tr>
                       </tbody>
                     </table>
@@ -176,8 +184,11 @@ function MicroForm({
                 <p className="resultstring">
                   <span id="rw">Просрочка </span>
                   <span id="resultimt">
-                    {state.overdueOverpayment}{" "}
-                    <span className="colored">руб.</span>
+                    {state.overdueOverpayment.toLocaleString("ru-RU", {
+                      style: "currency",
+                      currency: "RUB",
+                    })}{" "}
+                    <span className="colored"></span>
                   </span>
                 </p>
                 <p className="resultstring">
@@ -185,10 +196,15 @@ function MicroForm({
                   <span id="resultimt">
                     {state && (
                       <span>
-                        {(state.amount + state.overdueOverpayment).toFixed(2)}{" "}
+                        {new Intl.NumberFormat("ru-RU", {
+                          style: "currency",
+                          currency: "RUB",
+                          minimumFractionDigits: 3,
+                          maximumFractionDigits: 3,
+                        }).format(state.amount + state.overdueOverpayment)}
                       </span>
                     )}
-                    <span className="colored">руб.</span>
+                    <span className="colored"></span>
                   </span>
                 </p>
                 <div className="test2">
@@ -213,8 +229,8 @@ function MicroForm({
                           <thead>
                             <tr>
                               <td>День</td>
-                              <td>Проценты, руб.</td>
-                              <td>Долг, руб.</td>
+                              <td>Проценты, ₽</td>
+                              <td>Долг, ₽</td>
                             </tr>
                           </thead>
                         ) : null}
@@ -264,7 +280,12 @@ function MicroForm({
                       <td style={{ color: "red" }}>Штраф </td>
                       <td style={{ color: "red" }}>{overdueFee} ₽</td>
                       <td style={{ color: "red" }}>
-                        {(overdueFee + currentAmount).toFixed(2)} ₽
+                        {new Intl.NumberFormat("ru-RU", {
+                          style: "currency",
+                          currency: "RUB",
+                          minimumFractionDigits: 3,
+                          maximumFractionDigits: 3,
+                        }).format(overdueFee + currentAmount)}
                       </td>
                     </tr>
                   </table>

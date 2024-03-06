@@ -148,14 +148,14 @@ label > span {
   gap: 20px;
   justify-content: flex-start;
 }
-span.colorite {
+
+span#resultimt {
   background: linear-gradient(22.75deg, #f00 -42.47%, #4021ff 134.19%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
   font-weight: 600;
 }
-
 @media screen and (max-width: 768px) {
   .inlinecalculators {
     padding-right: 10px;
@@ -267,5 +267,5 @@ tbody {
 }
 
 #res {
-  width: 96%;
+  width: 95%;
 }

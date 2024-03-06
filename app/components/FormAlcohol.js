@@ -132,7 +132,8 @@ function FormAlcohol({
                 {all === "литров" ? "" : all}
               </span>
               <span id="resultimt">
-                {vihod} {vans}
+                {vihod}{" "}
+                {vans ? new Intl.NumberFormat("ru-RU").format(vans) : ""}
                 {select === "type3" || select === "type4" ? "°" : ""}
                 {all === "литров" ? "" : all}
               </span>
@@ -140,7 +141,10 @@ function FormAlcohol({
             <p className="resultstring">
               <span id="resultimt">
                 {crepost} {weight}
-                {strength} {select === "type2" ? "°" : ""}
+                {strength
+                  ? new Intl.NumberFormat("ru-RU").format(strength)
+                  : ""}{" "}
+                {select === "type2" ? "°" : ""}
               </span>
             </p>
             <p>{summaOblog}</p>

@@ -66,19 +66,20 @@ function DiscountForm({
           {modeSelect !== "startingPrice" && (
             <span id="resultimt">
               {disconts}
-              {discount} {modeSelect === "discountPercentage" ? "%" : "₽"}
+              {new Intl.NumberFormat("ru-RU").format(discount)}
+              {modeSelect === "discountPercentage" ? "%" : " ₽"}
             </span>
           )}
           {modeSelect === "discountedPrice" && (
             <span id="resultimt">
               {priceDiscount}
-              {prices} ₽
+              {new Intl.NumberFormat("ru-RU").format(prices)} ₽
             </span>
           )}
           {modeSelect === "startingPrice" && (
             <span id="resultimt">
               {priceBezScidki}
-              {discountedPrice} ₽
+              {new Intl.NumberFormat("ru-RU").format(discountedPrice)} ₽
             </span>
           )}
         </p>

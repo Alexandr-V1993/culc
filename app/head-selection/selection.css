@@ -73,7 +73,7 @@ p.resultstring > span {
   }
   p.resultstring > span {
     font-size: 20px;
-    line-height: 40px;
+    line-height: 28px;
     display: block;
     text-align: center;
   }
@@ -92,9 +92,8 @@ p.resultstring > span {
   }
   p.resultstring > span {
     font-size: 20px;
-    line-height: 40px;
+    line-height: 28px;
     display: block;
-    text-align: left;
   }
 }
 @media screen and (max-width: 580px) {

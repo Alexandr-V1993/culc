@@ -117,17 +117,33 @@ function Nds() {
               <div className="centre">
                 <span className="resspans items1">Без налога:</span>{" "}
                 <strong id="resultnet">
-                  {beforeAmount ? total.data?.beforeAmount : 0}
+                  {new Intl.NumberFormat("ru-RU", {
+                    style: "currency",
+                    currency: "RUB",
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                  }).format(beforeAmount)}
                 </strong>{" "}
                 <br />
                 <span className="topstest items1">Налог:</span>{" "}
-                <strong id="resulttax">{vat ? total.data?.vat : 0}</strong>{" "}
+                <strong id="resulttax">
+                  {new Intl.NumberFormat("ru-RU", {
+                    style: "currency",
+                    currency: "RUB",
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                  }).format(vat)}
+                </strong>{" "}
                 <br />
                 <b className="itogotax">
                   <span className="bolted">Итого:</span>{" "}
                   <strong id="resultgross">
-                    {" "}
-                    {afterAmount ? total.data?.afterAmount : 0}
+                    {new Intl.NumberFormat("ru-RU", {
+                      style: "currency",
+                      currency: "RUB",
+                      minimumFractionDigits: 2,
+                      maximumFractionDigits: 2,
+                    }).format(afterAmount)}
                   </strong>
                 </b>
               </div>

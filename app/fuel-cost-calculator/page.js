@@ -81,7 +81,7 @@ function FaelCost() {
           rashod={`Израсходовано топлива ${
             state.units === "english" ? "г-в" : "л-в"
           }: `}
-          CenaTopliva={"Стоимость топлива ₽: "}
+          CenaTopliva={"Стоимость топлива : "}
         >
           <div className="row-select">
             <div className="left-select">

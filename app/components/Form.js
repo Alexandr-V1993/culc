@@ -154,13 +154,15 @@ function Form({
         <p class="resultstring">
           <span id="resultimt"> {alcoTitle}</span>
           <span id="resultimt">
-            {vans}
+            {vans ? new Intl.NumberFormat("ru-RU").format(vans) : ""}
+
             {all === "литров" ? "" : all}
-            {tax}
+            {tax ? new Intl.NumberFormat("ru-RU").format(tax) : ""}
           </span>
           <span id="resultimt">{crepost}</span>
           <span id="resultimt">
-            {weights} {strength}
+            {weights}{" "}
+            {strength ? new Intl.NumberFormat("ru-RU").format(strength) : ""}
           </span>
         </p>
         <p>
@@ -195,7 +197,7 @@ function Form({
             {bmt === "SevereThinness" ? "Выраженный дефицит массы тела" : ""}
             {bmt === "Overweight" ? "Избыточная масса тела (предожирение)" : ""}
             {bmt === "Underweight" ? "Недостаточная (дефицит) масса тела" : ""}
-            {amount}
+            {amount ? new Intl.NumberFormat("ru-RU").format(amount) : ""}
           </span>
         </p>
       </div>

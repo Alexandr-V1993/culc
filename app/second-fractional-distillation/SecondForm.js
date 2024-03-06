@@ -91,25 +91,31 @@ function SecondForm({ children, obj, url }) {
             <p className="resultstring">
               <span id="rw">Абсолютного спирта: </span>
               <span id="resultimt">
-                {state.alcohol} <span className="colored">литров</span>
+                {new Intl.NumberFormat("ru-RU").format(state.alcohol)}
+                <span className="colored"> литров</span>
               </span>
             </p>
             <p className="resultstring">
               <span id="rw">Головы: </span>
               <span id="resultimt">
-                {state.heads} <span className="colored">литров</span>{" "}
+                {new Intl.NumberFormat("ru-RU").format(state.heads)}
+                <span className="colored"> литров</span>{" "}
               </span>
             </p>
             <p className="resultstring">
               <span id="rw">Хвосты: </span>
               <span id="resultimt">
-                {state.tails} <span className="colored">литров</span>
+                {new Intl.NumberFormat("ru-RU").format(state.tails)}
+
+                <span className="colored"> литров</span>
               </span>
             </p>
             <p className="resultstring">
               <span id="rw">Выход продукта крепостью 40°: </span>
               <span id="resultimt">
-                {state.value} <span className="colored">литров</span>
+                {new Intl.NumberFormat("ru-RU").format(state.value)}
+
+                <span className="colored"> литров</span>
               </span>
             </p>
           </div>

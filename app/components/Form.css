@@ -34,6 +34,16 @@
 .blacks {
   font-weight: 700;
 }
+div#result {
+  align-items: center;
+  text-align: center;
+}
+p.resultstring {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 @media screen and (max-width: 800px) {
   .select {
     width: 100%;
@@ -165,6 +175,7 @@
     left: 0px;
   }
 }
+
 @media screen and (max-width: 422px) {
   .btns,
   .bst {

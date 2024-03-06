@@ -9,7 +9,6 @@ function OtborGolov({ setVolume, setStrength, setHeads }) {
           class="input"
           id="nheight"
           min="0"
-          max="250"
           onChange={(e) => setVolume(e.target.value)}
           required
         />
