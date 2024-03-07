@@ -1746,3 +1746,9 @@ footer .fmenu.firstletterlogo a span {
   min-height: 54px;
   border: none;
 }
+.cont-row {
+  text-align: center;
+}
+section.listsection {
+  padding-bottom: 10px;
+}
