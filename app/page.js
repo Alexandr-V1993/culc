@@ -117,6 +117,16 @@ function Home() {
         "Микрозайм - это небольшие кредиты, предназначенные для предоставления.",
       url: "/microloan-calculator",
     },
+    {
+      id: 12,
+      name: "Калькулятор генератора паролей",
+      category: "finance math",
+      image: "/parol.svg",
+      alt: "генератор",
+      description:
+        "В цифровую эпоху пароль служит важнейшим ключом для доступа к различным учетным записям.",
+      url: "/password-generator",
+    },
   ];
 
   const filteredCalculators = calculators.filter((calculator) =>

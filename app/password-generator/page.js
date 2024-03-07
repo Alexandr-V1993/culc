@@ -120,7 +120,7 @@ function Password() {
                   />
                   <span>
                     <span className="span">Специальные символы</span> !@$%^&*()
-                    <></>,.?/[]{}-=_+
+                    <></>,.?/[]{}
                   </span>
                 </label>
                 <label className="label-row-top">

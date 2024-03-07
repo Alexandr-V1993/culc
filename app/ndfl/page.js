@@ -77,7 +77,6 @@ function Ndfl() {
               class="input"
               id="nprice"
               min="0"
-              max="100000"
               value={number}
               onChange={(e) => setNumber(e.target.value)}
             />
