@@ -1,16 +1,25 @@
 .inlinecalculator {
   width: 100%;
 }
+div.notation {
+  top: 36px;
+}
 .centre-top {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
 .van {
-  width: 100%;
+  width: 47%;
 }
 .two {
+  width: 47%;
+}
+.btn-top {
   width: 100%;
+}
+.bst {
+  width: 97%;
 }
 @media screen and (max-width: 800px) {
   .inlinecalculator {
@@ -30,6 +39,10 @@
   .inlinecalculator {
     min-width: 100%;
     margin-left: 1px;
+    padding-top: 100px;
+  }
+  div#result {
+    bottom: -20px;
   }
 }
 

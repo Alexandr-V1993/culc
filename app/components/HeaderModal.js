@@ -56,6 +56,9 @@ function HeaderModal() {
                 <a href="/percent" class="sublnk">
                   Калькулятор процентов
                 </a>
+                <a href="/compound-interest-calculator" class="sublnk">
+                  Калькулятор сложного процента
+                </a>
               </div>
               <div class="topmenulink">
                 <a class="linkheader linknotanchor">

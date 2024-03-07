@@ -127,6 +127,16 @@ function Home() {
         "В цифровую эпоху пароль служит важнейшим ключом для доступа к различным учетным записям.",
       url: "/password-generator",
     },
+    {
+      id: 13,
+      name: "Калькулятор сложного процента",
+      category: "finance math",
+      image: "/parol.svg",
+      alt: "сложный процент",
+      description:
+        "Кто понимает сложный процент – зарабатывает его, тот, кто не понимает – его платит.",
+      url: "/compound-interest-calculator",
+    },
   ];
 
   const filteredCalculators = calculators.filter((calculator) =>

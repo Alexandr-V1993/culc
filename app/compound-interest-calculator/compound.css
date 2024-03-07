@@ -1,0 +1,144 @@
+.formula > sup {
+  font-size: 17px;
+}
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+ol > li > h3 {
+  text-align: left;
+}
+.row-res {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #e1ecf3;
+  width: 100%;
+  padding-right: 24px;
+}
+
+.inlinecalculators {
+  max-width: 510px;
+  box-sizing: border-box;
+  padding: 5px 0px 10px 24px;
+  margin: 0px auto;
+  position: relative;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  background: #e1ecf3;
+  min-height: 170px;
+  padding-right: 4px;
+}
+#res {
+  border-radius: 10px;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  text-align: center;
+  background-color: #fff;
+  max-width: 100%;
+  padding-top: 20px;
+}
+
+input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+}
+label > span {
+  font-size: 15px;
+}
+#rw {
+  font-size: 10px;
+}
+.topInput-select > .select {
+  max-width: 30%;
+}
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topInput-select {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+}
+.bottom-select {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+}
+.bottom-select > .select {
+  max-width: 40%;
+}
+.bst {
+  margin-top: 20px;
+  width: 100%;
+}
+.input-seredina {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+}
+label .notation {
+  top: 40px;
+}
+.resultstring {
+  display: flex;
+  line-height: 80%;
+  justify-content: space-between;
+}
+.resultstring > span {
+  font-size: 18px;
+}
+#rw {
+  font-size: 18px;
+}
+@media screen and (max-width: 540px) {
+  .input-seredina {
+    flex-direction: column;
+  }
+  label {
+    width: 100%;
+  }
+  .topInput-select > .select {
+    max-width: 50%;
+  }
+  .bottom-select {
+    flex-direction: column;
+  }
+  .bottom-select > .select {
+    max-width: 100%;
+  }
+  .row-check {
+    width: 20%;
+  }
+  .row-res {
+    padding-top: 20px;
+  }
+  .resultstring {
+    display: flex;
+    line-height: 80%;
+    flex-direction: column;
+  }
+  .resultstring > span {
+    font-size: 20px;
+  }
+  #rw {
+    font-size: 20px;
+  }
+  div.test-res {
+    display: flex;
+    flex-direction: column;
+  }
+  p {
+    padding: 0;
+    margin: 0;
+  }
+  .test-res {
+    padding-bottom: 15px;
+  }
+}
