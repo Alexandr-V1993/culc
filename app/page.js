@@ -131,7 +131,7 @@ function Home() {
       id: 13,
       name: "Калькулятор сложного процента",
       category: "finance math",
-      image: "/parol.svg",
+      image: "/big-procent.svg",
       alt: "сложный процент",
       description:
         "Кто понимает сложный процент – зарабатывает его, тот, кто не понимает – его платит.",
