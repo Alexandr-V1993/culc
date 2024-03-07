@@ -46,7 +46,7 @@ function Footer() {
           <a className="fmenuitem" href="/doks">
             Политика конфиденциальности
           </a>
-          <a className="fmenuitem" href="#">
+          <a className="fmenuitem" href="/contacts">
             Контакты
           </a>
         </div>

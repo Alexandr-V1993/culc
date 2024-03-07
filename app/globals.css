@@ -1543,6 +1543,7 @@ footer .wrapper {
   align-items: center;
   flex-wrap: wrap;
   margin: 70px auto;
+  padding-top: 10px;
 }
 footer a.fmenu {
   display: block;
