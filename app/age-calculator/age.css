@@ -17,6 +17,12 @@
   font-size: 15px;
   color: grey;
 }
+.btn-top {
+  width: 100%;
+}
+.btns {
+  width: 100%;
+}
 span.bg > strong {
   font-size: 20px;
 }
@@ -98,11 +104,11 @@ p.pd > strong {
   }
 
   .inlinecalculator {
-    margin: 10px -15px;
+    margin: 10px 2px;
     padding: 5px 15px 15px;
     border-radius: 0;
     box-shadow: none;
-
+    min-width: 100%;
     min-height: 210px;
   }
   #result {

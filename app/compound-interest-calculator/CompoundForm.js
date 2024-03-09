@@ -1,4 +1,4 @@
-// Функция для форматирования числа в денежный формат
+"use client";
 function CurrencyFormat(amount) {
   return new Intl.NumberFormat("ru-RU", {
     style: "currency",
@@ -7,7 +7,7 @@ function CurrencyFormat(amount) {
 }
 
 // Компонент CompoundForm
-import React, { useEffect, useReducer, useRef } from "react";
+import React, { useEffect, useReducer, useRef, useState } from "react";
 import Chart from "chart.js/auto";
 
 const initialState = {
@@ -22,9 +22,11 @@ const initialState = {
     interest: [],
     balance: [],
   },
+  schedule: null,
 };
 
 function reducer(state, action) {
+  console.log(state.schedule);
   switch (action.type) {
     case "total":
       return { ...state, total: action.payload };
@@ -38,6 +40,8 @@ function reducer(state, action) {
       return { ...state, replenishment: action.payload };
     case "chart":
       return { ...state, chart: action.payload };
+    case "schedule":
+      return { ...state, schedule: action.payload };
     default:
       return state;
   }
@@ -46,6 +50,21 @@ function reducer(state, action) {
 function CompoundForm({ children, obj, url }) {
   const [state, dispatch] = useReducer(reducer, initialState);
   const chartRef = useRef(null);
+
+  const months = [
+    "Январь",
+    "Февраль",
+    "Март",
+    "Апрель",
+    "Май",
+    "Июнь",
+    "Июль",
+    "Август",
+    "Сентябрь",
+    "Октябрь",
+    "Ноябрь",
+    "Декабрь",
+  ];
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -85,6 +104,10 @@ function CompoundForm({ children, obj, url }) {
       dispatch({
         type: "chart",
         payload: state.total.data.chart,
+      });
+      dispatch({
+        type: "schedule",
+        payload: state.total.data.schedule,
       });
     }
   }, [state.total]);
@@ -198,6 +221,163 @@ function CompoundForm({ children, obj, url }) {
               </p>
               <div className="canvas-test">
                 <canvas ref={chartRef}></canvas>
+              </div>
+              <div className="table-container">
+                <table className="table">
+                  <thead>
+                    <tr>
+                      <th>Год</th>
+                      <th>Начальная сумма</th>
+                      <th>Процентный доход</th>
+                      <th>Вложения</th>
+                      <th>Конечная сумма</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {Object?.keys(state?.schedule || {})?.map((date, index) => {
+                      const entry = state?.schedule[date];
+                      const test = entry?.values;
+                      console.log(date);
+                      return (
+                        <tr key={index}>
+                          <td>
+                            <div className="colors-td">
+                              <td className="year-cell">{date}</td>
+                              {Object.keys(test || {}).map((el, innerIndex) => (
+                                <tr key={innerIndex}>
+                                  <span>
+                                    {" "}
+                                    {new Date(el).toLocaleString("ru-RU", {
+                                      month: "long",
+                                    })}
+                                  </span>
+                                </tr>
+                              ))}
+                            </div>
+                          </td>
+                          <td>
+                            <div className="colors-td">
+                              <td className="amount-cell">
+                                {entry?.startInvestment.toLocaleString(
+                                  "ru-RU",
+                                  {
+                                    style: "currency",
+                                    currency: "RUB",
+                                    minimumFractionDigits: 2,
+                                    maximumFractionDigits: 2,
+                                  }
+                                )}
+                              </td>
+                              {Object.keys(test || {}).map((el, innerIndex) => (
+                                <tr key={innerIndex}>
+                                  {" "}
+                                  <span>
+                                    {test[el]?.startInvestment?.toLocaleString(
+                                      "ru-RU",
+                                      {
+                                        style: "currency",
+                                        currency: "RUB",
+                                        minimumFractionDigits: 2,
+                                        maximumFractionDigits: 2,
+                                      }
+                                    )}
+                                  </span>
+                                </tr>
+                              ))}
+                            </div>
+                          </td>
+                          <td>
+                            <div className="colors-td">
+                              <td className="amount-cell">
+                                {entry?.interestIncome.toLocaleString("ru-RU", {
+                                  style: "currency",
+                                  currency: "RUB",
+                                  minimumFractionDigits: 2,
+                                  maximumFractionDigits: 2,
+                                })}
+                              </td>
+                              {Object.keys(test || {}).map((el, innerIndex) => (
+                                <tr key={innerIndex}>
+                                  {" "}
+                                  <span>
+                                    {test[el]?.interestIncome?.toLocaleString(
+                                      "ru-RU",
+                                      {
+                                        style: "currency",
+                                        currency: "RUB",
+                                        minimumFractionDigits: 2,
+                                        maximumFractionDigits: 2,
+                                      }
+                                    )}
+                                  </span>
+                                </tr>
+                              ))}
+                            </div>
+                          </td>
+                          <td>
+                            <div className="colors-td">
+                              <td className="amount-cell">
+                                {entry?.replenishment.toLocaleString("ru-RU", {
+                                  style: "currency",
+                                  currency: "RUB",
+                                  minimumFractionDigits: 2,
+                                  maximumFractionDigits: 2,
+                                })}
+                              </td>
+                              {Object.keys(test || {}).map((el, innerIndex) => (
+                                <tr key={innerIndex}>
+                                  {" "}
+                                  <span>
+                                    {test[el]?.replenishment?.toLocaleString(
+                                      "ru-RU",
+                                      {
+                                        style: "currency",
+                                        currency: "RUB",
+                                        minimumFractionDigits: 2,
+                                        maximumFractionDigits: 2,
+                                      }
+                                    )}
+                                  </span>
+                                </tr>
+                              ))}
+                            </div>
+                          </td>
+                          <td>
+                            <div className="colors-td">
+                              <td className="amount-cell">
+                                {entry?.finalInvestment.toLocaleString(
+                                  "ru-RU",
+                                  {
+                                    style: "currency",
+                                    currency: "RUB",
+                                    minimumFractionDigits: 2,
+                                    maximumFractionDigits: 2,
+                                  }
+                                )}
+                              </td>
+                              {Object.keys(test || {}).map((el, innerIndex) => (
+                                <tr key={innerIndex}>
+                                  {" "}
+                                  <span>
+                                    {test[el]?.endInvestment?.toLocaleString(
+                                      "ru-RU",
+                                      {
+                                        style: "currency",
+                                        currency: "RUB",
+                                        minimumFractionDigits: 2,
+                                        maximumFractionDigits: 2,
+                                      }
+                                    )}
+                                  </span>
+                                </tr>
+                              ))}
+                            </div>
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>

@@ -30,6 +30,9 @@ div.notation {
   #result {
     display: flex;
   }
+  .btn-top > button {
+    max-width: 100%;
+  }
 }
 @media screen and (max-width: 600px) {
   #result {

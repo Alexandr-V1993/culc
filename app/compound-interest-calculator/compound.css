@@ -17,7 +17,7 @@ ol > li > h3 {
 }
 
 .inlinecalculators {
-  max-width: 510px;
+  max-width: 610px;
   box-sizing: border-box;
   padding: 5px 0px 10px 24px;
   margin: 0px auto;
@@ -201,5 +201,63 @@ span#rw {
   }
   .inlinecalculators {
     padding-left: 15px;
+  }
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 5px;
+  text-align: left;
+}
+td.year-cell {
+  padding-left: 0;
+}
+td.amount-cell {
+  padding-left: 0;
+}
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.year-cell {
+  font-weight: bold;
+}
+
+.amount-cell {
+  white-space: nowrap;
+}
+th,
+td {
+  font-size: 14px;
+}
+th {
+  font-weight: 400;
+  font-size: 14px;
+}
+@media only screen and (max-width: 600px) {
+  th,
+  td {
+    font-size: 12px;
+  }
+  th {
+    font-weight: 400;
+    font-size: 12px;
+  }
+  form.inlinecalculators {
+    padding-left: 18px;
   }
 }
