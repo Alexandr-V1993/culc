@@ -17,6 +17,8 @@ p.resultstring {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
 }
 .notation {
   color: grey;

@@ -97,10 +97,48 @@ label .notation {
 #rw {
   font-size: 18px;
 }
+div#res {
+  width: 100%;
+}
+.canvas-test {
+  border-top: 5px solid #e1ecf3;
+}
+.canvas-test canvas {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+span#rw {
+  font-size: 16px;
+  background: none;
+  -webkit-text-fill-color: rgb(0, 0, 0);
+  font-weight: 400;
+}
 @media screen and (max-width: 540px) {
   .input-seredina {
     flex-direction: column;
   }
+
+  .row-res {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  div#res {
+    width: 100%;
+    padding-top: 5px;
+  }
+
+  .test-res {
+    width: 100%;
+  }
+
+  .btn-top {
+    margin-top: 15px;
+    width: 100%; /* Кнопка занимает всю доступную ширину */
+  }
+
   label {
     width: 100%;
   }
@@ -121,14 +159,14 @@ label .notation {
   }
   .resultstring {
     display: flex;
-    line-height: 80%;
+    line-height: 59%;
     flex-direction: column;
   }
   .resultstring > span {
-    font-size: 20px;
+    font-size: 16px;
   }
   #rw {
-    font-size: 20px;
+    font-size: 17px;
   }
   div.test-res {
     display: flex;
@@ -140,5 +178,28 @@ label .notation {
   }
   .test-res {
     padding-bottom: 15px;
+  }
+  .row-res {
+    padding-right: 10px;
+  }
+  .inlinecalculators {
+    padding-left: 17px;
+    padding-right: 6px;
+  }
+  .testcentre {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 375px) {
+  div.topInput-select {
+    column-gap: 10px;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .row-res {
+    padding-right: 10px;
+  }
+  .inlinecalculators {
+    padding-left: 15px;
   }
 }
