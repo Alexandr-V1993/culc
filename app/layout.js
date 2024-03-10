@@ -6,6 +6,10 @@ export const metadata = {
   title: "Онлайн-калькуляторы: самые простые и удобные",
   description:
     "Онлайн-калькуляторы по различным тематикам: финасовые, валютные, математические, медицинские, строительные, для IT и даже самогонные.",
+  manifest: "/manifest.json",
+  icons: {
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({ children }) {

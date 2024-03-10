@@ -13,7 +13,7 @@ ol > li > h3 {
   grid-template-columns: 1fr;
   background-color: #e1ecf3;
   width: 100%;
-  padding-right: 24px;
+  padding-right: 20px;
 }
 
 .inlinecalculators {
@@ -102,6 +102,8 @@ div#res {
 }
 .canvas-test {
   border-top: 5px solid #e1ecf3;
+  border-bottom: 5px solid #e1ecf3;
+  padding-bottom: 10px;
 }
 .canvas-test canvas {
   width: 100%;
@@ -180,11 +182,11 @@ span#rw {
     padding-bottom: 15px;
   }
   .row-res {
-    padding-right: 10px;
+    padding-right: 0px;
   }
   .inlinecalculators {
     padding-left: 17px;
-    padding-right: 6px;
+    padding-right: 14px;
   }
   .testcentre {
     width: 100%;
@@ -211,7 +213,6 @@ span#rw {
 .table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
 }
 
 th,
@@ -258,7 +259,17 @@ th {
     font-size: 12px;
   }
   form.inlinecalculators {
-    padding-left: 18px;
+    padding-left: 15px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  form.inlinecalculators {
+    padding-left: 15px;
     padding-right: 15px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .row-res {
+    padding-right: 0px;
   }
 }
