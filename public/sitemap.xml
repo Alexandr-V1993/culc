@@ -141,4 +141,10 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+    <url>
+        <loc>https://calcoffee.ru/add-percentage-number</loc>
+        <lastmod>2024-03-18T12:25:03+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 </urlset>
