@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect } from "react";
 
 function Footer() {
@@ -34,12 +35,8 @@ function Footer() {
         trackLinks: true,
         accurateTrackBounce: true,
       });
-    }
-  }, []);
 
-  useEffect(() => {
-    // Добавляем код для продакшн
-    if (process.env.NODE_ENV === "production") {
+      // Добавляем код для продакшн
       (function (d, z, s) {
         s.src = "https://" + d + "/401/" + z;
         try {
@@ -67,12 +64,6 @@ function Footer() {
           © 2024
         </div>
       </div>
-      <script
-        src="https://alwingulla.com/88/tag.min.js"
-        data-zone="52463"
-        async
-        data-cfasync="false"
-      ></script>
     </footer>
   );
 }
