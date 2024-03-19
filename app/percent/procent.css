@@ -9,6 +9,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
+  width: 100%;
 }
 .percent-item {
   width: 220px;

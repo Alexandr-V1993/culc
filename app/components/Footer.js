@@ -57,6 +57,12 @@ function Footer() {
           © 2024
         </div>
       </div>
+      <script
+        src="https://alwingulla.com/88/tag.min.js"
+        data-zone="52463"
+        async
+        data-cfasync="false"
+      ></script>
     </footer>
   );
 }
