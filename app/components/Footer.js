@@ -1,4 +1,3 @@
-"use client";
 import React, { useEffect } from "react";
 
 function Footer() {
@@ -36,6 +35,14 @@ function Footer() {
         trackLinks: true,
         accurateTrackBounce: true,
       });
+
+      // Добавляем скрипт glizauvo.net
+      (function (d, z, s) {
+        s.src = "https://" + d + "/401/" + z;
+        try {
+          (document.body || document.documentElement).appendChild(s);
+        } catch (e) {}
+      })("glizauvo.net", 7243075, document.createElement("script"));
     }
   }, []);
 
@@ -57,12 +64,6 @@ function Footer() {
           © 2024
         </div>
       </div>
-      <script
-        src="https://alwingulla.com/88/tag.min.js"
-        data-zone="52463"
-        async
-        data-cfasync="false"
-      ></script>
     </footer>
   );
 }
