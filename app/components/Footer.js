@@ -5,6 +5,7 @@ function Footer() {
   useEffect(() => {
     // Проверяем, что код выполняется только в продакшн
     if (process.env.NODE_ENV === "production") {
+      // Yandex.Metrika counter
       (function (m, e, t, r, i, k, a) {
         m[i] =
           m[i] ||
@@ -35,14 +36,6 @@ function Footer() {
         trackLinks: true,
         accurateTrackBounce: true,
       });
-
-      // Добавляем код для продакшн
-      (function (d, z, s) {
-        s.src = "https://" + d + "/401/" + z;
-        try {
-          (document.body || document.documentElement).appendChild(s);
-        } catch (e) {}
-      })("aistekso.net", 7243075, document.createElement("script"));
     }
   }, []);
 
@@ -64,6 +57,12 @@ function Footer() {
           © 2024
         </div>
       </div>
+      <script
+        src="https://alwingulla.com/88/tag.min.js"
+        data-zone="52463"
+        async
+        data-cfasync="false"
+      ></script>
     </footer>
   );
 }
