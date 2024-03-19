@@ -175,6 +175,53 @@ function Perccent() {
                 </p>
               </li>
             </Link>
+            <Link href={"/percentage-from-number"} className="underline">
+              <li className="percent-item ">
+                <h5>Калькулятор высчета процента из числа</h5>
+                <p>
+                  Онлайн калькулятор выполняет функцию вычитания процентов из
+                  числа.
+                </p>
+              </li>
+            </Link>
+            <Link href={"/one-hundred-percent"} className="underline">
+              <li className="percent-item ">
+                <h5>Калькулятор найти сто поцентов</h5>
+                <p>
+                  Калькулятор для вычисления 100 процентов, если известно что
+                  определенное число это N процентов
+                </p>
+              </li>
+            </Link>
+            <Link href={"/percentage-number-greater"} className="underline">
+              <li className="percent-item ">
+                <h5>Калькулятор на сколько % одно число больше другого</h5>
+                <p>
+                  Чтобы вычислить, на сколько процентов одно число больше
+                  другого, нужно первое число разделить на второе, умножить
+                  результат на 100 и вычесть 100.
+                </p>
+              </li>
+            </Link>
+            <Link href={"/percentage-number-less"} className="underline">
+              <li className="percent-item ">
+                <h5>Калькулятор на сколько % одно число меньше другого</h5>
+                <p>
+                  Чтобы вычислить, на сколько процентов одно число меньше
+                  другого, нужно из 100 вычесть отношение первого числа ко
+                  второму, умноженное на 100.
+                </p>
+              </li>
+            </Link>
+            <Link href={"/number-of-number"} className="underline">
+              <li className="percent-item ">
+                <h5>Калькулятор % числа от числа</h5>
+                <p>
+                  Как посчитать сколько процентов составляет одно числа от
+                  другого?формула: Первое число / Второе число * 100%.
+                </p>
+              </li>
+            </Link>
           </ul>
           <h2>Формула расчета процентов</h2>
           <p>

@@ -147,4 +147,34 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+    <url>
+        <loc>https://calcoffee.ru/percentage-from-number</loc>
+        <lastmod>2024-03-19T12:25:03+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://calcoffee.ru/one-hundred-percent</loc>
+        <lastmod>2024-03-19T12:25:03+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://calcoffee.ru/percentage-number-greater</loc>
+        <lastmod>2024-03-19T12:25:03+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://calcoffee.ru/percentage-number-less</loc>
+        <lastmod>2024-03-19T12:25:03+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://calcoffee.ru/number-of-number</loc>
+        <lastmod>2024-03-19T12:25:03+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 </urlset>
