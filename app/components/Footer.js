@@ -37,26 +37,6 @@ function Footer() {
         trackLinks: true,
         accurateTrackBounce: true,
       });
-
-      // Добавляем код для продакшн
-      (function (d, z, s) {
-        s.src = "https://" + d + "/401/" + z;
-        try {
-          (document.body || document.documentElement).appendChild(s);
-        } catch (e) {}
-      })("aistekso.net", 7243075, document.createElement("script"));
-
-      // Добавляем блок для продакшн
-      (function (s, u, z, p) {
-        s.src = u;
-        s.setAttribute("data-zone", z);
-        p.appendChild(s);
-      })(
-        document.createElement("script"),
-        "https://zovidree.com/tag.min.js",
-        7243238,
-        document.body || document.documentElement
-      );
     }
   }, []);
 
@@ -78,7 +58,19 @@ function Footer() {
           © 2024
         </div>
       </div>
-      
+      <script
+        type="text/javascript"
+        src="https://udbaa.com/bnr.php?section=General&pub=237667&format=300x250&ga=g"
+      ></script>
+      <noscript>
+        <a href="https://yllix.com/publishers/237667" target="_blank">
+          <img
+            src="//ylx-aff.advertica-cdn.com/pub/300x250.png"
+            style="border:none;margin:0;padding:0;vertical-align:baseline;"
+            alt="ylliX - Online Advertising Network"
+          />
+        </a>
+      </noscript>
     </footer>
   );
 }
