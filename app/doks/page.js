@@ -5,7 +5,7 @@ function Doks() {
   return (
     <div>
       <HeaderModal />
-      <section class="articlewrap">
+      <section className="articlewrap">
         <article itemprop="articleBody">
           <div>
             <h1>Политика конфиденциальности</h1>
@@ -604,7 +604,7 @@ function Doks() {
               сети Интернет по адресу&nbsp;https://calcoffee.ru/docs/.
             </p>
           </div>
-          <div class="docwrapper" id="2">
+          <div className="docwrapper" id="2">
             <h1>Пользовательское Соглашение</h1>
             <p>
               Настоящее Пользовательское Соглашение (Далее Соглашение)

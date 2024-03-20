@@ -35,44 +35,44 @@ function Heads() {
           alcoTitle={"Объем чистого спирта:"}
           crepost={"Объем «голов»:"}
         >
-          <label class="numrange row-1 van">
+          <label className="numrange row-1 van">
             <span>Объем спирта-сырца</span>
             <input
               type="number"
-              class="input"
+              className="input"
               id="nheight"
               min="0"
               value={volume}
               onChange={(e) => setVolume(e.target.value)}
             />
-            <div class="notation">л.</div>
+            <div className="notation">л.</div>
           </label>
 
-          <label class="numrange row-1 two">
+          <label className="numrange row-1 two">
             <span>Крепость спирта-сырца</span>
             <input
               type="number"
-              class="input"
+              className="input"
               id="nweight"
               min="0"
               max="100"
               value={strength}
               onChange={(e) => setStrength(e.target.value)}
             />
-            <div class="notation"> °</div>
+            <div className="notation"> °</div>
           </label>
-          <label class="numrange row-1 two">
+          <label className="numrange row-1 two">
             <span>Доля «голов»</span>
             <input
               type="number"
-              class="input"
+              className="input"
               id="nweight"
               min="0"
               max="100"
               value={heads}
               onChange={(e) => setHeads(e.target.value)}
             />
-            <div class="notation">% от общего объема</div>
+            <div className="notation">% от общего объема</div>
           </label>
         </Form>
         <Contents>

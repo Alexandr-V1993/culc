@@ -2,30 +2,30 @@ function CalculateTwo({ setPercent, setNumber }) {
   return (
     <>
       <label
-        class="numrange row-2 hideparts type3"
+        className="numrange row-2 hideparts type3"
         style={{ display: "block " }}
       >
         <span>Число</span>
         <input
           type="number"
-          class="input"
+          className="input"
           id="threenum1"
           onChange={(e) => setNumber(e.target.value)}
         />
-        <div class="notation">&nbsp;</div>
+        <div className="notation">&nbsp;</div>
       </label>
       <label
-        class="numrange row-2 hideparts type3"
+        className="numrange row-2 hideparts type3"
         style={{ display: "block" }}
       >
         <span>Прибавить процент</span>
         <input
           type="number"
-          class="input"
+          className="input"
           id="threenum2"
           onChange={(e) => setPercent(e.target.value)}
         />
-        <div class="notation">%</div>
+        <div className="notation">%</div>
       </label>
     </>
   );

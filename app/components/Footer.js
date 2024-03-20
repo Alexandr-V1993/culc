@@ -59,18 +59,11 @@ function Footer() {
         </div>
       </div>
       <script
-        type="text/javascript"
-        src="https://udbaa.com/bnr.php?section=General&pub=237667&format=300x250&ga=g"
+        src="https://alwingulla.com/88/tag.min.js"
+        data-zone="52463"
+        async
+        data-cfasync="false"
       ></script>
-      <noscript>
-        <a href="https://yllix.com/publishers/237667" target="_blank">
-          <img
-            src="//ylx-aff.advertica-cdn.com/pub/300x250.png"
-            style="border:none;margin:0;padding:0;vertical-align:baseline;"
-            alt="ylliX - Online Advertising Network"
-          />
-        </a>
-      </noscript>
     </footer>
   );
 }

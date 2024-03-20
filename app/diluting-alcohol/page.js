@@ -33,44 +33,44 @@ function Dilating() {
           formTitle={"Необходимо долить литров воды:"}
           all={"литров"}
         >
-          <label class="numrange row-1 van">
+          <label className="numrange row-1 van">
             <span>Начальный объем спирта</span>
             <input
               type="number"
-              class="input"
+              className="input"
               id="nheight"
               min="0"
               value={volume}
               onChange={(e) => setVolume(e.target.value)}
             />
-            <div class="notation">л.</div>
+            <div className="notation">л.</div>
           </label>
 
-          <label class="numrange row-1 two">
+          <label className="numrange row-1 two">
             <span>Крепость начального объема</span>
             <input
               type="number"
-              class="input"
+              className="input"
               id="nweight"
               min="0"
               max="100"
               value={strengthBefore}
               onChange={(e) => setStrengthBefore(e.target.value)}
             />
-            <div class="notation">%</div>
+            <div className="notation">%</div>
           </label>
-          <label class="numrange row-1 two">
+          <label className="numrange row-1 two">
             <span>Требуемая крепость</span>
             <input
               type="number"
-              class="input"
+              className="input"
               id="nweight"
               min="0"
               max="100"
               value={strengthAfter}
               onChange={(e) => setStrengthAfter(e.target.value)}
             />
-            <div class="notation">%</div>
+            <div className="notation">%</div>
           </label>
         </Form>
         <Contents>

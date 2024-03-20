@@ -8,55 +8,55 @@ function SmehivanieSpitrov({
   return (
     <>
       {" "}
-      <label class="numrange smesh-left">
+      <label className="numrange smesh-left">
         <span>Объем первой жидкости</span>
         <input
           type="number"
-          class="input"
+          className="input"
           id="nheight"
           min="0"
           onChange={(e) => setvolume1(e.target.value)}
           required
         />
-        <div class="notation">л-в.</div>
+        <div className="notation">л-в.</div>
       </label>
-      <label class="numrange smesh-left">
+      <label className="numrange smesh-left">
         <span>Крепость первой жидкости</span>
         <input
           type="number"
-          class="input"
+          className="input"
           id="nheight"
           min="0"
           max="100"
           onChange={(e) => setStrength1(e.target.value)}
           required
         />
-        <div class="notation">°C</div>
+        <div className="notation">°C</div>
       </label>
-      <label class="numrange smesh-left">
+      <label className="numrange smesh-left">
         <span>Объем второй жидкости</span>
         <input
           type="number"
-          class="input"
+          className="input"
           id="nheight"
           min="0"
           onChange={(e) => setVolume2(e.target.value)}
           required
         />
-        <div class="notation">л-в</div>
+        <div className="notation">л-в</div>
       </label>
-      <label class="numrange smesh-left">
+      <label className="numrange smesh-left">
         <span>Крепость второй жидкости</span>
         <input
           type="number"
-          class="input"
+          className="input"
           id="nheight"
           min="0"
           max="100"
           onChange={(e) => settrength2(e.target.value)}
           required
         />
-        <div class="notation">°С</div>
+        <div className="notation">°С</div>
       </label>
     </>
   );

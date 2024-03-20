@@ -42,11 +42,11 @@ function Agecalc() {
           sec={" секунд"}
           dn={" дн."}
         >
-          <label class="numrange row-1 van">
+          <label className="numrange row-1 van">
             <span>Дата рождения</span>
             <input
               type="date"
-              class="input"
+              className="input"
               id="nheight"
               min="0"
               max="250"
@@ -55,11 +55,11 @@ function Agecalc() {
             />
           </label>
 
-          <label class="numrange row-1 two">
+          <label className="numrange row-1 two">
             <span>Возраст на дату</span>
             <input
               type="date"
-              class="input"
+              className="input"
               id="nweight"
               min="0"
               max="250"

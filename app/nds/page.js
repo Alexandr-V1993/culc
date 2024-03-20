@@ -58,8 +58,8 @@ function Nds() {
   return (
     <>
       <HeaderModal />
-      <section class="topform ">
-        <div class="topformdesc">
+      <section className="topform ">
+        <div className="topformdesc">
           <h1>
             Калькулятор <span>НДС</span>
           </h1>
@@ -68,7 +68,7 @@ function Nds() {
             прибавить.
           </p>
         </div>
-        <form class="inlinecalculator" onSubmit={handleSubmit}>
+        <form className="inlinecalculator" onSubmit={handleSubmit}>
           <label className="row-2">
             <span>Что сделать</span>
             <div className="select">
@@ -157,10 +157,10 @@ function Nds() {
           </div>
         </form>
       </section>
-      <section class="articlewrap">
+      <section className="articlewrap">
         <article itemprop="articleBody">
           <h2 id="1">Понятие НДС или «налога на добавленную стоимость»</h2>
-          <p class="opredelenie">
+          <p className="opredelenie">
             <strong>НДС (налог на добавленную стоимость)</strong> — это налог,
             включенный в стоимость товаров или услуги и перечисляемый в бюджет
             государства как доля добавочной стоимости, созданной в процессе
@@ -181,7 +181,7 @@ function Nds() {
           <p>
             В упрощенной форме формула расчета НДС представляет собой следующее:
           </p>
-          <p class="formula">НДС = налоговая база × налоговая ставка</p>
+          <p className="formula">НДС = налоговая база × налоговая ставка</p>
           <p>
             Например, если компания самостоятельно произвела товар, не закупая
             материалы, и планирует получить за его продажу 100 рублей с

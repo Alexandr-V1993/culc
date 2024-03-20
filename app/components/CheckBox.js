@@ -1,11 +1,11 @@
 function CheckBox({ titleCheck, typeDispatch, handleCheck }) {
   return (
     <>
-      <label class="row-check">
+      <label className="row-check">
         <span>{titleCheck}</span>
         <input
           type="checkbox"
-          class="check"
+          className="check"
           onClick={() => handleCheck(typeDispatch)}
         />
       </label>

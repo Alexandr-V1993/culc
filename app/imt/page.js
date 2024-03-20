@@ -31,32 +31,32 @@ function Imt() {
           formTitle={"Ваш ИМТ:"}
           all={" кг/м2"}
         >
-          <label class="numrange row-1 van">
+          <label className="numrange row-1 van">
             <span>Рост</span>
             <input
               type="number"
-              class="input"
+              className="input"
               id="nheight"
               min="0"
               max="250"
               value={height}
               onChange={(e) => setHeight(e.target.value)}
             />
-            <div class="notation">см</div>
+            <div className="notation">см</div>
           </label>
 
-          <label class="numrange row-1 two">
+          <label className="numrange row-1 two">
             <span>Вес</span>
             <input
               type="number"
-              class="input"
+              className="input"
               id="nweight"
               min="0"
               max="250"
               value={weight}
               onChange={(e) => setWeight(e.target.value)}
             />
-            <div class="notation">кг</div>
+            <div className="notation">кг</div>
           </label>
         </Form>
         <Contents>

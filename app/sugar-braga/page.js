@@ -33,30 +33,30 @@ function Sugar() {
           alcoTitle={"Долить литров воды:"}
           crepost={"Крепость браги: "}
         >
-          <label class="numrange row-1 van">
+          <label className="numrange row-1 van">
             <span>Вес сахара</span>
             <input
               type="number"
-              class="input"
+              className="input"
               id="nheight"
               min="0"
               value={weight}
               onChange={(e) => setWeight(e.target.value)}
             />
-            <div class="notation">кг.</div>
+            <div className="notation">кг.</div>
           </label>
 
-          <label class="numrange row-1 two">
+          <label className="numrange row-1 two">
             <span>Раствор, вода + сахар (Гидромодуль)</span>
             <input
               type="number"
-              class="input"
+              className="input"
               id="nweight"
               min="0"
               value={volume}
               onChange={(e) => setVolume(e.target.value)}
             />
-            <div class="notation">л.</div>
+            <div className="notation">л.</div>
           </label>
         </Form>
         <Contents>

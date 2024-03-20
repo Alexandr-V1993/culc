@@ -92,11 +92,11 @@ function DateCalc() {
               </label>
             </div>
             <div className="row-vans-bottom">
-              <label class="numrange row-1 date">
+              <label className="numrange row-1 date">
                 <span>Начальная дата</span>
                 <input
                   type="date"
-                  class="input"
+                  className="input"
                   min="0"
                   max="250"
                   value={state.startDate}
@@ -109,11 +109,11 @@ function DateCalc() {
                 />
               </label>
               {state.mode === "difference" && (
-                <label class="numrange row-1 date">
+                <label className="numrange row-1 date">
                   <span>Конечная дата</span>
                   <input
                     type="date"
-                    class="input"
+                    className="input"
                     min="0"
                     max="250"
                     value={state.endDate}
@@ -129,11 +129,11 @@ function DateCalc() {
                 </label>
               )}
 
-              <label class="row-chekc">
+              <label className="row-chekc">
                 <span>Учитывать нач-ю. дату</span>
                 <input
                   type="checkbox"
-                  class="chekc"
+                  className="chekc"
                   min="0"
                   max="9999"
                   value={false}
@@ -166,10 +166,10 @@ function DateCalc() {
               )}
 
               {state.mode !== "difference" && (
-                <label class="numrange row-1 van">
+                <label className="numrange row-1 van">
                   <input
                     type="number"
-                    class="input"
+                    className="input"
                     min="0"
                     max="9999"
                     onChange={(e) =>
@@ -180,15 +180,15 @@ function DateCalc() {
                     }
                     required
                   />
-                  <div class="notation">дней</div>
+                  <div className="notation">дней</div>
                 </label>
               )}
               {state.mode !== "weekDays" && state.mode !== "difference" && (
                 <>
-                  <label class="numrange row-1 van">
+                  <label className="numrange row-1 van">
                     <input
                       type="number"
-                      class="input"
+                      className="input"
                       min="0"
                       max="9999"
                       onChange={(e) =>
@@ -199,12 +199,12 @@ function DateCalc() {
                       }
                       required
                     />
-                    <div class="notation">недель</div>
+                    <div className="notation">недель</div>
                   </label>
-                  <label class="numrange row-1 van">
+                  <label className="numrange row-1 van">
                     <input
                       type="number"
-                      class="input"
+                      className="input"
                       min="0"
                       max="9999"
                       onChange={(e) =>
@@ -215,12 +215,12 @@ function DateCalc() {
                       }
                       required
                     />
-                    <div class="notation">месяцев</div>
+                    <div className="notation">месяцев</div>
                   </label>
-                  <label class="numrange row-1 van">
+                  <label className="numrange row-1 van">
                     <input
                       type="number"
-                      class="input"
+                      className="input"
                       min="0"
                       max="99"
                       onChange={(e) =>
@@ -231,7 +231,7 @@ function DateCalc() {
                       }
                       required
                     />
-                    <div class="notation">лет</div>
+                    <div className="notation">лет</div>
                   </label>
                 </>
               )}

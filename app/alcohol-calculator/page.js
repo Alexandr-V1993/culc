@@ -193,12 +193,12 @@ function AlcoCalc() {
           strengthAfter={strengthAfter}
           setStrengthAfter={setStrengthAfter}
         >
-          <label class="row-2 four">
+          <label className="row-2 four">
             <span>Что вычислить</span>
-            <div class="select">
+            <div className="select">
               <select
                 id="what"
-                class="input"
+                className="input"
                 value={select}
                 onChange={(e) => setSelect(e.target.value)}
               >

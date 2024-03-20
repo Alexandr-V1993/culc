@@ -151,7 +151,7 @@ function Form({
           </p>
         </div>
         {weights}
-        <p class="resultstring">
+        <p className="resultstring">
           <span id="resultimt"> {alcoTitle}</span>
           <span id="resultimt">
             {vans ? new Intl.NumberFormat("ru-RU").format(vans) : ""}

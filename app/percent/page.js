@@ -76,12 +76,12 @@ function Perccent() {
           formTitle={"Результат :"}
           condition={condition}
         >
-          <label class="row-2 van">
+          <label className="row-2 van">
             <span>Что вычислить</span>
-            <div class="select">
+            <div className="select">
               <select
                 id="what"
-                class="input"
+                className="input"
                 onChange={(e) => setCondition(e.target.value)}
               >
                 <option value="type1" selected="">
@@ -102,12 +102,12 @@ function Perccent() {
               </select>
             </div>
           </label>
-          <label class="row-2 two">
+          <label className="row-2 two">
             <span>Окр. до</span>
-            <div class="select">
+            <div className="select">
               <select
                 name="age"
-                class="input"
+                className="input"
                 id="razmernost"
                 value={round}
                 onChange={(e) => setRound(e.target.value)}

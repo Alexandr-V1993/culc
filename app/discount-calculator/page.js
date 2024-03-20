@@ -65,39 +65,39 @@ function Discount() {
           </div>
 
           {mode !== "startingPrice" && (
-            <label class="numrange row-1">
+            <label className="numrange row-1">
               <span>Цена</span>
               <input
                 type="number"
-                class="input"
+                className="input"
                 id="nprice"
                 value={price}
                 onChange={(e) => setPrice(e.target.value)}
                 required
               />
-              <div class="notation">₽</div>
+              <div className="notation">₽</div>
             </label>
           )}
           {mode === "startingPrice" && (
-            <label class="numrange row-1">
+            <label className="numrange row-1">
               <span>Цена со скидкой</span>
               <input
                 type="number"
-                class="input"
+                className="input"
                 id="nprice"
                 value={price}
                 onChange={(e) => setPrice(e.target.value)}
                 required
               />
-              <div class="notation">₽</div>
+              <div className="notation">₽</div>
             </label>
           )}
           {mode !== "discountPercentage" && (
-            <label class="numrange row-1">
+            <label className="numrange row-1">
               <span>Скидка</span>
               <input
                 type="number"
-                class="input"
+                className="input"
                 id="nprice"
                 min={0}
                 max={100}
@@ -105,22 +105,22 @@ function Discount() {
                 onChange={(e) => setDiscount(e.target.value)}
                 required
               />
-              <div class="notation">%</div>
+              <div className="notation">%</div>
             </label>
           )}
 
           {mode === "discountPercentage" && (
-            <label class="numrange row-1">
+            <label className="numrange row-1">
               <span>Цена со скидкой</span>
               <input
                 type="number"
-                class="input"
+                className="input"
                 id="nprice"
                 value={discountPercentage}
                 onChange={(e) => setDiscountPercentage(e.target.value)}
                 required
               />
-              <div class="notation">₽</div>
+              <div className="notation">₽</div>
             </label>
           )}
         </DiscountForm>

@@ -29,17 +29,17 @@ function Replacement() {
           url={"https://calcline.ru/api/calculate/glucose-sugar-replacement"}
           alcoTitle={"Потребуется глюкозы кг. : "}
         >
-          <label class="numrange row-1 van">
+          <label className="numrange row-1 van">
             <span>Количество сахара</span>
             <input
               type="number"
-              class="input"
+              className="input"
               id="nheight"
               min="0"
               value={weight}
               onChange={(e) => setWeight(e.target.value)}
             />
-            <div class="notation">кг.</div>
+            <div className="notation">кг.</div>
           </label>
         </Form>
         <Contents>

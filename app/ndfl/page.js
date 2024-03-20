@@ -36,13 +36,13 @@ function Ndfl() {
           selectSumm={selectSumm}
           selectSummProcent={selectSummProcent}
         >
-          <label class="row-2 van">
+          <label className="row-2 van">
             <span>Налогообложения</span>
-            <div class="select">
+            <div className="select">
               <select
                 name="age"
                 id="actionnds"
-                class="input"
+                className="input"
                 value={selectSumm}
                 onChange={(e) => setSelectSumm(e.target.value)}
               >
@@ -51,13 +51,13 @@ function Ndfl() {
               </select>
             </div>
           </label>
-          <label class="row-2 two">
+          <label className="row-2 two">
             <span>Ставка налога</span>
-            <div class="select">
+            <div className="select">
               <select
                 name="age"
                 id="actionnds"
-                class="input"
+                className="input"
                 onChange={(e) => setSelectSummProcent(e.target.value)}
               >
                 <option value="13">Подоходный налог(13% - 15%)</option>
@@ -70,23 +70,23 @@ function Ndfl() {
             </div>
           </label>
 
-          <label class="numrange row-1">
+          <label className="numrange row-1">
             <span>Сумма</span>
             <input
               type="number"
-              class="input"
+              className="input"
               id="nprice"
               min="0"
               value={number}
               onChange={(e) => setNumber(e.target.value)}
             />
-            <div class="notation">р.</div>
+            <div className="notation">р.</div>
           </label>
         </Form>
         <Contents>
           {" "}
           <h2 id="1">Что такое НДФЛ или подоходный налог?</h2>
-          <p class="opredelenie">
+          <p className="opredelenie">
             <strong>НДФЛ</strong> — налог на доход физических лиц или подоходный
             налог, им облагаются личные доходы граждан, получаемые в виде денег,
             в натуральной форме или в виде материальной выгоды.

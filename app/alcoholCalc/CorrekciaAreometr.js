@@ -3,31 +3,31 @@ function CorrekciaAreometr({ setTemperature, setStrength }) {
   return (
     <>
       {" "}
-      <label class="numrange row-1 van">
+      <label className="numrange row-1 van">
         <span>Температура спирта</span>
         <input
           type="number"
-          class="input"
+          className="input"
           id="nheight"
           min="0"
           max="100"
           onChange={(e) => setTemperature(e.target.value)}
           required
         />
-        <div class="notation">°C</div>
+        <div className="notation">°C</div>
       </label>
-      <label class="numrange row-1 two">
+      <label className="numrange row-1 two">
         <span>Показание ареометра</span>
         <input
           type="number"
-          class="input"
+          className="input"
           id="nweight"
           min="0"
           max="100"
           onChange={(e) => setStrength(e.target.value)}
           required
         />
-        <div class="notation">°</div>
+        <div className="notation">°</div>
       </label>
     </>
   );

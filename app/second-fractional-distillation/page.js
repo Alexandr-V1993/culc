@@ -54,11 +54,11 @@ function SecondFrac() {
           }
         >
           <div className="label-row">
-            <label class="numrange five">
+            <label className="numrange five">
               <span>Объем спирта-сырца</span>
               <input
                 type="number"
-                class="input"
+                className="input"
                 id="nheight"
                 min="0"
                 onChange={(e) =>
@@ -66,13 +66,13 @@ function SecondFrac() {
                 }
                 required
               />
-              <div class="notation">л.</div>
+              <div className="notation">л.</div>
             </label>
-            <label class="numrange five">
+            <label className="numrange five">
               <span>Крепость спирта-сырца</span>
               <input
                 type="number"
-                class="input"
+                className="input"
                 id="nheight"
                 min={0}
                 max={100}
@@ -84,13 +84,13 @@ function SecondFrac() {
                 }
                 required
               />
-              <div class="notation">°</div>
+              <div className="notation">°</div>
             </label>
-            <label class="numrange five">
+            <label className="numrange five">
               <span>Крепость на выходе</span>
               <input
                 type="number"
-                class="input"
+                className="input"
                 id="nheight"
                 min={0}
                 max={100}
@@ -102,13 +102,13 @@ function SecondFrac() {
                 }
                 required
               />
-              <div class="notation">°</div>
+              <div className="notation">°</div>
             </label>
-            <label class="numrange five">
+            <label className="numrange five">
               <span>Доля «голов»</span>
               <input
                 type="number"
-                class="input"
+                className="input"
                 id="nheight"
                 min={0}
                 max={100}
@@ -117,13 +117,13 @@ function SecondFrac() {
                 }
                 required
               />
-              <div class="notation">%</div>
+              <div className="notation">%</div>
             </label>
-            <label class="numrange five">
+            <label className="numrange five">
               <span>Доля «хвостов» »</span>
               <input
                 type="number"
-                class="input"
+                className="input"
                 id="nheight"
                 min={0}
                 max={100}
@@ -132,7 +132,7 @@ function SecondFrac() {
                 }
                 required
               />
-              <div class="notation">%</div>
+              <div className="notation">%</div>
             </label>
           </div>
         </SecondForm>
