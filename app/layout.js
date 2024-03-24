@@ -16,6 +16,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ru">
       <meta
+        name="8ebdddfd71d4f27e8a3626f550684b3c4ed7ccf9"
+        content="8ebdddfd71d4f27e8a3626f550684b3c4ed7ccf9"
+      />
+      <meta
         name="robots"
         content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
       />
