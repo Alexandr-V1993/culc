@@ -8,7 +8,7 @@ import Contents from "../components/Contents";
 import Footer from "../components/Footer";
 import SecondForm from "./SecondForm";
 import "./Second.css";
-
+import Link from "next/link";
 const obj = {
   volume: null,
   strengthStart: null,
@@ -137,6 +137,38 @@ function SecondFrac() {
           </div>
         </SecondForm>
         <Contents>
+          <ul className="alcohol-list">
+            <Link href={"/diluting-alcohol"} className="underline">
+              <li className="alcohol-item">
+                <h5>Онлайн калькулятор разбавление самогона водой</h5>
+              </li>
+            </Link>
+            <Link href={"/sugar-braga"} className="underline">
+              <li className="alcohol-item">
+                <h5>Калькулятор расчет сахарной браги</h5>
+              </li>
+            </Link>
+            <Link href={"/areometer-correction"} className="underline">
+              <li className="alcohol-item">
+                <h5>Калькулятор коррекции показаний ареометра</h5>
+              </li>
+            </Link>
+            <Link href={"/head-selection"} className="underline">
+              <li className="alcohol-item">
+                <h5>Калькулятор абсолютного спирта и отбора голов</h5>
+              </li>
+            </Link>
+            <Link href={"/replacement-sugar"} className="underline">
+              <li className="alcohol-item">
+                <h5>Калькулятор замены сахара глюкозой</h5>
+              </li>
+            </Link>
+            <Link href={"/moonshiner-calculator"} className="underline">
+              <li className="alcohol-item">
+                <h5>Калькулятор смешивания спиртов</h5>
+              </li>
+            </Link>
+          </ul>
           <h3 className="tops-content">
             Расчет спирта сырца для второй перегонки
           </h3>

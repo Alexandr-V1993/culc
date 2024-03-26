@@ -6,7 +6,7 @@ import Form from "@/app/components/Form";
 import { useState } from "react";
 import Contents from "@/app/components/Contents";
 import "./areometer.css";
-
+import Link from "next/link";
 function Areometr() {
   const [temperature, setTemperature] = useState("");
   const [strength, setStrength] = useState("");
@@ -62,6 +62,45 @@ function Areometr() {
           </label>
         </Form>
         <Contents>
+          <ul className="alcohol-list">
+            <Link href={"/diluting-alcohol"} className="underline">
+              <li className="alcohol-item">
+                <h5>Онлайн калькулятор разбавление самогона водой</h5>
+              </li>
+            </Link>
+            <Link href={"/sugar-braga"} className="underline">
+              <li className="alcohol-item">
+                <h5>Калькулятор расчет сахарной браги</h5>
+              </li>
+            </Link>
+
+            <Link href={"/head-selection"} className="underline">
+              <li className="alcohol-item">
+                <h5>Калькулятор абсолютного спирта и отбора голов</h5>
+              </li>
+            </Link>
+            <Link href={"/replacement-sugar"} className="underline">
+              <li className="alcohol-item">
+                <h5>Калькулятор замены сахара глюкозой</h5>
+              </li>
+            </Link>
+            <Link href={"/moonshiner-calculator"} className="underline">
+              <li className="alcohol-item">
+                <h5>Калькулятор смешивания спиртов</h5>
+              </li>
+            </Link>
+            <Link
+              href={"/second-fractional-distillation"}
+              className="underline"
+            >
+              <li className="alcohol-item">
+                <h5>
+                  Калькулятор второй перегонки спирта сырца и отбора голов и
+                  хвостов
+                </h5>
+              </li>
+            </Link>
+          </ul>
           <h2 className="top-alco">Коррекции показаний ареометра</h2>
           <p>
             Аккуратное определение силы играет ключевую роль на различных этапах

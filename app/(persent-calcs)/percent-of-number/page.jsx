@@ -7,7 +7,7 @@ import TopForm from "@/app/components/TopForm";
 import Contents from "@/app/components/Contents";
 import Footer from "@/app/components/Footer";
 import PercentNumForm from "./PercentNumForm";
-
+import Link from "next/link";
 import Input from "@/app/components/Input";
 import "./percent.css";
 
@@ -86,6 +86,38 @@ function PercentNum() {
           </div>
         </PercentNumForm>
         <Contents>
+          <ul className="percent-list">
+            <Link href={"/add-percentage-number"} className="underline">
+              <li className="percent-item ">
+                <h5>Калькулятор прибавки процента к числу</h5>
+              </li>
+            </Link>
+            <Link href={"/percentage-from-number"} className="underline">
+              <li className="percent-item ">
+                <h5>Калькулятор высчета процента из числа</h5>
+              </li>
+            </Link>
+            <Link href={"/one-hundred-percent"} className="underline">
+              <li className="percent-item ">
+                <h5>Калькулятор найти сто поцентов</h5>
+              </li>
+            </Link>
+            <Link href={"/percentage-number-greater"} className="underline">
+              <li className="percent-item ">
+                <h5>Калькулятор на сколько % одно число больше другого</h5>
+              </li>
+            </Link>
+            <Link href={"/percentage-number-less"} className="underline">
+              <li className="percent-item ">
+                <h5>Калькулятор на сколько % одно число меньше другого</h5>
+              </li>
+            </Link>
+            <Link href={"/number-of-number"} className="underline">
+              <li className="percent-item ">
+                <h5>Калькулятор % числа от числа</h5>
+              </li>
+            </Link>
+          </ul>
           <p>
             Вам нужно быстро рассчитать процент от конкретной суммы? Наш
             калькулятор процента от числа - поможет вам в этом!

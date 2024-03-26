@@ -120,3 +120,11 @@ div#res {
   margin-top: 10px;
   min-height: 100px;
 }
+@media screen and (max-width: 540px) {
+  .inlinecalculator {
+    padding-right: 15px;
+    max-width: 580px;
+    padding-bottom: 20px;
+    min-height: 0px;
+  }
+}

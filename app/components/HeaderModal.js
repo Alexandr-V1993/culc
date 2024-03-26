@@ -59,6 +59,27 @@ function HeaderModal() {
                 <a href="/compound-interest-calculator" className="sublnk">
                   Калькулятор сложного процента
                 </a>
+                <a href="/add-percentage-number" className="sublnk">
+                  Калькулятор прибавления процента к числу
+                </a>
+                <a href="/number-of-number" className="sublnk">
+                  Калькулятор процента одного числа от другого
+                </a>
+                <a href="/one-hundred-percent" className="sublnk">
+                  Калькулятор нахождения ста процентов
+                </a>
+                <a href="/percent-of-number" className="sublnk">
+                  Калькулятор процента от числа
+                </a>
+                <a href="/percentage-from-number" className="sublnk">
+                  Калькулятор высчета процента из числа
+                </a>
+                <a href="percentage-number-greater" className="sublnk">
+                  Калькулятор на сколько % одно число больше другого.
+                </a>
+                <a href="percentage-number-less" className="sublnk">
+                  Калькулятор на сколько % одно число меньше другого
+                </a>
               </div>
               <div className="topmenulink">
                 <a className="linkheader linknotanchor">

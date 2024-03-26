@@ -69,6 +69,11 @@ span#rw {
   font-weight: 400;
   font-size: 16px;
 }
+.inlinecalculators {
+  padding-right: 10px;
+  justify-content: center;
+  padding-left: 30px;
+}
 @media screen and (max-width: 768px) {
   .inlinecalculators {
     padding-right: 10px;

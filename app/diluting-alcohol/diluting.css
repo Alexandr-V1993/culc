@@ -78,4 +78,10 @@ p.resultstring {
     width: 100%;
     padding-left: 200px;
   }
+  .alcohol-list {
+    padding-top: 150px;
+  }
+  .top-alco {
+    padding-top: 0;
+  }
 }

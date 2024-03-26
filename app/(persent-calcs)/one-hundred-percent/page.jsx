@@ -7,7 +7,7 @@ import TopForm from "@/app/components/TopForm";
 import Contents from "@/app/components/Contents";
 import Footer from "@/app/components/Footer";
 import OneHundredForm from "./OneHundredForm";
-
+import Link from "next/link";
 import Input from "@/app/components/Input";
 import "./percent.css";
 
@@ -87,6 +87,39 @@ function OneHundred() {
           </div>
         </OneHundredForm>
         <Contents>
+          <ul className="percent-list">
+            <Link href={"/percent-of-number"} className="underline">
+              <li className="percent-item ">
+                <h5>Калькулятор процента от числа</h5>
+              </li>
+            </Link>
+            <Link href={"/add-percentage-number"} className="underline">
+              <li className="percent-item ">
+                <h5>Калькулятор прибавки процента к числу</h5>
+              </li>
+            </Link>
+            <Link href={"/percentage-from-number"} className="underline">
+              <li className="percent-item ">
+                <h5>Калькулятор высчета процента из числа</h5>
+              </li>
+            </Link>
+
+            <Link href={"/percentage-number-greater"} className="underline">
+              <li className="percent-item ">
+                <h5>Калькулятор на сколько % одно число больше другого</h5>
+              </li>
+            </Link>
+            <Link href={"/percentage-number-less"} className="underline">
+              <li className="percent-item ">
+                <h5>Калькулятор на сколько % одно число меньше другого</h5>
+              </li>
+            </Link>
+            <Link href={"/number-of-number"} className="underline">
+              <li className="percent-item ">
+                <h5>Калькулятор % числа от числа</h5>
+              </li>
+            </Link>
+          </ul>
           <p>
             Калькулятор, вероятно,это одно из самых простых и в то же время
             удивительно полезных устройств в мире современных технологий.{" "}

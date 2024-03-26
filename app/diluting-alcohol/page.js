@@ -6,7 +6,7 @@ import Form from "@/app/components/Form";
 import { useState } from "react";
 import Contents from "@/app/components/Contents";
 import "./diluting.css";
-
+import Link from "next/link";
 function Dilating() {
   const [volume, setVolume] = useState("");
   const [strengthAfter, setStrengthAfter] = useState("");
@@ -74,6 +74,44 @@ function Dilating() {
           </label>
         </Form>
         <Contents>
+          <ul className="alcohol-list">
+            <Link href={"/sugar-braga"} className="underline">
+              <li className="alcohol-item">
+                <h5>Калькулятор расчет сахарной браги</h5>
+              </li>
+            </Link>
+            <Link href={"/areometer-correction"} className="underline">
+              <li className="alcohol-item">
+                <h5>Калькулятор коррекции показаний ареометра</h5>
+              </li>
+            </Link>
+            <Link href={"/head-selection"} className="underline">
+              <li className="alcohol-item">
+                <h5>Калькулятор абсолютного спирта и отбора голов</h5>
+              </li>
+            </Link>
+            <Link href={"/replacement-sugar"} className="underline">
+              <li className="alcohol-item">
+                <h5>Калькулятор замены сахара глюкозой</h5>
+              </li>
+            </Link>
+            <Link href={"/moonshiner-calculator"} className="underline">
+              <li className="alcohol-item">
+                <h5>Калькулятор смешивания спиртов</h5>
+              </li>
+            </Link>
+            <Link
+              href={"/second-fractional-distillation"}
+              className="underline"
+            >
+              <li className="alcohol-item">
+                <h5>
+                  Калькулятор второй перегонки спирта сырца и отбора голов и
+                  хвостов
+                </h5>
+              </li>
+            </Link>
+          </ul>
           <h2 className="top-alco">Зачем разбавлять самогон?</h2>
           <p>
             Разбавление самогона важно для безопасности употребления и

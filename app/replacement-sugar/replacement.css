@@ -148,10 +148,20 @@
     padding-top: 100px;
   }
 }
+
 @media screen and (max-width: 580px) {
   .topmenu,
   .active {
     width: 100%;
     padding-left: 200px;
+  }
+  .top-deluting {
+    padding-top: 0;
+  }
+  .alcohol-list {
+    padding-top: 120px;
+  }
+  .top-alco {
+    padding-top: 0;
   }
 }

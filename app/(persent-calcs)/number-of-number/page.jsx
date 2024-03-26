@@ -9,7 +9,7 @@ import Footer from "@/app/components/Footer";
 import PercentageNamOfNumForm from "./PercentageNamOfNumForm";
 import Input from "@/app/components/Input";
 import "./percent.css";
-
+import Link from "next/link";
 const initial = {
   number: null,
   number2: null,
@@ -87,6 +87,38 @@ function PercentageNumOfNum() {
           </div>
         </PercentageNamOfNumForm>
         <Contents>
+          <ul className="percent-list">
+            <Link href={"/percent-of-number"} className="underline">
+              <li className="percent-item ">
+                <h5>Калькулятор процента от числа</h5>
+              </li>
+            </Link>
+            <Link href={"/add-percentage-number"} className="underline">
+              <li className="percent-item ">
+                <h5>Калькулятор прибавки процента к числу</h5>
+              </li>
+            </Link>
+            <Link href={"/percentage-from-number"} className="underline">
+              <li className="percent-item ">
+                <h5>Калькулятор высчета процента из числа</h5>
+              </li>
+            </Link>
+            <Link href={"/one-hundred-percent"} className="underline">
+              <li className="percent-item ">
+                <h5>Калькулятор найти сто поцентов</h5>
+              </li>
+            </Link>
+            <Link href={"/percentage-number-greater"} className="underline">
+              <li className="percent-item ">
+                <h5>Калькулятор на сколько % одно число больше другого</h5>
+              </li>
+            </Link>
+            <Link href={"/percentage-number-less"} className="underline">
+              <li className="percent-item ">
+                <h5>Калькулятор на сколько % одно число меньше другого</h5>
+              </li>
+            </Link>
+          </ul>
           <h2>Справка</h2>
           <p>
             Часто встречаются задачи, в которых требуется определить процентное

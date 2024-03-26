@@ -20,7 +20,9 @@
   font-size: 20px;
   display: block;
 }
-
+.alcohol-list {
+  padding-top: 100px;
+}
 .notation {
   color: grey;
 }
@@ -99,7 +101,9 @@ p.resultstring {
     gap: 15px;
   }
 }
-
+.alcohol-list {
+  padding-top: 20px;
+}
 @media screen and (max-width: 375px) {
   #result {
     top: 273px;
@@ -111,5 +115,11 @@ p.resultstring {
   .active {
     width: 100%;
     padding-left: 200px;
+  }
+  .top-deluting {
+    padding-top: 0;
+  }
+  .alcohol-list {
+    padding-top: 120px;
   }
 }

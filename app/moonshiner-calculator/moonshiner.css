@@ -206,4 +206,13 @@ ol > li {
     display: flex;
     gap: 10px;
   }
+  .top-deluting {
+    padding-top: 0;
+  }
+  .alcohol-list {
+    padding-top: 160px;
+  }
+  .top-alco {
+    padding-top: 0;
+  }
 }

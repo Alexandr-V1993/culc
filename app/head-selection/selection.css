@@ -102,4 +102,13 @@ p.resultstring > span {
     width: 100%;
     padding-left: 200px;
   }
+  .top-deluting {
+    padding-top: 0;
+  }
+  .alcohol-list {
+    padding-top: 140px;
+  }
+  .top-alco {
+    padding-top: 0;
+  }
 }

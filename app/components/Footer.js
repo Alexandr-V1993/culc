@@ -6,16 +6,19 @@ function Footer() {
     // Проверяем, что код выполняется только в продакшн
     if (process.env.NODE_ENV === "production") {
       // Импортируем необходимый клиент
-      (function (rftyw) {
+      (function (wbow) {
         var d = document,
           s = d.createElement("script"),
           l = d.scripts[d.scripts.length - 1];
-        s.settings = rftyw || {};
+        s.settings = wbow || {};
         s.src =
-          "//dishonestseat.com/b.XNV/s-dnGflu0KY/WbdWiQYJWE5ZunZPXKIJ/Vebm/9/uZZkUzlakXPfTEUuyONBz/Uf3HM/DugxtGN-TXIx3qNDTQclwNOKQQ";
+          "//dishonestseat.com/b/X/VVs.dnGMlv0/YyW/dBi-YDWt5ausZvXEIz/EeamM9/u/ZUUPlikvPqTRU_ylNJzGUO3jMcDBg/tpNCTGIj3RNKT/cTwOOMQq";
         s.async = true;
         l.parentNode.insertBefore(s, l);
-      })({})(function (m, e, t, r, i, k, a) {
+      })({});
+
+      // Yandex.Metrika counter
+      (function (m, e, t, r, i, k, a) {
         m[i] =
           m[i] ||
           function () {
