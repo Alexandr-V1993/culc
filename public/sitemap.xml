@@ -183,4 +183,22 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+    <url>
+        <loc>https://calcoffee.ru/until-event-index</loc>
+        <lastmod>2024-03-28T12:25:03+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://calcoffee.ru/until-event-christmas</loc>
+        <lastmod>2024-03-26T12:25:03+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://calcoffee.ru/bac-calculator</loc>
+        <lastmod>2024-03-27T12:25:03+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 </urlset>

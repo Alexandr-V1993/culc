@@ -69,12 +69,12 @@ function Home() {
     },
     {
       id: 7,
-      name: "Калькулятор алкоголя",
+      name: "Калькулятор самогонщика",
       category: "finance math",
       image: "/alcohol.svg",
       alt: "алкоголь",
       description:
-        "Калькулятор алкоголя поможет произвести расчеты важных параметров.",
+        "Калькулятор самогонщика поможет произвести расчеты важных параметров.",
       url: "/alcohol-calculator/",
     },
     {
@@ -136,6 +136,36 @@ function Home() {
       description:
         "Кто понимает сложный процент – зарабатывает его, тот, кто не понимает – его платит.",
       url: "/compound-interest-calculator",
+    },
+    {
+      id: 14,
+      name: "Калькулятор калорий",
+      category: "finance math",
+      image: "/calorie2.svg",
+      alt: "калории",
+      description:
+        "Точный калькулятор калорий позволяет выбрать различные формулы расчета.",
+      url: "/calorie-calculator",
+    },
+    {
+      id: 15,
+      name: "Калькулятор алкоголя",
+      category: "finance math",
+      image: "/beer.svg",
+      alt: "алкоголь",
+      description:
+        "Алкогольный калькулятор позволяет быстро и точно рассчитать концентрацию алкоголя в крови.",
+      url: "/bac-calculator",
+    },
+    {
+      id: 16,
+      name: "Калькулятор сколько осталось до даты",
+      category: "finance math",
+      image: "/date4.svg",
+      alt: "дата",
+      description:
+        " Таймер созданный для расчета времени, оставшегося до любого желаемого события.",
+      url: "/until-event-index",
     },
   ];
 

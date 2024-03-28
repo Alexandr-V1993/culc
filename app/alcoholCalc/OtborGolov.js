@@ -2,7 +2,7 @@ import "./Otbor.css";
 function OtborGolov({ setVolume, setStrength, setHeads }) {
   return (
     <>
-      <label claclassNamess="numrange row-1 van">
+      <label className="numrange row-1 van">
         <span>Объем спирта-сырца</span>
         <input
           type="number"

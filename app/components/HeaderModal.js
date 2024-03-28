@@ -95,6 +95,12 @@ function HeaderModal() {
                 <a href="/imt" className="sublnk">
                   Калькулятор ИМТ
                 </a>
+                <a href="/calorie-calculator" className="sublnk">
+                  Калькулятор калорий
+                </a>
+                <a href="/bac-calculator" className="sublnk">
+                  Калькулятор алкоголя
+                </a>
               </div>
               <div className="topmenulink">
                 <a className="linkheader linknotanchor">
@@ -121,7 +127,7 @@ function HeaderModal() {
                   Алкоголь
                 </a>
                 <a href="/alcohol-calculator" className="sublnk">
-                  Калькулятор алкоголя
+                  Калькулятор самогонщика
                 </a>
                 <a href="/diluting-alcohol" className="sublnk">
                   Калькулятор разбавления спирта водой
@@ -173,6 +179,17 @@ function HeaderModal() {
                 </a>
                 <a href="/password-generator" className="sublnk">
                   Генератор паролей
+                </a>
+              </div>
+              <div className="topmenulink">
+                <a className="linkheader linknotanchor">
+                  <span className="material-symbols-rounded">
+                    <img className="img-width" src="/date.svg" alt="дата" />
+                  </span>{" "}
+                  Дата и время
+                </a>
+                <a href="/until-event-christmas" className="sublnk">
+                  Сколько дней осталось до Рождества
                 </a>
               </div>
               <span className="close" onClick={() => setOpen(false)}>
